@@ -28,6 +28,7 @@ const getRoute = (path, routelist) => {
   }
 
   const page = route || routelist[0] || {};
+  window.currentRoute = page;
 
   return [page, layout];
 };
@@ -78,22 +79,34 @@ const setPage = async (pagePath, layoutPath) => {
 
   const pHtml = await loadPage(pagePath);
   parsed.querySelector(".main-content").innerHTML = pHtml;
-  // main.innerHTML = pHtml;
 
   const layout = parsed.querySelector("body").innerHTML;
   main.innerHTML = layout;
+
+  main.querySelectorAll("a").forEach((a) => {
+    const href = a
+      .getAttribute("href")
+      .replace("#/", "#")
+      .replace("#", "/");
+    const exact = a.getAttribute("exact");
+
+    const grouped =
+      currentRoute.group && href.includes(currentRoute.group);
+
+    if ((href === currentRoute.path || grouped) && exact) {
+      a.setAttribute("current", true);
+      a.classList.add(exact);
+    } else if (exact) {
+      a.removeAttribute("current");
+      a.classList.remove(exact);
+    }
+  });
 
   handleRefresh();
 };
 
 window.addEventListener("DOMContentLoaded", () => {
   const url = new URL(location);
-  console.log(
-    getRoute((url.hash || "/").replace("#", "")),
-    url.hash || "/"
-  );
-
   setComponent(url.hash);
-
   handleRefresh();
 });

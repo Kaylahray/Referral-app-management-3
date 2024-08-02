@@ -1,6 +1,27 @@
-<div class="grid-container" id="root">
+<div class="grid-container">
   <header class="header">
-    <p>header</p>
+    <div class="search-container">
+      <img src="../assets/search.svg" alt="" />
+      <input
+        type="text"
+        class="search-input"
+        placeholder="What are you looking for?"
+      />
+    </div>
+    <div class="header-right">
+      <div class="notification">
+        <img src="../assets/notification-icon.svg" alt="" srcset="" />
+      </div>
+      <div class="profile">
+        <img
+          src="../assets/avatar.svg"
+          alt="Profile"
+          class="profile-image"
+        />
+        <span class="profile-name">TheEndDoen</span>
+        <img src="../assets/arrow-down.svg" alt="" />
+      </div>
+    </div>
   </header>
 
   <aside id="sidebar">
@@ -8,27 +29,27 @@
     <nav id="main-nav" class="sidebar">
       <ul class="sidebar_list_cont">
         <li class="sidebar_list">
-          <a href="#/dashboard-page" class="active-link">
+          <a href="#/dashboard-page" exact="active-link">
             <img src="../assets/dashboardIcon.svg" alt="" />
-            <span class="sidebar-text"> Overview </span>
+            <span class="sidebar-text"> Dashboard </span>
           </a>
         </li>
         <li class="sidebar_list">
-          <a href="#/prospect">
+          <a href="#/prospect" exact="active-link">
             <img src="../assets/prospect-icon.svg" alt="" />
-            <span class="sidebar-text"> Requests </span>
+            <span class="sidebar-text"> Prospect </span>
           </a>
         </li>
         <li class="sidebar_list">
-          <a href="#/report">
+          <a href="#/report" exact="active-link">
             <img src="../assets/reports-icon.svg" alt="" />
-            <span class="sidebar-text"> Requests </span>
+            <span class="sidebar-text"> Report </span>
           </a>
         </li>
         <li class="sidebar_list">
-          <a href="#settings">
+          <a href="#settings" exact="active-link">
             <img src="../assets/setting-icon.svg" alt="" />
-            <span class="sidebar-text"> Requests </span>
+            <span class="sidebar-text"> Settings </span>
           </a>
         </li>
       </ul>
