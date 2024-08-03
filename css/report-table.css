@@ -413,3 +413,91 @@ td.dots {
   background-color: #002855;
   border: none;
 }
+/* block table for smaller screen  */
+.block-table{
+    display: flex;
+    max-width: 530px;
+    width:100%;
+    padding:25px;
+
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.informationdetail-box{
+    display:flex;
+    width:100%;
+   
+    flex-direction: column;
+}
+.person-detail{
+display:flex;
+justify-content: space-between;
+height:24px;
+
+}
+.block-table{
+    display:none;
+    margin-bottom: 5px;
+    border-radius:5px;
+}
+
+@media  screen and (max-width:760px) {
+    .report-table-header .report-table-header-btn {
+        height: Hug (28px) px;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 10.24px;
+        padding: 10px;
+      } 
+      .report-table-header h1 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 20.36px;
+        margin-bottom: 0px;
+      }
+      @media  screen and (max-width:668px){
+        .searchname{
+            flex-direction: column;
+        }
+        .searchbyname p {
+            display:none;
+        }
+        .searchname{
+            align-items: flex-start;
+        }
+        .searchinput{
+            width:100%;
+            flex:1;
+        }
+        .searchsection-container {
+            width: 100%;
+            height: 160.33px;
+            padding-top: 0px;
+           background-color: rgba(39,83,135,0.08);
+            backdrop-filter: blur(10px);
+            
+        }
+        .searchname .find-btn {
+            height: 100%;
+            padding: 2px 30px;
+            background-color: #002855;
+            margin-top: 0px;
+        }
+        .searchsectionmid-container{
+          border:none;
+          padding:15px;
+        }
+      }
+      @media  screen and (max-width:520px){
+        .tablewrapper{
+            display:none;
+        }
+        .block-table{
+            display:flex;
+            border-radius: 1px solid #ddd;
+        }
+.recent-result{
+    padding-left:20px
+}
+      }
+}
