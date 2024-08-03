@@ -1,0 +1,110 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  background-color: #f0f2fa;
+}
+/* main container */
+.create-prospect-upload-container {
+  width: 100%;
+  padding: 20px;
+}
+.create-prospect-upload-container h1 {
+  font-family: Circular Std;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 31.62px;
+  text-align: left;
+  border: 2px solid black;
+  padding: 10px;
+  color: #585858;
+}
+
+/* prospect list container table */
+.prospect-list-table {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.prospect-list-table h2 {
+  color: #002855;
+  font-family: Circular Std;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 31.62px;
+  text-align: left;
+}
+.prospect-list-table h2 > span {
+  font-family: Circular Std;
+  font-size: 20px;
+  font-weight: 450;
+  line-height: 25.3px;
+  text-align: center;
+  color: #353535;
+}
+.createprospect-tablewrapper {
+  width: 100%;
+  height: 278.5px;
+  border: 2px solid red;
+  margin-top: 10px;
+}
+.createprospecttable {
+  width: 100%;
+}
+.createprospect-tablewrapper thead th {
+  text-align: left;
+  font-family: Circular Std;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15.18px;
+  text-align: left;
+  color: #7f8b94;
+  padding: 5px 0px;
+}
+.createprospect-tablewrapper tbody td {
+  font-family: Circular Std;
+  font-size: 12px;
+  font-weight: 450;
+  line-height: 15.18px;
+  text-align: left;
+  padding: 7px 0px;
+}
+.createprospect-tablewrapper tbody td img {
+  width: 32px;
+  height: 32px;
+}
+.createcancel-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.createcancel-btn .xbtn {
+  color: #002855;
+  height: 56px;
+  padding: 1px 50px;
+  font-family: Circular Std;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #002855;
+  border-radius: 5px;
+}
+.createcancel-btn .yesbtn {
+  height: 56px;
+  padding: 3px 20px;
+  font-family: Circular Std;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  background-color: #002855;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  border:none;
+}
