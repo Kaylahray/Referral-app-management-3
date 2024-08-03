@@ -1,7 +1,111 @@
- <!-- <a href="#/prospect" exact="active-link"> cancel button </a> -->
+<!-- <a href="#/prospect" exact="active-link"> cancel button </a> -->
 
 
 <div>
-  create prospect page
-  
+  <h2 class="prospectH2">Create a New Prospect</h2>
+  <div class="creationTypOptSect">
+    <div class="creationTypOptP" style="color: #34475E;">
+      <div class="creationTypOptHeader">
+        <h4>Select creation type</h4>
+        <span style="color: #002855;">
+          <a href="#/prospect" exact="active-link" style="color: #002855;">Cancel</a>
+        </span>
+      </div>
+      <div class="inpTyps">
+        <div class="inpTyp">
+          <input type="radio" name="upload" id="individual">
+          <label for="individual">Individual</label>
+        </div>
+        <div class="inpTyp">
+          <input type="radio" name="upload" id="bulkUpload">
+          <label for="bulkUpload">Bulk Upload</label>
+        </div>
+      </div>
+    </div>
+    <div class="createProspectFormDiv">
+      <form action="" class="createProspectForm">
+        <h4 style="color: #32404F; margin-block: 2.5rem; font-weight: 500;">Fill prospect information</h4>
+        <div class="prospectInpFormPDiv">
+          <div class="prospectInpChildDiv">
+            <label for="fName">First Name</label>
+            <input type="text" name="fName" id="fName">
+          </div>
+          <div class="prospectInpChildDiv">
+            <label for="lName">Last Name</label>
+            <input type="text" name="lName" id="lName">
+          </div>
+          <div class="prospectInpChildDiv">
+            <label for="prdct">Product Interest</label>
+            <div>
+              <input type="text" name="prdct" id="prdct">
+              <i class="fa-solid fa-circle-chevron-down" style="color: #34475E;"></i>
+            </div>
+          </div>
+          <div class="prospectInpChildDiv">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+          </div>
+          <div class="prospectInpChildDiv">
+            <label for="phoneNo">Phone Number</label>
+            <input type="text" name="phoneNo" id="phoneNo">
+          </div>
+          <div class="prospectInpChildDiv location">
+            <div class="">
+              <label for="state">State</label>
+              <input type="text" name="state" id="state">
+            </div>
+            <div class="">
+              <label for="city">City</label>
+              <input type="text" name="city" id="city">
+            </div>
+          </div>
+          <div class="prospectInpChildDiv">
+            <label for="ocptn">Occupation</label>
+            <input type="text" name="ocptn" id="ocptn">
+          </div>
+          <div class="prospectInpChildDiv">
+            <div>
+              <span for="gender">Gender</span>
+              <div class="genderOpts">
+                <div class="inpTyp">
+                  <input type="radio" name="gender" id="male">
+                  <label for="male">Male</label>
+                </div>
+                <div class="inpTyp">
+                  <input type="radio" name="gender" id="female">
+                  <label for="female">Male</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="createPrspctBtn"><a href="#">Create Prospect</a></button>
+      </form>
+    </div>
+
+    <!-- Bulk Upload section -->
+
+    <div class="bulkUploadSect">
+      <h2>Bulk Upload</h2>
+      <p class="clxWarningP">Please ensure the file is in excel (.XLS) format</p>
+      <div class="bulkUploadTxtareaDiv">
+        <textarea name="bulkUploadTxtarea" id="bulkUploadTxtarea">
+      </textarea>
+        <div class="positionA">
+          <div class="cloudDiv">
+            <img src="../assets/cloudIcon.svg" alt="">
+          </div>
+          <div>
+            <label for="attachDoc" id="attachDocLbl"><span style="color: #E6B014;">Select file</span> or
+              drag and
+              drop</label>
+            <input type="file" name="attachDoc" id="attachDoc">
+            <p class="clxWarningP">CSV or .XLSX file</p>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="downloadExlBtn"><a href="#">Download excel template</a></button>
+    </div>
+  </div>
+
 </div>
