@@ -116,6 +116,7 @@ body {
   background-color: #fff;
   padding: 40px 40px 20px 30px;
   border-radius: 5px;
+  
 }
 .report-container-table {
   width: 100%;
@@ -123,6 +124,7 @@ body {
   border-spacing: 0 10px;
   border-radius: 5px;
 }
+
 
 thead th {
   padding: 10px;
@@ -134,12 +136,15 @@ thead th {
   line-height: 15.18px;
   text-align: center;
   color: #7f8b94;
+  
 }
 
-tbody tr {
+
+tbody tr td{
   height: 49px;
   margin-bottom: 10px;
 }
+
 
 tbody td {
   text-align: left;
@@ -148,9 +153,12 @@ tbody td {
   font-weight: 450;
   line-height: 15.18px;
   text-align: center;
-  padding: 10px;
-  border: 1px solid #ddd;
+  /* padding: 10px; */
+  border: 1px solid rgba(63, 61, 61, 0.436);
   background-color: #fff;
+  border-left: none;
+  border-right: none;
+  
 }
 td.dots {
   width: 6.73px;
@@ -160,12 +168,30 @@ td.dots {
 }
 /* overlay */
 .reportoverlaycontent {
-  background-color: #fff;
-  width: 650px;
-  height: 650px;
+  width: 100%;
+  height: 100%;
   border: 2px solid red;
   padding: 15px;
   line-height: 30.12px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(39, 76, 140, 0.26);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  visibility:hidden;
+}
+.reportpop-up {
+  background-color: #fff;
+  width: 450px;
+  height: 550px;
+  padding: 15px;
+  border-radius: 5px;
 }
 .reportpop-up h1 {
   font-family: Mulish;
@@ -178,7 +204,7 @@ td.dots {
   width: 100%;
   height: 40px;
   background: #ffb94640;
-  margin-top: 30px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   border-radius: 5px;
@@ -202,7 +228,7 @@ td.dots {
 .data-date {
   width: 100%;
   display: flex;
-  margin-top: 10px;
+  margin-top: 15px;
   justify-content: space-between;
 }
 .datadate-text {
@@ -220,7 +246,7 @@ td.dots {
 .data-date-box {
   display: flex;
   border: 2px solid #ddd;
-  width: 182px;
+  width: 132px;
   height: 35px;
   justify-content: space-between;
   align-items: center;
@@ -254,7 +280,7 @@ td.dots {
   text-align: left;
 }
 .reportselect-links {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .reportselect-links a {
   text-decoration: underline;
@@ -316,7 +342,7 @@ td.dots {
 .cancel-create-button {
   display: flex;
   justify-content: flex-end;
-  margin-top: 30px;
+  margin-top: 10px;
   gap: 10px;
 }
 .cancel-create-button > button {
@@ -338,12 +364,32 @@ td.dots {
 }
 
 /* success popup style */
+.successpopupcontainer {
+    visibility: hidden;
+  width: 100%;
+  height: 100%;
+  border: 2px solid red;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+  z-index: 3330;
+}
 .reportsuccess-popup {
   height: 400px;
-  width: 400px;
-  border: 2px solid red;
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
+  bottom: 0;
+  left: 10;
+  margin-bottom: 100px;
 }
 .reportsuccess-popup h1 {
   text-align: center;
@@ -355,7 +401,6 @@ td.dots {
   margin-top: 50px;
 }
 .reportsuccess-popup .successimg {
- 
   width: 25%;
   height: 25%;
   margin: auto;
@@ -366,5 +411,5 @@ td.dots {
   height: 53.13px;
   color: #fff;
   background-color: #002855;
-  border:none;
+  border: none;
 }
