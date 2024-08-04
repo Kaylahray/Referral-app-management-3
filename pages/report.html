@@ -1,5 +1,4 @@
 <!-- all your links needed here view on the modal -->
-👇
 <!-- <a href="#/report/report-data" exact="active-link">
   view report data
 </a>
@@ -8,7 +7,132 @@
 </a>
 <a href="#/prospect" exact="active-link"> prospect </a> -->
 
-<div>
-  Report page
-  <!-- your work goes in here -->
+<div class="report-dashboard-container">
+  <div class="report-header">
+    <h1>Reports</h1>
+    <button class="report-create-button">
+      <img src="../assets/plus.svg" alt="plus" />
+      <span> Create Report </span>
+    </button>
+  </div>
+  <div class="report-cards">
+    <div class="report-card">
+      <h3>Total Sales</h3>
+      <p>NGN 3,000,000</p>
+    </div>
+    <div class="report-card">
+      <h3>Total Converts</h3>
+      <p>150</p>
+    </div>
+    <div class="report-card">
+      <h3>Prospects</h3>
+      <p>150</p>
+    </div>
+    <div class="report-card">
+      <h3>Users</h3>
+      <p>150</p>
+    </div>
+  </div>
+  <div class="report-main">
+    <div class="report-recent-reports">
+      <div class="view-report">
+        <h3>Recent Reports</h3>
+        <a>View All </a>
+      </div>
+
+      <ul>
+        <li>
+          <span class="first-span">01 <span>Report 001</span></span>
+          <span class="date-span">05 Jan 2023</span>
+          <button>View</button>
+        </li>
+        <li>
+          <span class="first-span">02 <span>Report 002</span></span>
+          <span class="date-span">05 Jan 2023</span>
+          <button>View</button>
+        </li>
+        <li>
+          <span class="first-span">03 <span>Report 003</span></span>
+          <span class="date-span">05 Jan 2023</span>
+          <button>View</button>
+        </li>
+        <li>
+          <span class="first-span">04 <span>Report 004</span></span>
+          <span class="date-span">05 Jan 2023</span>
+          <button>View</button>
+        </li>
+      </ul>
+    </div>
+    <div class="report-top-products">
+      <div>
+        <h3>Top Products</h3>
+        <a href="#report/report-data" class="view">View Report</a>
+      </div>
+      <table class="report-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Popularity</th>
+            <th>Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>Motor</td>
+            <td>
+              <div class="report-progress-bar">
+                <div
+                  class="report-progress"
+                  data-percentage="40"
+                ></div>
+              </div>
+            </td>
+            <td><span class="report-percentage">40%</span></td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>Term Life</td>
+            <td>
+              <div class="report-progress-bar">
+                <div
+                  class="report-progress"
+                  data-percentage="22"
+                ></div>
+              </div>
+            </td>
+            <td><span class="report-percentage">22%</span></td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>Group Life</td>
+            <td>
+              <div class="report-progress-bar">
+                <div
+                  class="report-progress"
+                  data-percentage="8"
+                ></div>
+              </div>
+            </td>
+            <td><span class="report-percentage">8%</span></td>
+          </tr>
+          <tr>
+            <td>04</td>
+            <td>Leadway Savings</td>
+            <td>
+              <div class="report-progress-bar">
+                <div
+                  class="report-progress"
+                  data-percentage="30"
+                ></div>
+              </div>
+            </td>
+            <td><span class="report-percentage">30%</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
+<script src="/js/report.js"></script>

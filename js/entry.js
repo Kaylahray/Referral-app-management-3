@@ -40,7 +40,7 @@ const handleRefresh = () => {
 
   document.querySelectorAll("a").forEach((a) => {
     const link = a.getAttribute("href");
-    if (!link.includes("http")) {
+    if (!link?.includes("http")) {
       a.addEventListener("click", (evt) => {
         evt.preventDefault();
         history.pushState(
@@ -80,10 +80,14 @@ const setPage = async (pagePath, layoutPath) => {
   const pHtml = await loadPage(pagePath);
   parsed.querySelector(".main-content").innerHTML = pHtml;
 
+  loadScripts(pHtml, pagePath);
+
   const layout = parsed.querySelector("body").innerHTML;
   main.innerHTML = layout;
 
   main.querySelectorAll("a").forEach((a) => {
+    if (!a.getAttribute("href")) return;
+
     const href = a
       .getAttribute("href")
       .replace("#/", "#")
@@ -103,6 +107,39 @@ const setPage = async (pagePath, layoutPath) => {
   });
 
   handleRefresh();
+};
+
+const loadScripts = (content = "", component = "default") => {
+  const parser = new DOMParser();
+  const scripts = content.match(
+    /<script\b[^>]*>([\s\S]*?)<\/script>/gi
+  );
+
+  document.querySelectorAll("script[component]").forEach((script) => {
+    if (
+      script.getAttribute("component") !==
+      window.currentRoute?.component
+    ) {
+      script.remove();
+    }
+  });
+
+  scripts?.forEach((script) => {
+    const parsed = parser.parseFromString(script, "text/html");
+    const src = parsed.querySelector("script");
+    const tag = document.createElement("script");
+    tag.src = src.getAttribute("src");
+    tag.async = src.getAttribute("aync");
+    tag.type = "text/javascript";
+    tag.setAttribute("component", component);
+
+    const exist = document.querySelector(
+      `script[component="${component}"]`
+    );
+    if (!exist) {
+      document.querySelector("head").appendChild(tag);
+    }
+  });
 };
 
 window.addEventListener("DOMContentLoaded", () => {
