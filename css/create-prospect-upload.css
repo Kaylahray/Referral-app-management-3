@@ -18,7 +18,6 @@ body {
   font-weight: 700;
   line-height: 31.62px;
   text-align: left;
-  border: 2px solid black;
   padding: 10px;
   color: #585858;
 }
@@ -48,7 +47,6 @@ body {
 .createprospect-tablewrapper {
   width: 100%;
   height: 278.5px;
-  border: 2px solid red;
   margin-top: 10px;
 }
 .createprospecttable {
@@ -108,3 +106,64 @@ body {
   border-radius: 5px;
   border:none;
 }
+
+/* the block hidden table style */
+.createProspectBlockTable{
+    display:none;
+    border: none;
+    margin-top: 20px;
+    width:100%;
+    background-color: #fff;
+   
+}
+.informationdetails-box{
+    margin-bottom: 10px;
+    border:2px solid #f0f2fa;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.persons-detail{
+display:flex;
+justify-content: space-between;
+height:34px;
+
+}
+.persons-detail h6{
+    color: #585858;
+}
+.persons-detail p{
+    color: #002855;
+}
+ @media screen and (max-width:555px) {
+    .createprospect-tablewrapper{
+        display:none;
+    }
+    .createProspectBlockTable{
+     display: block;
+    }
+
+
+
+    .createcancel-btn .xbtn {
+        color: #002855;
+        height: 36px;
+        padding: 1px 30px;
+        font-family: Circular Std;
+        font-size: 12px;
+        font-weight: 200;
+        line-height: 10px;
+        background-color: #fff;
+
+      }
+      .createcancel-btn .yesbtn {
+        height: 36px;
+        padding: 3px 30px;
+        font-family: Circular Std;
+        font-size: 12px;
+        font-weight: 200;
+        line-height: 10px; 
+      }
+      .createcancel-btn{
+        gap: 10px;
+      }
+ }
