@@ -125,18 +125,20 @@ const loadScripts = (content = "", component = "default") => {
   });
 
   scripts?.forEach((script) => {
-    const parsed = parser.parseFromString(script, "text/html");
-    const src = parsed.querySelector("script");
-    const tag = document.createElement("script");
-    tag.src = src.getAttribute("src");
-    tag.async = src.getAttribute("aync");
-    tag.type = "text/javascript";
-    tag.setAttribute("component", component);
-
     const exist = document.querySelector(
       `script[component="${component}"]`
     );
+
     if (!exist) {
+      const parsed = parser.parseFromString(script, "text/html");
+      const src = parsed.querySelector("script");
+      const tag = document.createElement("script");
+      tag.src = src.getAttribute("src");
+      tag.async = src.getAttribute("aync");
+      tag.type = "text/javascript";
+      tag.textContent = src.textContent;
+      tag.setAttribute("component", component);
+
       document.querySelector("head").appendChild(tag);
     }
   });
