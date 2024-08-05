@@ -1,3 +1,7 @@
+window.onMounted = (callback = () => null) => {
+  setTimeout(callback, 10);
+};
+
 async function loadPage(page) {
   return await fetch(page)
     .then((response) => response.text())
@@ -133,7 +137,9 @@ const loadScripts = (content = "", component = "default") => {
       const parsed = parser.parseFromString(script, "text/html");
       const src = parsed.querySelector("script");
       const tag = document.createElement("script");
-      tag.src = src.getAttribute("src");
+      if (src.getAttribute("src")) {
+        tag.src = src.getAttribute("src");
+      }
       tag.async = src.getAttribute("aync");
       tag.type = "text/javascript";
       tag.textContent = src.textContent;

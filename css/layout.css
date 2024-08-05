@@ -88,10 +88,10 @@
     line-height: 24px;
     letter-spacing: -0.2px;
   }
-  &.sidebar-visible {
-    display: flex;
-    transform: translateX(0);
-  }
+}
+.sidebar-visible {
+  display: flex;
+  transform: translateX(0);
 }
 /* ------------------------------------------------ */
 .header {
@@ -101,66 +101,68 @@
   padding: 17px 0px 26px 38px;
   z-index: 10;
   background-color: #ffffff;
-
-  .menu-icon {
+}
+.menu-icon {
+  display: none;
+  @media screen and (max-width: 992px) {
     display: none;
   }
+}
 
-  .search-container {
-    display: flex;
-    align-items: center;
-    padding: 14px 57px 15px 14px;
-    height: 49px;
-    max-width: 284px;
-    gap: 11px;
-    border-radius: 5px;
-    background-color: #f0f2fa;
-  }
+.search-container {
+  display: flex;
+  align-items: center;
+  padding: 14px 57px 15px 14px;
+  height: 49px;
+  max-width: 284px;
+  gap: 11px;
+  border-radius: 5px;
+  background-color: #f0f2fa;
+}
 
-  .search-input {
-    width: 100%;
-    height: 100%;
-    border: none;
-    font-size: 16px;
-    background-color: transparent;
-    outline: none;
-  }
+.search-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 16px;
+  background-color: transparent;
+  outline: none;
+}
 
-  .search-icon {
-    position: absolute;
-    margin-left: 10px;
-    font-size: 18px;
-    color: #6b7280;
-  }
+.search-icon {
+  position: absolute;
+  margin-left: 10px;
+  font-size: 18px;
+  color: #6b7280;
+}
 
-  .header-right {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-  }
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
 
-  .profile {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    margin-right: 1rem;
-  }
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-right: 1rem;
+}
 
-  .profile-image {
-    border-radius: 50%;
-    object-fit: cover;
-  }
+.profile-image {
+  border-radius: 50%;
+  object-fit: cover;
+}
 
-  .profile-name {
-    font-size: 16px;
-    color: #333;
-  }
+.profile-name {
+  font-size: 16px;
+  color: #333;
+}
 
-  .dropdown-arrow {
-    font-size: 16px;
-    color: #333;
-  }
+.dropdown-arrow {
+  font-size: 16px;
+  color: #333;
 }
 .main-content {
   grid-area: main;
