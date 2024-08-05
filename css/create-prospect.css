@@ -1,0 +1,189 @@
+.creationTypOptSect {
+  margin-inline: 21px;
+  padding: 20px 55px;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #34475e;
+}
+.prospectH2 {
+  margin: 24px 47px;
+}
+.creationTypOptHeader H4 {
+  font-size: 25px;
+  color: #585858;
+}
+.creationTypOptSect {
+  margin: 24px 36px;
+}
+
+.creationTypOptHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.creationTypOptHeader h4 {
+  font-size: 22px;
+  color: #34475e;
+  font-weight: 500;
+}
+.createProspectFormDiv {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+.inpTyps,
+.genderOpts {
+  display: flex;
+  gap: 2rem;
+  margin-block: 1rem;
+}
+.prospectInpFormPDiv {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 27px;
+  border-radius: 15px;
+}
+.location {
+  display: flex;
+  gap: 10px;
+}
+input[type="text"],
+input[type="email"],
+input[type="radio"] {
+  padding: 15px;
+  border: 1px solid #7f8b94;
+  border-radius: 15px;
+  width: 100%;
+  outline: none;
+}
+input[type="radio"] {
+  width: auto;
+  margin: 3px 3px 0 0;
+}
+input[type="radio"]:hover {
+  cursor: pointer;
+}
+label {
+  margin-block: 10px;
+  color: #353535;
+}
+
+/* creating custum radio input */
+.inpTyp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  user-select: none;
+}
+input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border: 2px solid #34475e;
+  border-radius: 50%;
+  background-color: white;
+}
+input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #34475e;
+  border-radius: 50%;
+}
+/* ------------------------------- */
+.createPrspctBtn {
+  padding: 18px 30px;
+  background-color: #002855;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 80%;
+  transform: translateX(0%);
+  text-wrap: nowrap;
+}
+
+/* Bulk upload sect */
+.bulkUploadSect {
+  /* display: none; */
+}
+.bulkUploadTxtareaDiv {
+  width: 100%;
+  height: 232px;
+  position: relative;
+}
+#bulkUploadTxtarea {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  outline: none;
+  border: 1px solid #7f8b94;
+}
+.downloadExlBtn {
+  padding: 18px 30px;
+  margin-block: 3rem;
+  background-color: #002855;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+/* textarea file attachment */
+.positionA {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.clxWarningP {
+  color: #afb0b1;
+  margin-block: 1rem;
+}
+#attachDoc {
+  display: none;
+}
+#attachDocLbl {
+  color: #002855;
+  cursor: pointer;
+}
+.cloudDiv {
+  display: inline-block;
+  padding: 10px 12px;
+  border-radius: 50%;
+  background-color: #f4f4f4;
+}
+/* mobile and tabs */
+@media screen and (max-width: 698px) {
+  .prospectInpFormPDiv {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .creationTypOptSect {
+    margin-inline: 10px;
+    padding: 5px 15px;
+  }
+  .cloudDiv {
+    display: none;
+  }
+  .createPrspctBtn {
+    padding: 18px 30px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
