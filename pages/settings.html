@@ -1,3 +1,72 @@
+<!-- Container is the default div-->
 <div class="container">
-  <p>settings</p>
+  <!-- My Containers -->
+  <h1>Settings</h1>
+  <div class="settings-container">
+    <div class="settings-menu">
+      <div class="settings-menu-grid">
+        <!-- Left-side Acct settings, Change password & notifications Icons -->
+        <div class="settings-option" id="account-settings">
+          <img src="/assets/settings-user.svg" alt="Account Settings" />
+          <p>Account Settings</p>
+        </div>
+        <!-- ====== -->
+        <div class="settings-option" id="change-password">
+          <img src="/assets/settings-lock.svg" alt="Change Password" />
+          <p>Change Password</p>
+        </div>
+
+        <!-- ======= -->
+        <div class="settings-option" id="notification-settings">
+          <img
+            src="/assets/settings-notification.svg"
+            alt="Notification Settings"
+          />
+          <p>Notification Settings</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHANGE PASSWORD FORM  -->
+    <div class="settings-content">
+      <!-- remember tod -->
+      <div class="settings-content-heading">
+        <h2>Change Password</h2>
+      </div>
+      <!-- FORM -->
+      <div class="form-wrapper">
+        <div id="change-password-form" class="form-container">
+          <form>
+            <label for="old-password">Old Password</label>
+            <input
+              type="password"
+              placeholder="***************************"
+              id="old-password"
+              name="old-password"
+            />
+
+            <label for="new-password">New Password</label>
+            <input
+              type="password"
+              id="new-password"
+              name="new-password"
+              placeholder="***************************"
+            />
+
+            <label for="confirm-password">Confirm New Password</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              placeholder="***************************"
+            />
+          </form>
+          <button type="submit">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add other forms here as needed -->
+  </div>
 </div>
+<!-- <script src="/js/settings.js"></script> -->

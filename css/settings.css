@@ -1,3 +1,153 @@
 .container {
-  background-color: red;
+  max-width: 1440px;
+  height: 89vh;
+  background-color: #f5f5f5;
+}
+
+.container h1 {
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 30.36px;
+  text-align: left;
+  padding: 10px 0 10px 5%;
+  color: #585858;
+}
+
+/* flex the settings-icon-div and and content div side by side */
+.settings-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Settings-Icons menu div: ie user icon, lock icon & notification bell */
+.settings-menu {
+  max-width: 450px;
+  width: 330px;
+  height: 673px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Individual icons container: grids the icons in fractions */
+.settings-menu-grid {
+  width: 126px;
+  height: 105px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15%;
+  margin: 50px 20px;
+}
+.settings-option {
+  border: 1px solid #585858;
+  padding: 30px;
+  cursor: pointer;
+  box-shadow: 0px 0px 30px 0px #0000001a;
+  border-radius: 5px;
+  margin: 0 auto;
+  transition: background-color 0.3s;
+}
+
+.settings-option:hover {
+  background-color: #f0f0f0;
+}
+.settings-option p {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 10px;
+  letter-spacing: -0.20000000298023224px;
+  text-align: center;
+}
+
+.settings-option img {
+  width: 40px;
+  margin: 0 20%;
+}
+
+/* CONTENT DIV STYLE */
+/* content div: ie content of either acct settings, change password form or notifications */
+.settings-content {
+  width: 70%;
+  height: 673px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 0 15px; /* Center the settings content */
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-content h2 {
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30.36px;
+  text-align: left;
+}
+
+.form-wrapper {
+  width: 97%;
+  height: 474px;
+  margin: 0 7px;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  display: flex;
+  justify-content: center; /* Center the form-wrapper */
+  align-items: center; /* Center content vertically */
+}
+
+.form-container {
+  max-width: 500px;
+  width: 100%;
+  margin: 5% 0 10% 0;
+}
+
+form,
+button {
+  margin: 0 15%;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.20000000298023224px;
+  color: #000000;
+}
+
+form input {
+  width: 353px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #c4c4c4;
+  outline: none;
+  margin-bottom: 29px;
+  padding: 2% 0 0 3%; /* Add padding for the placeholder, added in the input cause in the placeholder it moves only vertically */
+}
+
+input::placeholder {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.20000000298023224px;
+  color: #c4c4c4;
+}
+
+button {
+  width: 353px;
+  height: 66px;
+  padding: 16px 8px 16px 8px;
+  gap: 10px;
+  border-radius: 6px;
+  background-color: #002855;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29.52px;
+  letter-spacing: -0.03em;
+  text-align: center;
+  cursor: pointer;
 }
