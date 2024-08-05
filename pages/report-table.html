@@ -1,5 +1,348 @@
-<!-- <a href="#/report/report-data" exact="active-link"> view report data </a> -->
-<div>
-  report table
-  <!-- your work in here -->
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/report-table.css" />
+  </head>
+  <body>
+    <div class="report-table-container">
+      <!-- report table header -->
+      <div class="report-table-header">
+        <h1>Reports</h1>
+        <button class="report-table-header-btn">+ &nbsp; Create Reports</button>
+      </div>
+      <!-- search section -->
+      <div class="searchsection-container">
+        <div class="searchsectionmid-container">
+          <div class="searchname">
+            <div class="searchbyname">
+              <p>
+                Search By: Name &nbsp; &nbsp;<img
+                  src="../assets/search-dropdown.svg"
+                />
+                &nbsp
+              </p>
+              <input type="text" class="searchinput" placeholder="Search name" />
+            </div>
+            <button class="find-btn">Find</button>
+          </div>
+        </div>
+      </div>
+      <!-- recent search result -->
+      <p class="recent-result">Recent search result:</p>
+
+      <!-- report table -->
+      <div class="tablewrapper">
+        <table class="report-container-table">
+          <thead>
+            <tr>
+              <th>Name &nbsp;<img src="../assets/table dropdown.svg" /></th>
+              <th>
+                Date Created&nbsp;<img src="../assets/table dropdown.svg" />
+              </th>
+              <th>
+                Created By&nbsp;<img src="../assets/table dropdown.svg" />
+              </th>
+              <th>
+                Date Modified&nbsp;<img src="../assets/table dropdown.svg" />
+              </th>
+              <th>Action&nbsp;<img src="../assets/table dropdown.svg" /></th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr>
+              <td>Report 001</td>
+              <td>04 Jan 2023</td>
+              <td>Michael Adesanya</td>
+              <td>09 Jan 2023</td>
+              <td class="dots">...</td>
+            </tr>
+            <tr>
+              <td>Report 002</td>
+              <td>04 Jan 2023</td>
+              <td>Michael Adesanya</td>
+              <td>09 Jan 2023</td>
+              <td class="dots">...</td>
+            </tr>
+            <tr>
+              <td>Report 003</td>
+              <td>04 Jan 2023</td>
+              <td>Michael Adesanya</td>
+              <td>09 Jan 2023</td>
+              <td class="dots">...</td>
+            </tr>
+            <tr>
+              <td>Report 004</td>
+              <td>04 Jan 2023</td>
+              <td>Michael Adesanya</td>
+              <td>09 Jan 2023</td>
+              <td class="dots">...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- overlay -->
+      <div class="reportoverlaycontent">
+        <div class="reportpop-up">
+          <h1>Report Parameter</h1>
+          <p>Select parameters you want to include in your report</p>
+          <div class="reportsales-overview">
+            <h4>Sales overview</h4>
+            <p>change</p>
+          </div>
+          <div class="data-date">
+            <p class="datadate-text">Showing data from:</p>
+            <div class="data-date-container">
+              <div class="data-date-box">
+                <p>Wed March 29,2020</p>
+                <img src="../assets/report-date-dropdown.svg" />
+              </div>
+              <div class="data-date-box">
+                <p>Wed March 29,2020</p>
+                <img src="../assets/report-date-dropdown.svg" />
+              </div>
+            </div>
+          </div>
+          <!-- check for current reporting -->
+          <div class="check-current-reporting">
+            <input type="checkbox" />
+            <p>Turn on current reporting</p>
+          </div>
+          <!-- select linkx -->
+          <div class="reportselect-links">
+            <a>Select all</a>&nbsp;&nbsp;
+            <a>Select none</a>
+          </div>
+          <!-- over-layscrollable input checkboxes -->
+          <div class="scrollable-container">
+            <label
+              ><input type="checkbox" name="new_customers" $nbsp /> No of New
+              Customers</label
+            >
+            <label
+              ><input type="checkbox" name="new_corporate_customers" /> No of
+              New Corporate Customers</label
+            >
+            <label
+              ><input type="checkbox" name="new_retail_customers" /> No of New
+              Retail Customers</label
+            >
+            <label
+              ><input type="checkbox" name="active_customers" /> No of Active
+              Customers</label
+            >
+            <label
+              ><input type="checkbox" name="inactive_customers" /> No of
+              Inactive Customers</label
+            >
+            <label
+              ><input type="checkbox" name="customers_active_products" /> No of
+              Customers with Active Products</label
+            >
+            <label
+              ><input type="checkbox" name="customers_inactive_products" /> No
+              of Customers with Inactive Products</label
+            >
+            <label
+              ><input type="checkbox" name="current_prospects" /> No of Current
+              Prospects</label
+            >
+            <label
+              ><input type="checkbox" name="customers_active_products" /> No of
+              Customers with Active Products</label
+            >
+            <label
+              ><input type="checkbox" name="customers_inactive_products" /> No
+              of Customers with Inactive Products</label
+            >
+            <label
+              ><input type="checkbox" name="current_prospects" /> No of Current
+              Prospects</label
+            >
+            <label
+              ><input type="checkbox" name="customers_active_products" /> No of
+              Customers with Active Products</label
+            >
+            <label
+              ><input type="checkbox" name="customers_inactive_products" /> No
+              of Customers with Inactive Products</label
+            >
+            <label
+              ><input type="checkbox" name="current_prospects" /> No of Current
+              Prospects</label
+            >
+          </div>
+          <!-- cancel and create button  -->
+          <div class="cancel-create-button">
+            <button class="cancel">Cancel</button>
+            <button class="create-report">Create Report</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- success pop-up -->
+      <div class="successpopupcontainer">
+      <div class="reportsuccess-popup">
+        <h1>Report created <br />successfully</h1>
+        <img src="../assets/sucess-img.svg" class="successimg" />
+        <button class="success-btn">view</button>
+      </div>
+     </div>
+
+     <!-- <block table for smaller screen -->
+      <div class="block-table">
+       <div class="informationdetail-box">
+        <div class="person-detail">
+        <h6 >Name 
+        </h6>
+         <p>Report 001</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Date Created
+        </h6>
+         <p>04 Jan 2023</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Created by
+        </h6>
+         <p>Michael Adesanya</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Date modified 
+        </h6>
+         <p>09 Jan 2023</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Action
+        </h6>
+         <p>...</p>
+        </div>
+       </div>
+      </div>
+      <div class="block-table">
+       <div class="informationdetail-box">
+        <div class="person-detail">
+        <h6 >Name 
+        </h6>
+         <p>Report 001</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Date Created
+        </h6>
+         <p>04 Jan 2023</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Created by
+        </h6>
+         <p>Michael Adesanya</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Date modified 
+        </h6>
+         <p>09 Jan 2023</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Action
+        </h6>
+         <p>...</p>
+        </div>
+       </div>
+      </div>
+      <div class="block-table">
+       <div class="informationdetail-box">
+        <div class="person-detail">
+        <h6 >Name 
+        </h6>
+         <p>Report 001</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Date Created
+        </h6>
+         <p>04 Jan 2023</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Created by
+        </h6>
+         <p>Michael Adesanya</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Date modified 
+        </h6>
+         <p>09 Jan 2023</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Action
+        </h6>
+         <p>...</p>
+        </div>
+       </div>
+      </div>
+      <div class="block-table">
+       <div class="informationdetail-box">
+        <div class="person-detail">
+        <h6 >Name 
+        </h6>
+         <p>Report 001</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Date Created
+        </h6>
+         <p>04 Jan 2023</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Created by
+        </h6>
+         <p>Michael Adesanya</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Date modified 
+        </h6>
+         <p>09 Jan 2023</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Action
+        </h6>
+         <p>...</p>
+        </div>
+       </div>
+      </div>
+      <div class="block-table">
+       <div class="informationdetail-box">
+        <div class="person-detail">
+        <h6 >Name 
+        </h6>
+         <p>Report 001</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Date Created
+        </h6>
+         <p>04 Jan 2023</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Created by
+        </h6>
+         <p>Michael Adesanya</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Date modified 
+        </h6>
+         <p>09 Jan 2023</p>
+        </div>
+        <div class="person-detail">
+        <h6 >Action
+        </h6>
+         <p>...</p>
+        </div>
+       </div>
+      </div>
+
+
+    </div>
+<script src="../js/report-table.js"></script>
+
+  </body>
+</html>

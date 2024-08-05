@@ -1,0 +1,222 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  background-color: #f0f2fa;
+}
+/* main container */
+.create-prospect-upload-container {
+  width: 100%;
+  padding: 20px;
+}
+.create-prospect-upload-container h1 {
+  font-family: Circular Std;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 31.62px;
+  text-align: left;
+  padding: 10px;
+  color: #585858;
+}
+
+/* prospect list container table */
+.prospect-list-table {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.prospect-list-table h2 {
+  color: #002855;
+  font-family: Circular Std;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 31.62px;
+  text-align: left;
+}
+.prospect-list-table h2 > span {
+  font-family: Circular Std;
+  font-size: 20px;
+  font-weight: 450;
+  line-height: 25.3px;
+  text-align: center;
+  color: #353535;
+}
+.createprospect-tablewrapper {
+  width: 100%;
+  height: 278.5px;
+  margin-top: 10px;
+}
+.createprospecttable {
+  width: 100%;
+}
+.createprospect-tablewrapper thead th {
+  text-align: left;
+  font-family: Circular Std;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15.18px;
+  text-align: left;
+  color: #7f8b94;
+  padding: 5px 0px;
+}
+.createprospect-tablewrapper tbody td {
+  font-family: Circular Std;
+  font-size: 12px;
+  font-weight: 450;
+  line-height: 15.18px;
+  text-align: left;
+  padding: 7px 0px;
+}
+.createprospect-tablewrapper tbody td img {
+  width: 32px;
+  height: 32px;
+}
+.createcancel-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.createcancel-btn .xbtn {
+  color: #002855;
+  height: 56px;
+  padding: 1px 50px;
+  font-family: Circular Std;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #002855;
+  border-radius: 5px;
+}
+.createcancel-btn .yesbtn {
+  height: 56px;
+  padding: 3px 20px;
+  font-family: Circular Std;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  background-color: #002855;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  border:none;
+}
+
+/* the block hidden table style */
+.createProspectBlockTable{
+    display:none;
+    border: none;
+    margin-top: 20px;
+    width:100%;
+    background-color: #fff;
+   
+}
+.informationdetails-box{
+    margin-bottom: 10px;
+    border:2px solid #f0f2fa;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.persons-detail{
+display:flex;
+justify-content: space-between;
+height:34px;
+
+}
+.persons-detail h6{
+    color: #585858;
+}
+.persons-detail p{
+    color: #002855;
+}
+
+/* success popup modal style */
+.successpopupmodalcontainer {
+   visibility:hidden; 
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+  justify-content: center;
+  align-items: center;
+  z-index: 3330;
+  background-color: rgba(39,83,135,0.08);
+}
+.reportsuccess-popup {
+  height: 400px;
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  left: 80;
+  margin-bottom: 100px;
+}
+.reportsuccess-popup h1 {
+  text-align: center;
+  font-family: Circular Std;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40.48px;
+  text-align: center;
+  margin-top: 50px;
+}
+.reportsuccess-popup .successimg {
+  width: 25%;
+  height: 25%;
+  margin: auto;
+}
+.success-btn {
+  margin: auto;
+  width: 185.94px;
+  height: 53.13px;
+  color: #fff;
+  background-color: #002855;
+  border: none;
+}
+
+
+ @media screen and (max-width:555px) {
+    .createprospect-tablewrapper{
+        display:none;
+    }
+    .createProspectBlockTable{
+     display: block;
+    }
+
+
+
+    .createcancel-btn .xbtn {
+        color: #002855;
+        height: 36px;
+        padding: 1px 30px;
+        font-family: Circular Std;
+        font-size: 12px;
+        font-weight: 200;
+        line-height: 10px;
+        background-color: #fff;
+
+      }
+      .createcancel-btn .yesbtn {
+        height: 36px;
+        padding: 3px 30px;
+        font-family: Circular Std;
+        font-size: 12px;
+        font-weight: 200;
+        line-height: 10px; 
+      }
+      .createcancel-btn{
+        gap: 10px;
+      }
+ }
