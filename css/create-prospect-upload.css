@@ -134,6 +134,59 @@ height:34px;
 .persons-detail p{
     color: #002855;
 }
+
+/* success popup modal style */
+.successpopupmodalcontainer {
+   visibility:hidden; 
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+  justify-content: center;
+  align-items: center;
+  z-index: 3330;
+  background-color: rgba(39,83,135,0.08);
+}
+.reportsuccess-popup {
+  height: 400px;
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  left: 80;
+  margin-bottom: 100px;
+}
+.reportsuccess-popup h1 {
+  text-align: center;
+  font-family: Circular Std;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40.48px;
+  text-align: center;
+  margin-top: 50px;
+}
+.reportsuccess-popup .successimg {
+  width: 25%;
+  height: 25%;
+  margin: auto;
+}
+.success-btn {
+  margin: auto;
+  width: 185.94px;
+  height: 53.13px;
+  color: #fff;
+  background-color: #002855;
+  border: none;
+}
+
+
  @media screen and (max-width:555px) {
     .createprospect-tablewrapper{
         display:none;
