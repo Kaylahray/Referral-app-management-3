@@ -17,84 +17,73 @@
       </div>
       <div class="inpTyps">
         <div class="inpTyp">
-          <input type="radio" name="upload" id="individual" />
-          <label for="individual">Individual</label>
+          <input type="radio" name="upload" id="individual" class="radioInput">
+          <label for="individual" class="prospectLbl">Individual</label>
         </div>
         <div class="inpTyp">
-          <input type="radio" name="upload" id="bulkUpload" />
-          <label for="bulkUpload">Bulk Upload</label>
+          <input type="radio" name="upload" id="bulkUpload" class="radioInput">
+          <label for="bulkUpload" class="prospectLbl">Bulk Upload</label>
         </div>
       </div>
     </div>
     <div class="createProspectFormDiv">
       <form action="" class="createProspectForm">
-        <h4
-          style="
-            color: #32404f;
-            margin-block: 2.5rem;
-            font-weight: 500;
-          "
-        >
-          Fill prospect information
-        </h4>
+        <h4 style="color: #32404F; margin-block: 2.5rem; font-weight: 500;">Fill prospect information</h4>
         <div class="prospectInpFormPDiv">
           <div class="prospectInpChildDiv">
-            <label for="fName">First Name</label>
-            <input type="text" name="fName" id="fName" />
+            <label for="fName" class="prospectLbl">First Name</label>
+            <input type="text" name="fName" id="fName" class="prospectInp">
           </div>
           <div class="prospectInpChildDiv">
-            <label for="lName">Last Name</label>
-            <input type="text" name="lName" id="lName" />
+            <label for="lName" class="prospectLbl">Last Name</label>
+            <input type="text" name="lName" id="lName" class="prospectInp">
           </div>
           <div class="prospectInpChildDiv">
-            <label for="prdct">Product Interest</label>
+            <label for="prdct" class="prospectLbl">Product Interest</label>
             <div>
-              <input type="text" name="prdct" id="prdct" />
-              <i
-                class="fa-solid fa-circle-chevron-down"
-                style="color: #34475e"
-              ></i>
+              <input type="text" name="prdct" id="prdct" class="prospectInp">
+              <i class="fa-solid fa-circle-chevron-down" style="color: #34475E;"></i>
             </div>
           </div>
           <div class="prospectInpChildDiv">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" />
+            <label for="email" class="prospectLbl">Email</label>
+            <input type="email" name="email" id="email" class="prospectInp">
           </div>
           <div class="prospectInpChildDiv">
-            <label for="phoneNo">Phone Number</label>
-            <input type="text" name="phoneNo" id="phoneNo" />
+            <label for="phoneNo" class="prospectLbl">Phone Number</label>
+            <input type="text" name="phoneNo" id="phoneNo" class="prospectInp">
           </div>
           <div class="prospectInpChildDiv location">
             <div class="">
-              <label for="state">State</label>
-              <input type="text" name="state" id="state" />
+              <label for="state" class="prospectLbl">State</label>
+              <input type="text" name="state" id="state" class="prospectInp">
             </div>
             <div class="">
-              <label for="city">City</label>
-              <input type="text" name="city" id="city" />
+              <label for="city" class="prospectLbl">City</label>
+              <input type="text" name="city" id="city" class="prospectInp">
             </div>
           </div>
           <div class="prospectInpChildDiv">
-            <label for="ocptn">Occupation</label>
-            <input type="text" name="ocptn" id="ocptn" />
+            <label for="ocptn" class="prospectLbl">Occupation</label>
+            <input type="text" name="ocptn" id="ocptn" class="prospectInp">
           </div>
           <div class="prospectInpChildDiv">
             <div>
               <span for="gender">Gender</span>
               <div class="genderOpts">
                 <div class="inpTyp">
-                  <input type="radio" name="gender" id="male" />
-                  <label for="male">Male</label>
+                  <input type="radio" name="gender" id="male" class="radioInput">
+                  <label for="male" class="prospectLbl">Male</label>
                 </div>
                 <div class="inpTyp">
-                  <input type="radio" name="gender" id="female" />
-                  <label for="female">Male</label>
+                  <input type="radio" name="gender" id="female" class="radioInput">
+                  <label for="female" class="prospectLbl">Male</label>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <button type="submit" class="createPrspctBtn">
+        <button type="submit" class="createPrspctBtn" id="createPrspctBtn">
           <a href="#">Create Prospect</a>
         </button>
       </form>
