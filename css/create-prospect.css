@@ -49,23 +49,21 @@
   display: flex;
   gap: 10px;
 }
-input[type="text"],
-input[type="email"],
-input[type="radio"] {
+.prospectInp{
   padding: 15px;
   border: 1px solid #7f8b94;
   border-radius: 15px;
   width: 100%;
   outline: none;
 }
-input[type="radio"] {
+.inpTyp input {
   width: auto;
   margin: 3px 3px 0 0;
 }
-input[type="radio"]:hover {
+.inpTyp input:hover {
   cursor: pointer;
 }
-label {
+.prospectLbl {
   margin-block: 10px;
   color: #353535;
 }
@@ -76,16 +74,16 @@ label {
   align-items: center;
   gap: 10px;
 }
-input[type="radio"] {
+.inpTyp input {
   display: none;
 }
-input[type="radio"] + label {
+.inpTyp input + .prospectLbl {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
   user-select: none;
 }
-input[type="radio"] + label::before {
+.inpTyp input + .prospectLbl::before {
   content: "";
   position: absolute;
   left: 0;
@@ -97,7 +95,7 @@ input[type="radio"] + label::before {
   border-radius: 50%;
   background-color: white;
 }
-input[type="radio"]:checked + label::after {
+.inpTyp input:checked + .prospectLbl::after {
   content: "";
   position: absolute;
   left: 5px;
