@@ -1,5 +1,5 @@
 window.onMounted = (callback = () => null) => {
-  setTimeout(callback, 10);
+  callback();
 };
 
 async function loadPage(page) {
@@ -89,6 +89,8 @@ const setPage = async (pagePath, layoutPath) => {
   const layout = parsed.querySelector("body").innerHTML;
   main.innerHTML = layout;
 
+  loadScripts(lHtml, pagePath, "layout");
+
   main.querySelectorAll("a").forEach((a) => {
     if (!a.getAttribute("href")) return;
 
@@ -113,7 +115,11 @@ const setPage = async (pagePath, layoutPath) => {
   handleRefresh();
 };
 
-const loadScripts = (content = "", component = "default") => {
+const loadScripts = (
+  content = "",
+  component = "default",
+  prefix = ""
+) => {
   const parser = new DOMParser();
   const scripts = content.match(
     /<script\b[^>]*>([\s\S]*?)<\/script>/gi
@@ -130,7 +136,7 @@ const loadScripts = (content = "", component = "default") => {
 
   scripts?.forEach((script) => {
     const exist = document.querySelector(
-      `script[component="${component}"]`
+      `script[component="${prefix + component}"]`
     );
 
     if (!exist) {
@@ -143,7 +149,7 @@ const loadScripts = (content = "", component = "default") => {
       tag.async = src.getAttribute("aync");
       tag.type = "text/javascript";
       tag.textContent = src.textContent;
-      tag.setAttribute("component", component);
+      tag.setAttribute("component", prefix + component);
 
       document.querySelector("head").appendChild(tag);
     }
