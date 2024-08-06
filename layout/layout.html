@@ -1,5 +1,8 @@
 <div class="grid-container">
   <header class="header">
+    <div class="menu-icon" onclick="Sidebar()">
+      <p>menu</p>
+    </div>
     <div class="search-container">
       <img src="../assets/search.svg" alt="" />
       <input
@@ -58,3 +61,14 @@
 
   <div class="main-content"></div>
 </div>
+<script>
+  const sidebar = document.getElementById("sidebar");
+  console.log(sidebar);
+  function showSidebar() {
+    sidebar.classList.add("sidebar-visible");
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove("sidebar-visible");
+  }
+</script>
