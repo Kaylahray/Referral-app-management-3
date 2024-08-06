@@ -1,65 +1,72 @@
-if (typeof loadDataReport === "undefined") {
-  const loadDataReport = () => {
-    const ctx = document.getElementById("myChart");
+onMounted((doc) => {
+  const ctx = document.getElementById("myChart").getContext("2d");
 
-    let datasets = [
+  const data = {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+    datasets: [
       {
-        name: "motor",
-        label: "# of Votes",
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1,
-        backgroundColor: "orange",
+        label: "Motor",
+        backgroundColor: "#1f77b4",
+        data: [137, 181, 127, 169, 127, 80, 85],
       },
       {
-        name: "term-life",
-        label: "# of Votes",
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1,
-        backgroundColor: "green",
+        label: "Term Life",
+        backgroundColor: "#ff7f0e",
+        data: [83, 110, 185, 183, 111, 100, 61],
       },
       {
-        label: "# of Votes",
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1,
-        backgroundColor: "blue",
+        label: "Group Life",
+        backgroundColor: "#2ca02c",
+        data: [70, 75, 39, 169, 111, 42, 21],
       },
       {
-        label: "# of Votes",
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1,
-        backgroundColor: "red",
+        label: "Leadway Savings",
+        backgroundColor: "#d62728",
+        data: [68, 113, 154, 150, 153, 153, 127],
       },
-      {
-        label: "# of Votes",
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1,
-        backgroundColor: "purple",
-      },
-    ];
+    ],
+  };
 
-    const getchat = new Chart(ctx, {
-      type: "bar",
-      data: {
-        datasets,
-        labels: [
-          "Blue",
-          "Yellow",
-          "Purple",
-          "Red",
-          "Green",
-          "Orange",
-        ],
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-          },
+  const options = {
+    plugins: {
+      legend: {
+        display: true,
+        position: "right",
+        labels: {
+          usePointStyle: true,
+          boxWidth: 10,
         },
       },
-    });
+      tooltip: {
+        enabled: true,
+      },
+    },
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
+        title: {
+          display: true,
+          text: "Period",
+        },
+      },
+      y: {
+        beginAtZero: true,
+        grid: {
+          borderDash: [5],
+        },
+        title: {
+          display: true,
+          text: "Amount (1000)",
+        },
+      },
+    },
   };
-  loadDataReport();
-} else {
-  loadDataReport();
-}
+
+  new Chart(ctx, {
+    type: "bar",
+    data: data,
+    options: options,
+  });
+});

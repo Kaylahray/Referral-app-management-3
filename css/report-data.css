@@ -48,7 +48,12 @@
 .report-data-sales {
   margin-top: 20px;
 }
-
+.report-data-sales .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid green;
+}
 .report-data-sales h2 {
   font-size: 18px;
   margin-bottom: 10px;

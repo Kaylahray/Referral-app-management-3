@@ -1,6 +1,5 @@
 <!-- <a href="#/report" exact="active-link"> Back to report </a> -->
 
-
 <div class="report-data-container">
   <div class="report-data-header">
     <h1>Reports</h1>
@@ -9,14 +8,17 @@
       <input type="date" id="startDate" />
       <input type="date" id="endDate" />
     </div>
-    <div class="report-data-actions">
-      <button class="report-data-back">Back To Report</button>
-      <button class="report-data-export">Export Report</button>
-    </div>
   </div>
 
   <div class="report-data-sales">
-    <h2>Sales Report</h2>
+    <div class="flex">
+      <h2>Sales Report</h2>
+      <div class="report-data-actions">
+        <button class="report-data-back">Back To Report</button>
+        <button class="report-data-export">Export Report</button>
+      </div>
+    </div>
+    <div class="bottom-line"><div class="bottom-inner"></div></div>
     <div class="report-data-cards">
       <div class="report-data-card">
         <img src="icon1.png" alt="Products Bought Icon" />
@@ -72,8 +74,9 @@
   </div>
 </div>
 
-<div>
+<div id="report-data">
   report data page
+  <div class="settings"></div>
   <canvas id="myChart"></canvas>
   <!-- your work goes in here -->
 </div>

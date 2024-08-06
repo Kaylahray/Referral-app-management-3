@@ -44,12 +44,13 @@ if (typeof loadReport === "undefined") {
       datasets: [
         {
           label: "Prospect Conversion",
-          data: [200, 450, 300, 600, 700, 500, 400], // Example data
+          data: [120, 400, 210, 800, 300, 550, 550], // Example data
           fill: false,
           borderColor: "#1C64F2", // Line color similar to the image
           tension: 0.4, // Smoother curve
-          pointBackgroundColor: "#1C64F2", // Point color similar to the image
-          pointBorderColor: "#fff", // White border for the points
+          pointBackgroundColor: "transparent", // Point color similar to the image
+          pointBorderColor: "transparent", // White border for the points
+          pointHoverBackgroundColor: "#1C64F2",
           pointBorderWidth: 2,
           pointRadius: 5, // Size of the points
           pointHoverRadius: 7, // Size when hovered
@@ -68,10 +69,10 @@ if (typeof loadReport === "undefined") {
             beginAtZero: true,
             max: 1000, // Adjust based on your data range
             ticks: {
-              stepSize: 100,
+              stepSize: 500,
               font: {
-                size: 12,
-                family: "Arial, sans-serif",
+                size: 11,
+                family: "Circular Std, sans-serif",
               },
               color: "#8E8E93",
             },
@@ -83,8 +84,8 @@ if (typeof loadReport === "undefined") {
           x: {
             ticks: {
               font: {
-                size: 12,
-                family: "Arial, sans-serif",
+                size: 11,
+                family: "Circular Std, sans-serif",
               },
               color: "#8E8E93",
             },
@@ -98,11 +99,17 @@ if (typeof loadReport === "undefined") {
             enabled: true,
             backgroundColor: "#fff",
             titleColor: "#1C64F2",
-            titleFont: { size: 14, family: "Arial, sans-serif" },
+            titleFont: {
+              size: 14,
+              family: "Circular Std, sans-serif",
+            },
             bodyColor: "#000",
             borderColor: "#ddd",
             borderWidth: 1,
-            bodyFont: { size: 12, family: "Arial, sans-serif" },
+            bodyFont: {
+              size: 12,
+              family: "Circular Std, sans-serif",
+            },
             padding: 10,
             displayColors: false,
             callbacks: {
@@ -118,7 +125,7 @@ if (typeof loadReport === "undefined") {
       },
     };
 
-    const conversionChart = new Chart(ctx, config);
+    new Chart(ctx, config);
   };
   loadReport();
 } else {
