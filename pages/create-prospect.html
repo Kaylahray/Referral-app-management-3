@@ -1,6 +1,6 @@
 <!-- <a href="#/prospect" exact="active-link"> cancel button </a> -->
-
-<div>
+<div class="create-prospectSect">
+<div style="position: relative;">
   <h2 class="prospectH2">Create a New Prospect</h2>
   <div class="creationTypOptSect">
     <div class="creationTypOptP" style="color: #34475e">
@@ -118,5 +118,23 @@
       </button>
     </div>
   </div>
+
+  <!-- success alert message -->
+  <div>
+    <!-- your work goes here -->
+    <div class="successPopUpSect" id="successPopUpSect">
+      <h2 class="successAlertMsg">Prospect created <br>successfully</h2>
+      <div class="successImg">
+        <img src="../assets/success.svg" alt="Success popup">
+      </div>
+      <div class="TRMBtnDiv successTRMBtnDiv">
+        <button class="cancelTRMBtn" id="goToRequestBtn">
+          <a href="#/prospect" exact="active-link">Close</a>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="overlay hidden"></div>
+</div>
 </div>
 <script src="/js/create-prospect.js"></script>
