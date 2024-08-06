@@ -71,19 +71,49 @@
 .report-cards .report-card:nth-child(4) {
   background-color: #00b388;
 }
+
 .report-main {
+  display: grid;
+  gap: 20px;
+}
+.report-main-up {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-.report-recent-reports .view-report {
+.report-main-down {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.report-recent-reports,
+.report-top-products,
+.report-top-referrals,
+.report-prospect-conversion,
+.report-top-branches {
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.report-recent-reports .view-report,
+.report-top-products .view-report {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 10px;
+  padding-left: 28px;
+  padding-right: 22px;
+}
+.report-top-products .view-report {
+  margin-bottom: 11px;
+}
+.report-recent-reports .view-report {
   border-bottom: 1px solid #edf2f6;
 }
-
 .report-recent-reports .view-report a {
   font-family: Lato;
   font-size: 10px;
@@ -92,64 +122,116 @@
   text-align: left;
   color: #002855;
   padding: 7px 13px;
-  border-radius: 5px;
   border: 1px solid #002855;
   box-shadow: 0px 4px 20px 0px #eeeeee80;
 }
 
-.report-recent-reports .view-report h3 {
+.report-recent-reports .view-report h3,
+.report-top-products .view-report h3,
+.report-top-referrals h3,
+.report-prospect-conversion h3,
+.report-top-branches h3,
+.report-top-referrals li .number,
+.report-top-branches li .number {
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
   color: #222b45;
 }
-.report-recent-reports,
-.report-top-products {
-  background-color: #fff;
-  padding: 20px 28px 20px 22px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.report-top-referrals h3 {
+  margin-bottom: 16px;
 }
-.report-recent-reports .first-span {
+.report-prospect-conversion h3 {
+  margin-bottom: 10px;
+}
+.report-top-branches h3 {
+  margin-bottom: 23px;
+}
+
+.report-top-referrals li .number,
+.report-top-branches li .number {
+  font-size: 15px;
+}
+.report-top-referrals h3,
+.report-prospect-conversion h3,
+.report-top-branches h3 {
+  padding-left: 28px;
+}
+.report-top-products .view-report {
+  padding-bottom: 8px;
+}
+
+.report-recent-reports .first-span,
+.report-top-referrals .first-span,
+.report-top-branches .first-span {
   display: flex;
   gap: 28px;
   font-size: 13px;
+  align-items: center;
   font-weight: 450;
   line-height: 16px;
-}
-
-.report-recent-reports .date-span {
-  color: #96a5b8;
-  font-family: Circular Std;
-  font-size: 12px;
-  font-weight: 450;
-  line-height: 16px;
-  text-align: center;
-}
-.report-recent-reports h3,
-.report-top-products h3 {
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 20px;
   color: #222b45;
 }
 
+.report-top-referrals .first-span {
+  gap: 7px;
+}
+
+.report-top-branches .first-span {
+  gap: 14px;
+}
+.report-top-branches .first-span .circle {
+  padding: 7px 9px;
+  border-radius: 100%;
+  font-size: 12px;
+  font-weight: 450;
+  line-height: 16px;
+}
+.report-top-branches .first-span .l {
+  background-color: #0070bf;
+}
+.report-top-branches .first-span .p {
+  background-color: #f66b22;
+}
+.report-top-branches .first-span .a {
+  background-color: #47a51a;
+}
+.report-recent-reports .date-span,
+.report-table thead th {
+  color: #96a5b8;
+  font-size: 12px;
+  font-weight: 450;
+  line-height: 16px;
+}
+
 .report-recent-reports ul,
-.report-top-products ul {
+.report-top-referrals ul,
+.report-top-branches ul {
   list-style: none;
 }
 
 .report-recent-reports li,
-.report-top-products li {
+.report-top-referrals li,
+.report-top-branches li {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-block: 10px;
   border-bottom: 1px solid #edf2f6;
 }
+.report-recent-reports li,
+.report-top-referrals li,
+.report-top-branches li {
+  padding-left: 28px;
+}
+.report-recent-reports li,
+.report-top-referrals li,
+.report-top-branches li {
+  padding-right: 22px;
+}
 
-.report-recent-reports button,
-.report-top-products button {
+.report-recent-reports li a,
+.report-top-products .view-report a {
   border: 1px solid #ffffff;
   background-color: #002855;
   padding: 7px 19px;
@@ -160,45 +242,73 @@
   line-height: 12px;
 }
 .report-recent-reports li:last-child,
-.report-top-products li:last-child {
+.report-top-referrals li:last-child,
+.report-top-branches li:last-child {
   border-bottom: none;
-}
-
-.report-top-products .view {
-  padding: 6px 17px 7px 20px;
-  font-family: Lato;
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 12px;
 }
 
 /* Table Styling */
 .report-table {
   width: 100%;
   border-collapse: collapse;
-  font-family: Arial, sans-serif;
+  text-align: left;
 }
 
 .report-table th,
 .report-table td {
-  padding: 10px;
+  padding-block: 10px;
+  border-bottom: 1px solid #edf2f6;
+}
+.report-table td:last-child {
+  padding-right: 22px;
+}
+.report-table td:first-child,
+.report-table th:first-child {
+  padding-left: 28px;
+}
+.report-table tbody tr:last-child {
+  border-bottom: none;
+}
+.report-table th {
+  font-weight: bold;
+  padding-top: 0px;
+  padding-bottom: 6px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
 }
 
-.report-table th {
-  background-color: #f4f4f4;
-  font-weight: bold;
+.report-table tbody tr td:nth-child(1),
+.report-table tbody tr td:nth-child(2) {
+  font-size: 13px;
+  font-weight: 450;
+  line-height: 16px;
+  text-align: left;
+  color: #222b45;
 }
 
 /* Progress Bar Styling */
-
 .report-progress-bar {
-  background-color: #f1eded;
+  height: 1px;
+  max-width: 100%;
+  width: 180px;
+}
+
+.report-progress-bar[data-color="first"] {
+  background-color: #8cfac7;
+}
+.report-progress-bar[data-color="second"] {
+  background-color: #cde7ff;
+}
+
+.report-progress-bar[data-color="third"] {
+  background-color: #c5a8ff;
+}
+
+.report-progress-bar[data-color="fourth"] {
+  background-color: #ffd5a4;
 }
 .report-progress-bar .report-progress {
   width: 0%;
-  height: 5px;
+  height: 100%;
   overflow: hidden;
   background-color: green;
   position: relative;
@@ -210,7 +320,7 @@
   display: inline-block;
   padding: 2px 8px;
   border-radius: 4px;
-  background-color: #e6f7ff;
+  border: 1px solid white;
   color: #007bff;
   font-weight: bold;
 }
