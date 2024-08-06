@@ -48,4 +48,19 @@ onMounted(() => {
     // window.location = "/#/prospect/create-prospect-upload";
     document.querySelector("[prospect-uploaded]")?.click();
   }
+
+  // popping of success alert message
+const createPrspctBtn = document.querySelector("#createPrspctBtn");
+const hidden = document.querySelector(".hidden");
+const successPopUpSect = document.querySelector("#successPopUpSect");
+
+// Add event listener to the generate button
+  createPrspctBtn.addEventListener("click", (e) => {
+  // prevent default
+  e.preventDefault();
+  console.log("button clicked");
+  // Show the popup
+  successPopUpSect.style.display = "flex";
+  hidden.style.display = "block";
+});
 });
