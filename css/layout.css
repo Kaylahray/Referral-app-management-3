@@ -3,6 +3,10 @@
   overflow: hidden !important;
 }
 
+[k-show] {
+  display: none;
+}
+
 /* Grid Layout */
 .grid-container {
   display: grid;

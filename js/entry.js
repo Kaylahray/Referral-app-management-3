@@ -1,5 +1,5 @@
 window.onMounted = (callback = () => null) => {
-  callback();
+  setTimeout(callback, 10);
 };
 
 async function loadPage(page) {

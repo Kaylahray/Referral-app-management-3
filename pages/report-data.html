@@ -1,4 +1,6 @@
 <!-- <a href="#/report" exact="active-link"> Back to report </a> -->
+
+
 <div class="report-data-container">
   <div class="report-data-header">
     <h1>Reports</h1>
@@ -75,72 +77,4 @@
   <canvas id="myChart"></canvas>
   <!-- your work goes in here -->
 </div>
-
-<script>
-  onMounted((doc) => {
-    const ctx = document.getElementById("myChart");
-
-    let datasets = [
-      {
-        name: "motor",
-        label: "# of Votes",
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1,
-        backgroundColor: "orange",
-      },
-      {
-        name: "term-life",
-        label: "# of Votes",
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1,
-        backgroundColor: "green",
-      },
-      {
-        label: "# of Votes",
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1,
-        backgroundColor: "blue",
-      },
-      {
-        label: "# of Votes",
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1,
-        backgroundColor: "red",
-      },
-      {
-        label: "# of Votes",
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1,
-        backgroundColor: "purple",
-      },
-    ];
-
-    const getchat = new Chart(ctx, {
-      type: "bar",
-      data: {
-        datasets,
-        labels: [
-          "Blue",
-          "Yellow",
-          "Purple",
-          "Red",
-          "Green",
-          "Orange",
-        ],
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-          },
-        },
-      },
-    });
-
-    document.onclick = () => {
-      datasets = datasets.filter((e) => e.name !== "motor");
-      console.log(1, datasets);
-      getchat.update();
-    };
-  });
-</script>
+<script src="../js/report-data.js"></script>

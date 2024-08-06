@@ -16,14 +16,16 @@
         </span>
       </div>
       <div class="inpTyps">
-        <div class="inpTyp">
-          <input type="radio" name="upload" id="individual" />
-          <label for="individual">Individual</label>
-        </div>
-        <div class="inpTyp">
-          <input type="radio" name="upload" id="bulkUpload" />
-          <label for="bulkUpload">Bulk Upload</label>
-        </div>
+        <input
+          type="radio"
+          id="html"
+          name="upload"
+          value="indivudal"
+          checked
+        />
+        <label for="html">Indivudal</label><br />
+        <input type="radio" id="css" name="upload" value="bulk" />
+        <label for="css">Bulk Upload</label><br />
       </div>
     </div>
     <div class="createProspectFormDiv">
@@ -94,15 +96,15 @@
             </div>
           </div>
         </div>
-        <button type="submit" class="createPrspctBtn">
-          <a href="#">Create Prospect</a>
+        <button type="button" class="createPrspctBtn">
+          Create Prospect
         </button>
       </form>
     </div>
 
     <!-- Bulk Upload section -->
 
-    <div class="bulkUploadSect">
+    <div class="bulkUploadSect" k-show>
       <h2>Bulk Upload</h2>
       <p class="clxWarningP">
         Please ensure the file is in excel (.XLS) format
@@ -124,8 +126,14 @@
           </div>
         </div>
       </div>
+      <a
+        prospect-uploaded
+        style="display: none"
+        href="#/prospect/create-prospect-upload"
+        >...</a
+      >
       <button type="submit" class="downloadExlBtn">
-        <a href="#">Download excel template</a>
+        Download excel template
       </button>
     </div>
   </div>
