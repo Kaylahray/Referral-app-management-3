@@ -19,7 +19,7 @@
 .settings-container {
   display: flex;
   justify-content: center;
-  gap:15px ;
+  gap: 15px;
   margin: 0 2%;
 }
 
@@ -125,7 +125,8 @@ input::placeholder {
 }
 
 /* =======ACCOUNT INFORMATION FORM STYLE======= */
-.bank-info-wrapper, .account-info-container{
+.bank-info-wrapper,
+.account-info-container {
   background-color: #f8f8f8;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   width: 95%;
@@ -159,13 +160,13 @@ input::placeholder {
   background-color: #e9e9e9;
 }
 
-.acct-info-btn{
+.acct-info-btn {
   display: flex;
   justify-content: flex-end;
   margin-top: 20px;
 }
-.bank-info-container .info-field input{
-  border: 1px solid #7F8B94;
+.bank-info-container .info-field input {
+  border: 1px solid #7f8b94;
   background-color: #fff;
 }
 .bank-info .acct-btn {
@@ -186,13 +187,11 @@ input::placeholder {
 }
 
 /* =======CHANGE PASSWORD FORM STYLE======= */
-.change-password-settings-content {
-  display: none;
-}
+
 .form-wrapper {
   width: 97%;
   height: 474px;
-  margin: 0 7px;
+  margin: 0 auto;
   border-radius: 5px;
   background-color: #f8f8f8;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -201,18 +200,18 @@ input::placeholder {
   align-items: center; /* Center content vertically */
 }
 
-.form-container {
-  max-width: 500px;
-  width: 100%;
-  margin: 5% 0 10% 0;
-}
+/* .form-container {
+  max-width: 100%;
+  width: 500px;
+  margin: 0 auto;
+  
+} */
 
-form,
+/* .form,
 .password-btn {
-  margin: 0 15%;
-}
+} */
 
-form label {
+.form label {
   display: block;
   margin-bottom: 5px;
   font-size: 15px;
@@ -222,7 +221,8 @@ form label {
   color: #000000;
 }
 
-form input {
+.form input {
+  max-width: 100%;
   width: 353px;
   height: 50px;
   border-radius: 5px;
@@ -374,7 +374,7 @@ input:checked + .slider:before {
 
 /* Media query for mobile devices */
 
-@media screen and (min-width: 300px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .settings-container {
     flex-direction: column;
     margin: 0 auto;
@@ -410,42 +410,28 @@ input:checked + .slider:before {
     padding: 20px;
   }
 
-  .bank-info-container {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .info-field {
-    margin-bottom: 3px;
-  }
-
   .info-field input {
+    max-width: 100%;
     width: 230px;
     height: 35px;
   }
-
-  .bank-info .acct-btn {
-    width: 107px;
-    height: 34px;
-    padding: 2px 5px 2px 5px;
-    margin: 0 1% 15% 50px;
-    font-size: 18px;
+  .bank-info-wrapper {
+    padding: 5px;
   }
 
-
-  .form-container form input {
-    width: 100%;
-    height: 40px;
+  .acct-info-btn {
+    justify-content: center;
+    margin-bottom: 15px;
   }
 
-  .info-field input {
-    width: 100%;
-    height: 40px;
-  }
-
-  .password-btn {
-    width: 70%;
+  .form input {
+    width: 250px;
     height: 50px;
+  }
+  .password-btn {
+    width: 100%;
+    height: 50px;
+    padding: 5px 8px;
   }
 
   .section {
@@ -487,5 +473,33 @@ input:checked + .slider:before {
 
   input:checked + .slider:before {
     transform: translateX(15px);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .settings-container {
+    display: block;
+  }
+  .settings-menu {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 17px;
+  }
+  .settings-menu-grid {
+    /* place-content: center; */
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+  }
+
+  .form input {
+    width: 500px;
+    padding: 2% 0 0 3%;
+  }
+  .password-btn {
+    width: 100%;
+    height: 50px;
+    padding: 5px 8px;
   }
 }
