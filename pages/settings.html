@@ -4,32 +4,36 @@
   <div class="settings-container">
     <!-- SETTINGS MENU -->
     <div class="settings-menu">
-      <div class="settings-menu-grid">
-        <!-- ACCOUNT SETTINGS ICON CONTAINER -->
-        <div class="settings-option active" id="account-settings">
-          <img
-            src="/assets/settings-user.svg"
-            alt="Account Settings"
-          />
-          <p>Account Settings</p>
-        </div>
-        <!-- CHANGE PASSWORD ICON CONTAINER -->
-        <div class="settings-option" id="change-password">
-          <img
-            src="/assets/settings-lock.svg"
-            alt="Change Password"
-          />
-          <p>Change Password</p>
-        </div>
-        <!-- NOTIFICATION ICON CONTAINER -->
-        <div class="settings-option" id="notification-settings">
-          <img
-            src="/assets/settings-notification.svg"
-            alt="Notification Settings"
-          />
-          <p>Notification Settings</p>
+
+      <div class="settings-menu-width">
+        <div class="settings-menu-grid">
+          <!-- ACCOUNT SETTINGS ICON CONTAINER -->
+          <div class="settings-option active" id="account-settings">
+            <img
+              src="/assets/settings-user.svg"
+              alt="Account Settings"
+            />
+            <p>Account Settings</p>
+          </div>
+          <!-- CHANGE PASSWORD ICON CONTAINER -->
+          <div class="settings-option" id="change-password">
+            <img
+              src="/assets/settings-lock.svg"
+              alt="Change Password"
+            />
+            <p>Change Password</p>
+          </div>
+          <!-- NOTIFICATION ICON CONTAINER -->
+          <div class="settings-option" id="notification-settings">
+            <img
+              src="/assets/settings-notification.svg"
+              alt="Notification Settings"
+            />
+            <p>Notification Settings</p>
+          </div>
         </div>
       </div>
+
     </div>
 
     <!-- CONTENT CONTAINER -->
@@ -85,37 +89,41 @@
           <!-- Bank Info -->
           <div class="bank-info">
             <h2>Bank Information</h2>
-            <div class="bank-info-container">
-              <div class="info-field">
-                <label for="account-number">Account Number:</label>
-                <input
-                  type="text"
-                  id="account-number"
-                  name="account-number"
-                  placeholder="1236757843"
-                />
+            <div class="bank-info-wrapper">
+              <div class="bank-info-container">
+                <div class="info-field">
+                  <label for="account-number">Account Number:</label>
+                  <input 
+                    type="text"
+                    id="account-number"
+                    name="account-number"
+                    placeholder="1236757843"
+                  />
+                </div>
+                <div class="info-field">
+                  <label for="bank-name">Bank Name:</label>
+                  <input
+                    type="text"
+                    id="bank-name"
+                    name="bank-name"
+                    placeholder=" "
+                  />
+                </div>
+                <div class="info-field">
+                  <label for="bank-account-name"
+                    >Bank Account Name:</label
+                  >
+                  <input
+                    type="text"
+                    id="bank-account-name"
+                    name="bank-account-name"
+                    placeholder="Femi Falana"
+                  />
+                </div>
               </div>
-              <div class="info-field">
-                <label for="bank-name">Bank Name:</label>
-                <input
-                  type="text"
-                  id="bank-name"
-                  name="bank-name"
-                  placeholder=" "
-                />
+              <div class="acct-info-btn">
+                <button class="acct-btn" type="submit">Save</button>
               </div>
-              <div class="info-field">
-                <label for="bank-account-name"
-                  >Bank Account Name:</label
-                >
-                <input
-                  type="text"
-                  id="bank-account-name"
-                  name="bank-account-name"
-                  placeholder="Femi Falana"
-                />
-              </div>
-              <button class="acct-btn" type="submit">Save</button>
             </div>
           </div>
         </div>
