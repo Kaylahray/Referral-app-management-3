@@ -10,7 +10,7 @@ body {
 /* main container */
 .create-prospect-upload-container {
   width: 100%;
-  padding: 20px;
+  padding: 20px 20px 20px 40px;
 }
 .create-prospect-upload-container h1 {
   font-family: Circular Std;
@@ -69,6 +69,7 @@ body {
   line-height: 15.18px;
   text-align: left;
   padding: 7px 0px;
+  border:none;
 }
 .createprospect-tablewrapper tbody td img {
   width: 32px;

@@ -8,7 +8,7 @@ body {
 }
 .report-table-container {
   width: 100%;
-  padding: 0px 20px;
+  padding: 0px 20px 20px 50px;
   background-color: #f0f2fa;
 }
 .report-table-header {
@@ -16,7 +16,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0px 20px 20px;
   height: 100px;
 }
 
@@ -26,6 +25,7 @@ body {
   font-weight: 900;
   line-height: 30.36px;
   margin-bottom: 40px;
+  padding-left: 10px;
 }
 .report-table-header .report-table-header-btn {
   height: Hug (48px) px;
@@ -486,7 +486,7 @@ height:24px;
           padding:15px;
         }
       }
-      @media  screen and (max-width:520px){
+      @media  screen and (max-width:555px){
         .tablewrapper{
             display:none;
         }
