@@ -1,133 +1,140 @@
 <!-- <a href="#/prospect" exact="active-link"> cancel button </a> -->
-
-<div>
-  <h2 class="prospectH2">Create a New Prospect</h2>
-  <div class="creationTypOptSect">
-    <div class="creationTypOptP" style="color: #34475e">
-      <div class="creationTypOptHeader">
-        <h4>Select creation type</h4>
-        <span style="color: #002855">
-          <a
-            href="#/prospect"
-            exact="active-link"
-            style="color: #002855"
-            >Cancel</a
-          >
-        </span>
-      </div>
-      <div class="inpTyps">
-        <div class="inpTyp">
-          <input type="radio" name="upload" id="individual" />
-          <label for="individual">Individual</label>
+<div class=".create-prospectSect">
+  <div style="position: relative;">
+    <h2 class="prospectH2">Create a New Prospect</h2>
+    <div class="creationTypOptSect">
+      <div class="creationTypOptP" style="color: #34475e">
+        <div class="creationTypOptHeader">
+          <h4>Select creation type</h4>
+          <span style="color: #002855">
+            <a href="#/prospect" exact="active-link" style="color: #002855">Cancel</a>
+          </span>
         </div>
-        <div class="inpTyp">
-          <input type="radio" name="upload" id="bulkUpload" />
-          <label for="bulkUpload">Bulk Upload</label>
+        <div class="inpTyps">
+          <div class="inpTyp">
+            <input type="radio" id="html" name="upload" value="indivudal" checked />
+            <label for="html" class="prospectLbl">Indivudal</label><br />
+          </div>
+          <div class="inpTyp">
+            <input type="radio" id="css" name="upload" value="bulk" />
+            <label for="css" class="prospectLbl">Bulk Upload</label><br />
+          </div>
         </div>
       </div>
-    </div>
-    <div class="createProspectFormDiv">
-      <form action="" class="createProspectForm">
-        <h4
-          style="
+      <div class="createProspectFormDiv">
+        <form action="" class="createProspectForm">
+          <h4 style="
             color: #32404f;
             margin-block: 2.5rem;
             font-weight: 500;
-          "
-        >
-          Fill prospect information
-        </h4>
-        <div class="prospectInpFormPDiv">
-          <div class="prospectInpChildDiv">
-            <label for="fName">First Name</label>
-            <input type="text" name="fName" id="fName" />
-          </div>
-          <div class="prospectInpChildDiv">
-            <label for="lName">Last Name</label>
-            <input type="text" name="lName" id="lName" />
-          </div>
-          <div class="prospectInpChildDiv">
-            <label for="prdct">Product Interest</label>
-            <div>
-              <input type="text" name="prdct" id="prdct" />
-              <i
-                class="fa-solid fa-circle-chevron-down"
-                style="color: #34475e"
-              ></i>
+          ">
+            Fill prospect information
+          </h4>
+          <div class="prospectInpFormPDiv">
+            <div class="prospectInpChildDiv">
+              <label for="fName" class="prospectLbl">First Name</label>
+              <input type="text" name="fName" class="prospectInp" id="fName" />
             </div>
-          </div>
-          <div class="prospectInpChildDiv">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" />
-          </div>
-          <div class="prospectInpChildDiv">
-            <label for="phoneNo">Phone Number</label>
-            <input type="text" name="phoneNo" id="phoneNo" />
-          </div>
-          <div class="prospectInpChildDiv location">
-            <div class="">
-              <label for="state">State</label>
-              <input type="text" name="state" id="state" />
+            <div class="prospectInpChildDiv">
+              <label for="lName" class="prospectLbl">Last Name</label>
+              <input type="text" name="lName" class="prospectInp" id="lName" />
             </div>
-            <div class="">
-              <label for="city">City</label>
-              <input type="text" name="city" id="city" />
+            <div class="prospectInpChildDiv">
+              <label for="prdct" class="prospectLbl">Product Interest</label>
+              <div>
+                <input type="text" name="prdct" id="prdct" class="prospectInp" />
+                <i class="fa-solid fa-circle-chevron-down" style="color: #34475e"></i>
+              </div>
             </div>
-          </div>
-          <div class="prospectInpChildDiv">
-            <label for="ocptn">Occupation</label>
-            <input type="text" name="ocptn" id="ocptn" />
-          </div>
-          <div class="prospectInpChildDiv">
-            <div>
-              <span for="gender">Gender</span>
-              <div class="genderOpts">
-                <div class="inpTyp">
-                  <input type="radio" name="gender" id="male" />
-                  <label for="male">Male</label>
-                </div>
-                <div class="inpTyp">
-                  <input type="radio" name="gender" id="female" />
-                  <label for="female">Male</label>
+            <div class="prospectInpChildDiv">
+              <label for="email" class="prospectLbl">Email</label>
+              <input type="email" name="email" id="email" class="prospectInp" />
+            </div>
+            <div class="prospectInpChildDiv">
+              <label for="phoneNo" class="prospectLbl">Phone Number</label>
+              <input type="text" name="phoneNo" id="phoneNo" class="prospectInp" />
+            </div>
+            <div class="prospectInpChildDiv location">
+              <div class="">
+                <label for="state" class="prospectLbl">State</label>
+                <input type="text" name="state" id="state" class="prospectInp" />
+              </div>
+              <div class="">
+                <label for="city" class="prospectLbl">City</label>
+                <input type="text" name="city" id="city" class="prospectInp" />
+              </div>
+            </div>
+            <div class="prospectInpChildDiv">
+              <label for="ocptn" class="prospectLbl">Occupation</label>
+              <input type="text" name="ocptn" id="ocptn" class="prospectInp" />
+            </div>
+            <div class="prospectInpChildDiv">
+              <div>
+                <span for="gender">Gender</span>
+                <div class="genderOpts">
+                  <div class="inpTyp">
+                    <input type="radio" name="gender" id="male" class="prospectInp" />
+                    <label for="male" class="prospectLbl">Male</label>
+                  </div>
+                  <div class="inpTyp">
+                    <input type="radio" name="gender" id="female" class="prospectInp" />
+                    <label for="female" class="prospectLbl">Male</label>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <button type="button" class="createPrspctBtn" id="createPrspctBtn">
+            Create Prospect
+          </button>
+        </form>
+      </div>
+
+      <!-- Bulk Upload section -->
+
+      <div class="bulkUploadSect" k-show>
+        <h2>Bulk Upload</h2>
+        <p class="clxWarningP">
+          Please ensure the file is in excel (.XLS) format
+        </p>
+        <div class="bulkUploadTxtareaDiv">
+          <textarea name="bulkUploadTxtarea" id="bulkUploadTxtarea">
+        </textarea>
+          <div class="positionA">
+            <div class="cloudDiv">
+              <img src="../assets/cloudIcon.svg" alt="" />
+            </div>
+            <div>
+              <label for="attachDoc" id="attachDocLbl"><span style="color: #e6b014">Select file</span> or drag
+                and drop</label>
+              <input type="file" name="attachDoc" id="attachDoc" />
+              <p class="clxWarningP">CSV or .XLSX file</p>
+            </div>
+          </div>
         </div>
-        <button type="submit" class="createPrspctBtn">
-          <a href="#">Create Prospect</a>
+        <a prospect-uploaded style="display: none" href="#/prospect/create-prospect-upload">...</a>
+        <button type="submit" class="downloadExlBtn">
+          Download excel template
         </button>
-      </form>
+      </div>
     </div>
 
-    <!-- Bulk Upload section -->
-
-    <div class="bulkUploadSect">
-      <h2>Bulk Upload</h2>
-      <p class="clxWarningP">
-        Please ensure the file is in excel (.XLS) format
-      </p>
-      <div class="bulkUploadTxtareaDiv">
-        <textarea name="bulkUploadTxtarea" id="bulkUploadTxtarea">
-        </textarea>
-        <div class="positionA">
-          <div class="cloudDiv">
-            <img src="../assets/cloudIcon.svg" alt="" />
-          </div>
-          <div>
-            <label for="attachDoc" id="attachDocLbl"
-              ><span style="color: #e6b014">Select file</span> or drag
-              and drop</label
-            >
-            <input type="file" name="attachDoc" id="attachDoc" />
-            <p class="clxWarningP">CSV or .XLSX file</p>
-          </div>
+    <!-- success alert message -->
+    <div>
+      <!-- your work goes here -->
+      <div class="successPopUpSect" id="successPopUpSect">
+        <h2 class="successAlertMsg">Prospect created <br>successfully</h2>
+        <div class="successImg">
+          <img src="../assets/success.svg" alt="Success popup">
+        </div>
+        <div class="TRMBtnDiv successTRMBtnDiv">
+          <button class="cancelTRMBtn" id="goToRequestBtn">
+            <a href="#/prospect" exact="active-link">Close</a>
+          </button>
         </div>
       </div>
-      <button type="submit" class="downloadExlBtn">
-        <a href="#">Download excel template</a>
-      </button>
     </div>
+    <div class="overlay hidden"></div>
   </div>
 </div>
 <script src="/js/create-prospect.js"></script>

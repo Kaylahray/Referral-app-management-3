@@ -1,3 +1,6 @@
+.create-prospectSect {
+  position: relative;
+}
 .creationTypOptSect {
   margin-inline: 21px;
   padding: 20px 55px;
@@ -6,7 +9,7 @@
   color: #34475e;
 }
 .prospectH2 {
-  margin: 24px 47px;
+  padding: 24px 47px;
 }
 .creationTypOptHeader H4 {
   font-size: 25px;
@@ -46,23 +49,21 @@
   display: flex;
   gap: 10px;
 }
-input[type="text"],
-input[type="email"],
-input[type="radio"] {
+.prospectInp{
   padding: 15px;
   border: 1px solid #7f8b94;
   border-radius: 15px;
   width: 100%;
   outline: none;
 }
-input[type="radio"] {
+.inpTyp input {
   width: auto;
   margin: 3px 3px 0 0;
 }
-input[type="radio"]:hover {
+.inpTyp input:hover {
   cursor: pointer;
 }
-label {
+.prospectLbl {
   margin-block: 10px;
   color: #353535;
 }
@@ -73,16 +74,16 @@ label {
   align-items: center;
   gap: 10px;
 }
-input[type="radio"] {
+.inpTyp input {
   display: none;
 }
-input[type="radio"] + label {
+.inpTyp input + .prospectLbl {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
   user-select: none;
 }
-input[type="radio"] + label::before {
+.inpTyp input + .prospectLbl::before {
   content: "";
   position: absolute;
   left: 0;
@@ -94,7 +95,7 @@ input[type="radio"] + label::before {
   border-radius: 50%;
   background-color: white;
 }
-input[type="radio"]:checked + label::after {
+.inpTyp input:checked + .prospectLbl::after {
   content: "";
   position: absolute;
   left: 5px;
@@ -143,6 +144,12 @@ input[type="radio"]:checked + label::after {
   margin-left: 50%;
   transform: translateX(-50%);
 }
+.createPrspctBtn a,
+.downloadExlBtn a,
+.cancelTRMBtn a {
+  color: #fff;
+  text-decoration: none;
+}
 
 /* textarea file attachment */
 .positionA {
@@ -169,6 +176,49 @@ input[type="radio"]:checked + label::after {
   border-radius: 50%;
   background-color: #f4f4f4;
 }
+
+.successPopUpSect {
+  background-color: #fff;
+  width: 60%;
+  padding-block: 3rem;
+  display: none;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+.successPopUpSect h2 {
+  font-size: 32px;
+}
+.cancelTRMBtn {
+  padding: 17px 45px;
+  /* width: max-content; */
+  color: #fff;
+  background-color: #002855;
+}
+
+/* overlay */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.2) inset;
+  backdrop-filter: blur(1px);
+  z-index: 1;
+}
+.hidden {
+  display: none;
+}
+/* ------------------------------------- */
 /* mobile and tabs */
 @media screen and (max-width: 698px) {
   .prospectInpFormPDiv {
@@ -185,5 +235,8 @@ input[type="radio"]:checked + label::after {
     padding: 18px 30px;
     margin-left: 50%;
     transform: translateX(-50%);
+  }
+  .successPopUpSect {
+    width: 90%;
   }
 }

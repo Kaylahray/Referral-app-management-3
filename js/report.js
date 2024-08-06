@@ -6,25 +6,13 @@ if (typeof loadReport === "undefined") {
     const percentageTexts = document.querySelectorAll(
       ".report-percentage"
     );
-
-    // Loop through each percentageText to set its color based on the data-color attribute
-    percentageTexts.forEach((text) => {
-      const color = text.getAttribute("data-color");
-      if (color) {
-        text.style.color = color;
-        text.style.borderColor = color;
-      }
-    });
-
-    // Loop through each progressBar to set its width and background color based on the data-percentage and data-color attributes
-    progressBars.forEach((bar) => {
-      const percentageText = bar.querySelector(".report-percentage");
+    progressBars.forEach((bar, index) => {
       const color = bar.getAttribute("data-color");
-      let percentage = parseInt(
+      const percentage = parseInt(
         bar.getAttribute("data-percentage"),
         10
       );
-      let width = 0;
+      let width = 0; // Reset width for each progress bar
 
       let interval = setInterval(() => {
         if (width >= percentage) {
@@ -33,12 +21,15 @@ if (typeof loadReport === "undefined") {
           width++;
           bar.style.width = width + "%";
 
-          if (percentageText) {
-            percentageText.textContent = width + "%";
-          }
-
           if (color) {
             bar.style.backgroundColor = color;
+          }
+
+          // Update the percentage text
+          percentageTexts[index].textContent = width + "%";
+          if (color) {
+            percentageTexts[index].style.color = color;
+            percentageTexts[index].style.borderColor = color;
           }
         }
       }, 20); // Speed of the animation
