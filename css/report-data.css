@@ -320,3 +320,291 @@
     margin-left: 2%;
   }
 }
+.report-data-container2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.chart-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.table-container {
+  flex: 1;
+}
+
+/* Updated class name for the report table */
+.sales-report-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sales-report-table thead th {
+  text-align: left;
+  padding: 8px;
+  background-color: #f0f0f0;
+}
+
+.sales-report-table tbody td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.sales-report-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Other existing styles remain the same */
+
+.report-data-container {
+  padding: 20px;
+}
+
+.report-data-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.report-data-date-range {
+  display: flex;
+  align-items: center;
+}
+
+.report-data-date-range label {
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.report-data-date-range input {
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.report-data-actions {
+  display: flex;
+  align-items: center;
+}
+
+.report-data-actions button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #1c64f2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.report-data-actions button.report-data-back {
+  background-color: #f3f4f6;
+  color: #1c64f2;
+}
+
+.report-data-sales {
+  margin-top: 20px;
+}
+.report-data-sales .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.report-data-sales h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.bottom-line {
+  border: 0.5px solid #9f9f9f;
+  height: 1px;
+  width: 100%;
+  margin-block: 20px;
+  display: flex;
+  align-items: center;
+}
+.bottom-line .bottom-inner {
+  border: 2px solid #002855;
+  width: 20%;
+}
+
+.report-data-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.report-data-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-up {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 28px 22px;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  text-wrap: wrap;
+}
+.details h3 {
+  font-size: 45px;
+  font-weight: 900;
+  line-height: 56.92px;
+  color: #585858;
+}
+.details p {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15.18px;
+  color: #7f8b94;
+}
+.details span {
+  color: #585858;
+  font-family: Mulish;
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 10.04px;
+}
+
+.report-data-card img {
+  margin-bottom: 10px;
+}
+
+.report-data-card-info {
+  margin-bottom: 10px;
+}
+
+.report-data-card-info h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.report-data-card-info p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.report-data-card-info span {
+  font-size: 12px;
+  color: #10b981;
+}
+
+.report-data-card-breakdown {
+  background-color: #f9fafb;
+  padding: 13px 24px;
+  border-radius: 0px 0px 5px 5px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.bul1 {
+  display: flex;
+  gap: 3px;
+}
+
+.report-data-card-breakdown .bul1 p {
+  font-family: Mulish;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12.55px;
+  text-align: left;
+}
+.breakdown-1 {
+  background-color: #0277e640; /* Example color for the first card */
+}
+
+.breakdown-2 {
+  background-color: #00b38840;
+}
+.breakdown-2 .bul1 p {
+  color: #06c194;
+}
+
+.breakdown-3 {
+  background-color: #e31a1c33;
+}
+.breakdown-3 .bul1 p {
+  color: #e94849;
+}
+
+.breakdown-4 {
+  background-color: #0000002b; /* Example color for the fourth card */
+}
+.breakdown-4 .bul1 p {
+  color: #000;
+}
+
+.breakdown-1 p {
+  justify-self: end;
+}
+.report-data-card-breakdown .bul1 p span {
+  color: #585858;
+}
+
+#report-data .animatable-table thead,
+#report-data-sec .animatable-table thead {
+  animation-name: hideTableHeader;
+  animation-duration: 1.3s;
+  animation-delay: -1s;
+  animation-timing-function: linear;
+}
+
+@keyframes hideTableHeader {
+  from {
+    position: relative;
+    top: -235px;
+    left: 350px;
+  }
+  to {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
+#report-data,
+#report-data-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 40px;
+  width: 100%;
+  padding: 1rem;
+  overflow-x: scroll;
+  border-radius: 5px;
+  background-color: white;
+  overflow-x: hidden;
+}
+#report-data .chartBox {
+  width: 100%;
+  min-height: 300px;
+  margin: 0 auto;
+}
+#report-data .chartBox > #myChart {
+  width: 100%;
+  height: 300px;
+}
+.chart-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.chart-flex .settings {
+  display: flex;
+  gap: 10px;
+}
+#report-data canvas {
+  margin: 0 auto;
+}

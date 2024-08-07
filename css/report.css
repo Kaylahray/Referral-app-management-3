@@ -1,11 +1,16 @@
 .report-dashboard-container {
   padding: 32px 32px 56px;
 }
+.report-dashboard-container a {
+  border-radius: 5px;
+}
 .report-header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 29px;
   align-items: center;
+}
+.report-header p {
   font-size: 24px;
   font-weight: 900;
   line-height: 30.36px;
@@ -17,10 +22,29 @@
   border: none;
   display: flex;
   margin-top: 26px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20.24px;
   padding: 14px 44px;
   gap: 10px;
   border-radius: 5px;
 }
+
+@media screen and (max-width: 992px) {
+  .report-dashboard-container {
+    padding: 1rem;
+  }
+  .report-create-button {
+    margin-top: 0;
+    padding: 10px 24px;
+  }
+  .report-header p {
+    font-size: 18px;
+    line-height: 20px;
+    color: #585858;
+  }
+}
+
 .report-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -37,24 +61,36 @@
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   justify-content: space-between;
+  min-height: 127px;
+}
+.cardup {
+  flex: 1;
+  display: flex;
 }
 
-.report-card h3 {
+.carddown {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+}
+
+.report-card .cardup h3 {
   font-size: 18px;
   font-weight: 700;
   line-height: 22.77px;
 }
-.report-card p {
+.report-card .carddown p {
   font-family: Circular Std;
   font-size: 60px;
   font-weight: 700;
   line-height: 75.9px;
   align-self: flex-end;
 }
-.report-cards .report-card:first-child p {
+.report-card .carddown .firstp {
   font-size: 20px;
   font-weight: 700;
   line-height: 25.3px;
+  align-self: center;
 }
 .report-cards .report-card:nth-child(1) {
   background-color: #002855;
@@ -87,6 +123,31 @@
   gap: 20px;
 }
 
+@media (min-width: 700px) and (max-width: 1280px) {
+  .report-cards {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 28px;
+    gap: 43px;
+  }
+  .report-main-down {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 699px) {
+  .report-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .report-main-down {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .report-main-up {
+    grid-template-columns: 1fr;
+  }
+}
 .report-recent-reports,
 .report-top-products,
 .report-top-referrals,
@@ -97,6 +158,13 @@
   padding-bottom: 10px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  /* max-width: 90vw; */
+  margin-left: auto;
+  margin-right: auto;
+}
+.report-prospect-conversion .chart {
+  max-width: 100%;
 }
 
 .report-recent-reports .view-report,
@@ -291,7 +359,11 @@
   max-width: 100%;
   width: 180px;
 }
-
+@media screen and (max-width: 1280px) {
+  .report-progress-bar {
+    width: 60%;
+  }
+}
 .report-progress-bar[data-color="first"] {
   background-color: #8cfac7;
 }

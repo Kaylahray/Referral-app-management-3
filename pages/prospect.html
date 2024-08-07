@@ -1,7 +1,7 @@
 <!-- All buttons you will need 👇 -->
 
 <!-- <a href="#/prospect/create-prospect" exact="active-link">
-  create prospect
+  + &nbsp; Create Prospect
 </a>
 <a href="#/prospect/ongoing-prospect" exact="active-link">
   ongoing
@@ -9,6 +9,188 @@
 <a href="#/prospect/ongoing-prospect" exact="active-link"> view </a> -->
 
 <div>
-    <p>prospect page</p>
-<!-- your work goes here -->
+  <!-- your work goes here -->
+  <div class="report-table-container">
+    <!-- report table header -->
+    <div class="report-table-header">
+      <h1>Reports</h1>
+      <button class="report-table-header-btn">
+        <a href="#/prospect/create-prospect" exact="active-link">
+          + &nbsp; Create Prospect
+        </a>
+      </button>
+    </div>
+    <!-- search section -->
+    <div class="searchsection-container" id="prospectSearchContainer">
+      <div class="searchsectionmid-container">
+        <div class="searchname" id="prospectSearchname">
+          <div class="searchbyname">
+            <p class="searchbyname">
+              Search By: Name &nbsp; &nbsp;<img src="../assets/search-dropdown.svg" />
+              &nbsp
+            </p>
+            <input type="text" class="searchinput prospectSearchInp" placeholder="Search name" />
+          </div>
+          <button class="find-btn" id="prospectFindBtn">Find</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- table -->
+
+    <div class="prospectTableNav">
+      <span class="prospectTableNavChild allNav">All
+        <hr>
+      </span>
+      <span class="prospectTableNavChild openNav">Open</span>
+      <span class="prospectTableNavChild closedNav">Closed</span>
+      <span class="prospectTableNavChild ongoingNav">Ongoing</span>
+      <span class="prospectTableNavChild outtaNav">Out of SLA</span>
+    </div>
+    <div class="createprospect-tablewrapper prospectTableWraper" id="prospectTableWraper">
+      <table class="createprospecttable prospectTable" id="prospectTable">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Name &nbsp;<img src="../assets/table dropdown.svg" /></th>
+            <th>
+              Email&nbsp;<img src="../assets/table dropdown.svg" />
+            </th>
+            <th>
+              Phone Number&nbsp;<img src="../assets/table dropdown.svg" />
+            </th>
+            <th>
+              Product Interest&nbsp;<img src="../assets/table dropdown.svg" />
+            </th>
+            <th>
+              Assigned to&nbsp;<img src="../assets/table dropdown.svg" />
+            </th>
+            <th>
+              Date Added&nbsp;<img src="../assets/table dropdown.svg" />
+            </th>
+            <th>
+              Status&nbsp;<img src="../assets/table dropdown.svg" />
+            </th>
+            <th>
+              Action
+            </th>
+
+          </tr>
+        </thead>
+        <tbody id="prospectTableBody">
+          <tr>
+            <td><img src="../assets/avatar-prospect-user.svg" /></td>
+            <td>Nurudeen Ibrahim</td>
+            <td>thendden@gmail.com</td>
+            <td>08014623461</td>
+            <td>Auto Insurance</td>
+            <td>Seyi Olanrewaju</td>
+            <td>01 Jan 2023</td>
+            <td>
+              <span class="statusSpan ongoingNav">
+                <a href="#/prospect/ongoing-prospect" exact="active-link">
+                  Ongoing
+                </a>
+              </span>
+            </td>
+            <td class="viewDropdownP">
+              <img src="../assets/threedots.svg" alt="" class="viewDropdownImg">
+              <div class="ViewDropdown">
+                <a href="#/prospect/ongoing-prospect" exact="active-link"> view </a>
+                <a href="#">Edit</a>
+                <a href="#">Assign</a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="../assets/avatar-prospect-user.svg" /></td>
+            <td>Nurudeen Ibrahim</td>
+            <td>thendden@gmail.com</td>
+            <td>08014623461</td>
+            <td>Auto Insurance</td>
+            <td>Seyi Olanrewaju</td>
+            <td>01 Jan 2023</td>
+            <td>
+              <span class="statusSpan closedNav">Closed</span>
+            </td>
+            <td class="viewDropdownP">
+              <img src="../assets/threedots.svg" alt="" class="viewDropdownImg">
+              <div class="ViewDropdown">
+                <a> view </a>
+                <a href="#">Edit</a>
+                <a href="#">Assign</a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="../assets/avatar-prospect-user.svg" /></td>
+            <td>Nurudeen Ibrahim</td>
+            <td>thendden@gmail.com</td>
+            <td>08014623461</td>
+            <td>Auto Insurance</td>
+            <td>Seyi Olanrewaju</td>
+            <td>01 Jan 2023</td>
+            <td>
+              <span class="statusSpan outtaNav">Out of SLA</span>
+            </td>
+            <td class="viewDropdownP">
+              <img src="../assets/threedots.svg" alt="" class="viewDropdownImg">
+              <div class="ViewDropdown">
+                <a>view</a>
+                <a href="#">Edit</a>
+                <a href="#">Assign</a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="../assets/avatar-prospect-user.svg" /></td>
+            <td>Nurudeen Ibrahim</td>
+            <td>thendden@gmail.com</td>
+            <td>08014623461</td>
+            <td>Auto Insurance</td>
+            <td>Seyi Olanrewaju</td>
+            <td>01 Jan 2023</td>
+            <td>
+              <span class="statusSpan openNav">Open</span>
+            </td>
+            <td class="viewDropdownP">
+              <img src="../assets/threedots.svg" alt="" class="viewDropdownImg">
+              <div class="ViewDropdown">
+                <a>view</a>
+                <a href="#">Edit</a>
+                <a href="#">Assign</a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="tableWrapFooter">
+      <div class="leftTableWrapFooter">
+        <img src="../assets/leftArrow.svg" alt="" style="width: 10px;">
+        <div class="prospectPgCount">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span style="display: flex; gap: 4px;">
+            <span>.</span>
+            <span>.</span>
+          </span>
+          <span>6</span>
+        </div>
+        <img src="../assets/rightArrow.svg" alt="">
+      </div>
+      <div class="rightTableWrapFooter">
+        <span>Views</span>
+        <span class="no15">15 <img src="../assets/arrow-down.svg" alt=""></span>
+        <span>items per page</span>
+        <span style="margin-left: 17.9px;">1 - 15 of 15 Entries</span>
+      </div>
+    </div>
+    </div>
+    
+
+
+  </div>
+
 </div>
+<script src="../js/prospect.js"></script>

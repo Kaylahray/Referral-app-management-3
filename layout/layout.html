@@ -1,7 +1,9 @@
 <div class="grid-container">
   <header class="header">
-    <div class="menu-icon" onclick="ShowSidebar()">
-      <p>menu</p>
+    <div class="menu-icon" data-toggle="#sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
     <div class="search-container">
       <img src="../assets/search.svg" alt="" />
@@ -28,6 +30,7 @@
   </header>
 
   <aside id="sidebar">
+    <div data-toggle="#sidebar" class="close">X</div>
     <img src="../assets/logo.svg" alt="logo" class="logo" />
     <nav id="main-nav" class="sidebar">
       <ul class="sidebar_list_cont">
@@ -62,13 +65,16 @@
   <div class="main-content"></div>
 </div>
 <script>
-  const sidebar = document.getElementById("sidebar");
-  console.log(sidebar);
-  function showSidebar() {
-    sidebar.classList.add("sidebar-visible");
-  }
+  onMounted(() => {
+    const toggle = document.querySelectorAll(
+      '[data-toggle="#sidebar"]'
+    );
 
-  function closeSidebar() {
-    sidebar.classList.remove("sidebar-visible");
-  }
+    toggle.forEach(
+      (e) =>
+        (e.onclick = () => {
+          sidebar.classList.toggle("sidebar-visible");
+        })
+    );
+  });
 </script>
