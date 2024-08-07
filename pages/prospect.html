@@ -21,9 +21,9 @@
       </button>
     </div>
     <!-- search section -->
-    <div class="searchsection-container">
+    <div class="searchsection-container" id="prospectSearchContainer">
       <div class="searchsectionmid-container">
-        <div class="searchname">
+        <div class="searchname" id="prospectSearchname">
           <div class="searchbyname">
             <p class="searchbyname">
               Search By: Name &nbsp; &nbsp;<img src="../assets/search-dropdown.svg" />
@@ -31,7 +31,7 @@
             </p>
             <input type="text" class="searchinput prospectSearchInp" placeholder="Search name" />
           </div>
-          <button class="find-btn">Find</button>
+          <button class="find-btn" id="prospectFindBtn">Find</button>
         </div>
       </div>
     </div>
@@ -39,7 +39,9 @@
     <!-- table -->
 
     <div class="prospectTableNav">
-      <span class="prospectTableNavChild allNav">All <hr></span>
+      <span class="prospectTableNavChild allNav">All
+        <hr>
+      </span>
       <span class="prospectTableNavChild openNav">Open</span>
       <span class="prospectTableNavChild closedNav">Closed</span>
       <span class="prospectTableNavChild ongoingNav">Ongoing</span>
@@ -162,7 +164,30 @@
           </tr>
         </tbody>
       </table>
+      <div class="tableWrapFooter">
+      <div class="leftTableWrapFooter">
+        <img src="../assets/leftArrow.svg" alt="" style="width: 14px;">
+        <div class="prospectPgCount">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span style="display: flex; gap: 4px;">
+            <span>.</span>
+            <span>.</span>
+          </span>
+          <span>6</span>
+        </div>
+        <img src="../assets/rightArrow.svg" alt="">
+      </div>
+      <div class="rightTableWrapFooter">
+        <span>Views</span>
+        <span class="no15">15 <img src="../assets/arrow-down.svg" alt=""></span>
+        <span>items per page</span>
+        <span style="margin-left: 17.9px;">1 - 15 of 15 Entries</span>
+      </div>
     </div>
+    </div>
+    
 
 
   </div>

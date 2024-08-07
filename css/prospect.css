@@ -1,24 +1,68 @@
-.report-table-header-btn a, .ongoingNav a{
-    color: #fff;
+.report-table-header-btn a,
+.ongoingNav a {
+  color: #fff;
 }
-.searchbyname{
-    justify-content: center;
-    text-wrap: nowrap
+.searchbyname {
+  justify-content: center;
+  text-wrap: nowrap;
 }
-.prospectSearchInp{
+.prospectSearchInp {
+  width: 100%;
+  outline: none;
+  padding-left: 1rem;
+}
+@media screen and (max-width: 668px) {
+  #prospectSearchContainer {
+    height: max-content;
+    padding: 0;
+  }
+  
+  .prospectTableWraper{
+    display: block;
+  }
+  
+  #prospectSearchname {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px; /* Optional: Adds space between the input and the button */
+    align-items: center;
     width: 100%;
-    outline: none;
-    padding-left: 1rem;
+  }
+  
+  .searchbyname {
+    display: flex;
+    align-items: center;
+  }
+  
+  .prospectSearchInp {
+    width: 100%;
+    border-radius: 2.841px;
+    padding: 8px;
+border: 0.947px solid rgba(127, 139, 148, 0.50);
+  }
+
+  #prospectFindBtn{
+    height: max-content;
+    padding: 8px 30px;
+  }
 }
+
+
 .prospectTableWraper {
   background-color: #fff;
   padding: 2%;
   margin-top: 0;
   border-radius: 5px;
   max-width: 100%;
-  overflow-x: auto;  /* Enable horizontal scrolling */
+  overflow-x: auto; /* Enable horizontal scrolling */
   scrollbar-width: none;
   -ms-overflow-style: none;
+}
+/* .prospectTableWraper overriding .createprospect-tablewrapper at large screens */
+@media screen and (min-width:1200px){
+  .prospectTableWraper{
+    height: max-content;
+  }
 }
 .prospectTableNav {
   display: flex;
@@ -58,9 +102,13 @@
 .outtaNav {
   background-color: #e30000;
 }
-.prospectTable{
-    width: 100%; /* Remove fixed width to make the table responsive */
+.prospectTable {
+  width: 100%; /* Remove fixed width to make the table responsive */
   min-width: 1163px;
+}
+.prospectTable tr{
+  padding-inline: 15px;
+  border: 1px solid rgba(88, 88, 88, 0.20) !important;
 }
 .statusSpan {
   display: flex;
@@ -74,36 +122,76 @@
 }
 
 /* dropdown on hover div */
-.viewDropdownP{
-    position: relative;
+.viewDropdownP {
+  position: relative;
 }
-.ViewDropdown{
-    position: absolute;
-    top: 60%;
-    right: 60%;
-    width: 111px;
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 9px;
-    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
-    display: none;
-    flex-direction: column;
-    gap: 11px;
-    z-index: 2;
+.ViewDropdown {
+  position: absolute;
+  top: 60%;
+  right: 60%;
+  width: 111px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 9px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  gap: 11px;
+  z-index: 2;
 }
-.ViewDropdown a{
-    color: #353535;
-    font-size: 12px;
+.ViewDropdown a {
+  color: #353535;
+  font-size: 12px;
 }
-.viewDropdownImg:hover{
-    cursor: pointer;
+.viewDropdownImg:hover {
+  cursor: pointer;
 }
+
+/* --------------- table footer ----------------- */
+.tableWrapFooter{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 237px;
+  color: #9f9f9f;
+  font-size: 12px;
+  font-weight: 700;
+}
+.leftTableWrapFooter {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.prospectPgCount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.rightTableWrapFooter{
+  display: flex;
+  align-items: center;
+  gap: 9.7px;
+}
+.no15{
+  border: 1px solid #7F8B94;
+  padding: 5px 7.5px;
+  display: flex;
+  align-items: center;
+  gap: 8.6px;
+}
+.no15 img{
+  width: 5px;
+}
+
 @media screen and (max-width: 600px) {
-    .prospectTableNav .prospectTableNavChild{
-        padding: 5px 3%;
-      }
-      .allNav hr {
-        width: 22px;
-        bottom: 10%;
-      }
+  .prospectTableNav .prospectTableNavChild {
+    padding: 5px 3%;
+  }
+  .allNav hr {
+    width: 22px;
+    bottom: 10%;
+  }
+  .tableWrapFooter{
+    display: none;
+  }
 }
