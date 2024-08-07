@@ -1,0 +1,427 @@
+.ongoingProspectContainer {
+  padding: 0px 20px 30px 40px;
+}
+.ongoingProspectHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+.ongoingProspectHeader h1 {
+  font-family: Circular Std;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+}
+.ongoingProspectImgWithText {
+  display: flex;
+  padding-top: 50px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-family: Circular Std;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+}
+.profileCard {
+  width: 100%;
+  display: flex;
+  padding: 10px 40px;
+  background-color: #fff;
+  gap: 50px;
+  border-radius: 5px;
+}
+.profileHeader > img {
+  width: 120px;
+  height: 140px;
+}
+.profileHeader > h2 {
+  font-family: Circular Std;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 25.3px;
+  text-align: center;
+  color: #353535;
+}
+.profileDetails {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 10px;
+}
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.profileName > h2 {
+  font-family: Circular Std;
+  font-size: 10px;
+  font-weight: 450;
+  line-height: 12.65px;
+  text-align: left;
+  color: #7a7c87;
+}
+.profileName > p {
+  font-family: Circular Std;
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 17.71px;
+  text-align: left;
+  color: #353535;
+}
+.startAChat {
+  height: 45px;
+  padding: 0px 40px;
+  border: 1px solid #002855;
+  font-family: Circular Std;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18.97px;
+  text-align: left;
+  color: #002855;
+}
+
+.activityChatButton {
+  width: 100%;
+  margin-top: 20px;
+}
+.activityButton {
+  width: 142px;
+  height: 43px;
+  font-family: Circular Std;
+  font-size: 12px;
+  font-weight: 700;
+  color: #002855;
+  border-bottom: 4px solid #002855;
+  background-color: #fff;
+  border-radius: 2px;
+}
+.chatButton {
+  width: 142px;
+  height: 43px;
+  font-family: Circular Std;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #002855;
+  border-radius: 2px;
+}
+/* table style */
+.activitySummaryTable {
+  width: 100%;
+  background-color: #fff;
+  padding: 0px 50px;
+}
+.activitySummaryTable h2 {
+  font-family: Circular Std;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.71px;
+  text-align: left;
+  color: #353535; 
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.summaryTable {
+width:100%;
+}
+.summaryTableContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f1ecec;
+}
+.summaryTableContent > span {
+    font-family: Circular Std;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15.18px;
+    text-align: center;
+    color:#353535;
+    }
+
+.summaryText {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.summaryText > img {
+  width: 9px;
+  height: 9px;
+}
+.summaryText > p {
+  font-family: Circular Std;
+  font-size: 12px;
+  font-weight: 450;
+  line-height: 15.18px;
+  text-align: left;
+  color: #353535;
+  padding: 15px 0px;
+}
+.summaryBtnView {
+  width: 62px;
+  height: 25px;
+  font-family: Circular Std;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  background-color: #002855;
+  color:#fff;
+  border-radius: 2px;
+}
+ /* chatbox style */
+ 
+ .chatContainer{
+    
+    width:100%;
+    background-color: #fff;
+    display:flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    display:none;
+    
+ }
+ .chatBoxCont{
+   display:flex; 
+   flex-direction: column;
+   gap:100px;
+ }
+.firstFlex{
+  display:flex;  
+}
+.chatBox{
+    display:flex;
+    flex-direction: column;
+}
+.dateOngoing{
+    font-family: Circular Std;
+    font-size: 5px;
+    font-weight: 700;
+    line-height: 6.32px;
+    text-align: right;
+    color:#585858
+}
+.chatText{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+.chatText > p{
+    background-color: #f3f5f6;
+    padding :15px;
+    border-radius: 10px 10px 10px 0px ;
+    font-family: Circular Std;
+font-size: 14px;
+font-weight: 450;
+line-height: 17.71px;
+text-align: left;
+color:#000000;
+}
+
+ .secondFlex{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .chatText2{
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+ }
+ .chatText2 >p {
+    background-color: #f3f5f6;
+    padding :15px;
+    border-radius: 10px 10px 0px 10px ;
+    font-family: Circular Std;
+    font-size: 14px;
+    font-weight: 450;
+    line-height: 17.71px;
+    text-align: left;
+    color:#000000;
+ }
+ .date2{
+    font-family: Circular Std;
+    font-size: 5px;
+    font-weight: 700;
+    line-height: 6.32px;
+    text-align: left;
+    color:#585858; 
+ }
+
+ /* input style */
+ .inputContainer {
+    display: flex;
+    align-items: center;
+    background-color: #F0F2FA;
+    border-radius: 50px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin:0px auto;
+    padding: 30px 40px;
+     height: 53px;
+
+
+}
+.inputContainer img {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+
+}
+.inputContainer input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 16px;
+    background: #F0F2FA
+}
+.inputOverallContainer{  
+    display:none;
+    width:100%;
+    background-color: #fff;
+    padding-top: 30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+   
+}
+
+@media screen and (max-width:1300px){
+    .startAChat {
+        height: 45px;
+        padding: 0px 30px;
+        font-size: 8px;
+        font-weight: 200;
+        line-height: 7.97px;        
+}
+
+}
+@media screen and (max-width:1100px){
+.topImg{
+display: none;
+}
+}
+@media screen and (max-width: 847px) {
+.profileCard{
+    flex-direction: column;
+}
+.profileHeader{
+    padding-left: 50px;
+}
+.profileHeader > h2{
+    text-align: left;
+}
+.ongoingProspectImgWithText {
+    padding-top: 0px;
+}
+}
+@media screen and (max-width: 678px) {
+    .profileDetails {
+        flex-direction: column;
+    }
+    .profileHeader{
+        padding-left: 0px;
+    }
+    .profileDetails {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 20px;
+    }
+    .detailItem {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 calc(50% - 10px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+    .startAChat{
+        width:120px;
+    }  
+    
+}
+
+@media screen and (max-width: 560px){
+    .summaryTable {
+        display: flex;
+        flex-direction: column;
+    }   
+    .summaryTableContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        border-radius: 5px;
+        background-color: #fff;
+        margin-bottom: 20px;
+    }
+    .summaryTableContent > span{
+        /* justify-content: flex-start; */
+        text-align: left;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .chatText > img, .chatText2 >img{
+        width:30px;
+        height:30px;
+    }
+    .chatText > p, .chatText2 >p {   
+        font-size: 7px;
+        font-weight: 450;
+        line-height: 11.71px;
+        text-align: left;
+        color: #000000;
+}
+.inputContainer {
+    padding:10px;
+}
+
+}
+
+
+@media screen and (max-width: 400px){
+    .profileDetails {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .detailItem {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+    .chatButton {
+        width:120px
+    }
+    .activityButton{
+        width:120px;
+    }
+    .inputContainer> img{
+        margin:0px 3px;
+    }
+}
+@media screen and (max-width:361px){
+    .inputContainer>input {
+        width:150px
+    }
+}
+

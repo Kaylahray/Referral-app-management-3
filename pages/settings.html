@@ -1,1 +1,327 @@
+<link rel="stylesheet" href="/css/settings.css" />
+<div class="container">
+  <h1>Settings</h1>
 
+  <div class="settings-container">
+    <!-- SETTINGS MENU -->
+    <div class="settings-menu">
+
+      <div class="settings-menu-width">
+        <div class="settings-menu-grid">
+          <!-- ACCOUNT SETTINGS ICON CONTAINER -->
+          <div class="settings-option active" id="account-settings">
+            <img
+              src="/assets/settings-user.svg"
+              alt="Account Settings"
+            />
+            <p>Account Settings</p>
+          </div>
+          <!-- CHANGE PASSWORD ICON CONTAINER -->
+          <div class="settings-option" id="change-password">
+            <img
+              src="/assets/settings-lock.svg"
+              alt="Change Password"
+            />
+            <p>Change Password</p>
+          </div>
+          <!-- NOTIFICATION ICON CONTAINER -->
+          <div class="settings-option" id="notification-settings">
+            <img
+              src="/assets/settings-notification.svg"
+              alt="Notification Settings"
+            />
+            <p>Notification Settings</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CONTENT CONTAINER -->
+    <div class="content-container">
+      <!-- ACCOUNT INFORMATION CONTAINER -->
+      <div
+        class="content-section account-settings-content"
+        style="display: none"
+      >
+        <div class="account-information-container">
+          <!-- Account Info -->
+          <div class="account-info">
+            <h2>Account Information</h2>
+            <div class="account-info-container">
+              <div class="info-field">
+                <label for="first-name">First Name:</label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first-name"
+                  placeholder="Nurudeen"
+                />
+              </div>
+              <div class="info-field">
+                <label for="last-name">Last Name:</label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  placeholder="Ibrahim"
+                />
+              </div>
+              <div class="info-field">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="thedeens@gmail.com"
+                />
+              </div>
+              <div class="info-field">
+                <label for="phone-number">Phone Number:</label>
+                <input
+                  type="text"
+                  id="phone-number"
+                  name="phone-number"
+                  placeholder="08765413245"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Bank Info -->
+          <div class="bank-info">
+            <h2>Bank Information</h2>
+            <div class="bank-info-wrapper">
+              <div class="bank-info-container">
+                <div class="info-field">
+                  <label for="account-number">Account Number:</label>
+                  <input 
+                    type="text"
+                    id="account-number"
+                    name="account-number"
+                    placeholder="1236757843"
+                  />
+                </div>
+                <div class="info-field">
+                  <label for="bank-name">Bank Name:</label>
+                  <input
+                    type="text"
+                    id="bank-name"
+                    name="bank-name"
+                    placeholder=" "
+                  />
+                </div>
+                <div class="info-field">
+                  <label for="bank-account-name"
+                    >Bank Account Name:</label
+                  >
+                  <input
+                    type="text"
+                    id="bank-account-name"
+                    name="bank-account-name"
+                    placeholder="Femi Falana"
+                  />
+                </div>
+              </div>
+              <div class="acct-info-btn">
+                <button class="acct-btn" type="submit">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHANGE PASSWORD CONTAINER -->
+      <div
+        class="content-section change-password-content"
+        style="display: none"
+      >
+        <h2>Change Password</h2>
+        <div class="form-wrapper">
+          <div id="change-password-form" class="form-container">
+            <form class="form">
+              <label for="old-password">Old Password</label>
+              <input
+                type="password"
+                placeholder="***************************"
+                id="old-password"
+                name="old-password"
+              />
+
+              <label for="new-password">New Password</label>
+              <input
+                type="password"
+                id="new-password"
+                name="new-password"
+                placeholder="***************************"
+              />
+
+              <label for="confirm-password"
+                >Confirm New Password</label
+              >
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                placeholder="***************************"
+              />
+            </form>
+            <button class="password-btn" type="submit">Save</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- NOTIFICATION CONTAINER -->
+      <div
+        class="content-section notification-settings-content"
+        style="display: none"
+      >
+        <h2>Notification Settings</h2>
+        <!-- All Notifications -->
+        <div class="section all-notifications">
+          <h3>All Notifications</h3>
+          <div class="all-notification-header">
+            <span>Email</span>
+            <span>Push</span>
+          </div>
+          <div class="toggle-group">
+            <div class="toggle-label">
+              <p>Receive all notifications</p>
+            </div>
+            <div class="toggle-switch">
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider"></span>
+              </label>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- Chats -->
+        <div class="section chats">
+          <h3>Chats</h3>
+          <div class="all-notification-header">
+            <span>Email</span>
+            <span>Push</span>
+          </div>
+          <div class="toggle-group">
+            <div class="toggle-label">
+              <p>Receive new chat messages</p>
+            </div>
+            <div class="toggle-switch">
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider"></span>
+              </label>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="toggle-group">
+            <div class="toggle-label">
+              <p>Receive new inbox mail</p>
+            </div>
+            <div class="toggle-switch">
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider"></span>
+              </label>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- Prospect -->
+        <div class="section prospect">
+          <h3>Prospect</h3>
+          <div class="all-notification-header">
+            <span>Email</span>
+            <span>Push</span>
+          </div>
+          <div class="toggle-group">
+            <div class="toggle-label">
+              <p>New prospect created</p>
+            </div>
+            <div class="toggle-switch">
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider"></span>
+              </label>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="toggle-group">
+            <div class="toggle-label">
+              <p>New prospect activity</p>
+            </div>
+            <div class="toggle-switch">
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider"></span>
+              </label>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="toggle-group">
+            <div class="toggle-label">
+              <p>Prospect has exceeded SLA</p>
+            </div>
+            <div class="toggle-switch">
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider"></span>
+              </label>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="toggle-group">
+            <div class="toggle-label">
+              <p>New policy created for prospect</p>
+            </div>
+            <div class="toggle-switch">
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider"></span>
+              </label>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="toggle-group">
+            <div class="toggle-label">
+              <p>Prospect has been converted</p>
+            </div>
+            <div class="toggle-switch">
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider"></span>
+              </label>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/settings.js"></script>
+</div>

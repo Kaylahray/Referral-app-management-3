@@ -9,132 +9,223 @@
 
 <div>
   <!-- your work goes in here -->
-<div class="report-dashboard-container">
-  <div class="report-header">
-    <h1>Reports</h1>
-    <button class="report-create-button">
-      <img src="../assets/plus.svg" alt="plus" />
-      <span> Create Report </span>
-    </button>
-  </div>
-  <div class="report-cards">
-    <div class="report-card">
-      <h3>Total Sales</h3>
-      <p>NGN 3,000,000</p>
+  <div class="report-dashboard-container">
+    <div class="report-header">
+      <p>Reports</p>
+      <a class="report-create-button">
+        <img src="../assets/plus.svg" alt="plus" />
+        <span> Create Report </span>
+      </a>
     </div>
-    <div class="report-card">
-      <h3>Total Converts</h3>
-      <p>150</p>
-    </div>
-    <div class="report-card">
-      <h3>Prospects</h3>
-      <p>150</p>
-    </div>
-    <div class="report-card">
-      <h3>Users</h3>
-      <p>150</p>
-    </div>
-  </div>
-  <div class="report-main">
-    <div class="report-recent-reports">
-      <div class="view-report">
-        <h3>Recent Reports</h3>
-        <a>View All </a>
+    <div class="report-cards">
+      <div class="report-card">
+        <div class="cardup">
+          <h3>Total Sales</h3>
+        </div>
+        <div class="carddown">
+          <p class="firstp">NGN 3,000,000</p>
+        </div>
       </div>
+      <div class="report-card">
+        <div class="cardup">
+          <h3>Total Converts</h3>
+        </div>
+        <div class="carddown">
+          <p>150</p>
+        </div>
+      </div>
+      <div class="report-card">
+        <div class="cardup">
+          <h3>Prospects</h3>
+        </div>
+        <div class="carddown">
+          <p>150</p>
+        </div>
+      </div>
+      <div class="report-card">
+        <div class="cardup">
+          <h3>Users</h3>
+        </div>
+        <div class="carddown">
+          <p>150</p>
+        </div>
+      </div>
+    </div>
 
-      <ul>
-        <li>
-          <span class="first-span">01 <span>Report 001</span></span>
-          <span class="date-span">05 Jan 2023</span>
-          <button>View</button>
-        </li>
-        <li>
-          <span class="first-span">02 <span>Report 002</span></span>
-          <span class="date-span">05 Jan 2023</span>
-          <button>View</button>
-        </li>
-        <li>
-          <span class="first-span">03 <span>Report 003</span></span>
-          <span class="date-span">05 Jan 2023</span>
-          <button>View</button>
-        </li>
-        <li>
-          <span class="first-span">04 <span>Report 004</span></span>
-          <span class="date-span">05 Jan 2023</span>
-          <button>View</button>
-        </li>
-      </ul>
-    </div>
-    <div class="report-top-products">
-      <div>
-        <h3>Top Products</h3>
-        <a href="#report/report-data" class="view">View Report</a>
+    <div class="report-main">
+      <div class="report-main-up">
+        <div class="report-recent-reports">
+          <div class="view-report">
+            <h3>Recent Reports</h3>
+            <a href="#/report/report-table" exact="active-link">
+              View All
+            </a>
+          </div>
+
+          <ul>
+            <li>
+              <span class="first-span">01 <span>Report 001</span></span>
+              <span class="date-span">05 Jan 2023</span>
+              <a href="#/report/report-data" exact="active-link">
+                View
+              </a>
+            </li>
+            <li>
+              <span class="first-span">02 <span>Report 002</span></span>
+              <span class="date-span">05 Jan 2023</span>
+              <a href="#/report/report-data" exact="active-link">
+                View
+              </a>
+            </li>
+            <li>
+              <span class="first-span">03 <span>Report 003</span></span>
+              <span class="date-span">05 Jan 2023</span>
+              <a href="#/report/report-data" exact="active-link">
+                View
+              </a>
+            </li>
+            <li>
+              <span class="first-span">04 <span>Report 004</span></span>
+              <span class="date-span">05 Jan 2023</span>
+              <a href="#/report/report-data" exact="active-link">
+                View
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="report-top-products">
+          <div class="view-report">
+            <h3>Top Products</h3>
+            <a href="#/prospect/ongoing-prospect" exact="active-link" class="view2"> View Report </a>
+          </div>
+          <table class="report-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Popularity</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01</td>
+                <td>Motor</td>
+                <td>
+                  <div class="report-progress-bar" data-color="first">
+                    <div class="report-progress" data-percentage="40" data-color=" #00E096"></div>
+                  </div>
+                </td>
+                <td>
+                  <span class="report-percentage" data-color=" #00E096">40%
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>Term Life</td>
+                <td>
+                  <div class="report-progress-bar" data-color="second">
+                    <div class="report-progress" data-percentage="22" data-color="#0095FF"></div>
+                  </div>
+                </td>
+                <td>
+                  <span class="report-percentage" data-color="#0095FF">22%
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>03</td>
+                <td>Group Life</td>
+                <td>
+                  <div class="report-progress-bar" data-color="third">
+                    <div class="report-progress" data-percentage="8" data-color=" #884DFF"></div>
+                  </div>
+                </td>
+                <td>
+                  <span class="report-percentage" data-color=" #884DFF">8%
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>04</td>
+                <td>Leadway Savings</td>
+                <td>
+                  <div class="report-progress-bar" data-color="fourth">
+                    <div class="report-progress" data-percentage="30" data-color="#ff8f0d"></div>
+                  </div>
+                </td>
+                <td>
+                  <span class="report-percentage" data-color="#ff8f0d">30%</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <table class="report-table">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Popularity</th>
-            <th>Percentage</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>01</td>
-            <td>Motor</td>
-            <td>
-              <div class="report-progress-bar">
-                <div
-                  class="report-progress"
-                  data-percentage="40"
-                ></div>
+      <div class="report-main-down">
+        <div class="report-top-referrals">
+          <h3>Top Referrals</h3>
+          <ul>
+            <li>
+              <div class="first-span">
+                <img src="../assets/profile1.svg" alt="" />
+                <span> Esther Abodunrin </span>
               </div>
-            </td>
-            <td><span class="report-percentage">40%</span></td>
-          </tr>
-          <tr>
-            <td>02</td>
-            <td>Term Life</td>
-            <td>
-              <div class="report-progress-bar">
-                <div
-                  class="report-progress"
-                  data-percentage="22"
-                ></div>
+
+              <span class="number">NGN 52,446</span>
+            </li>
+            <li>
+              <div class="first-span">
+                <img src="../assets/profile2.svg" alt="" />
+                <span> Johnny Jack </span>
               </div>
-            </td>
-            <td><span class="report-percentage">22%</span></td>
-          </tr>
-          <tr>
-            <td>03</td>
-            <td>Group Life</td>
-            <td>
-              <div class="report-progress-bar">
-                <div
-                  class="report-progress"
-                  data-percentage="8"
-                ></div>
+              <span class="number">NGN 52,446</span>
+            </li>
+            <li>
+              <div class="first-span">
+                <img src="../assets/profile3.svg" alt="" />
+                <span> Ahmed Koffi </span>
               </div>
-            </td>
-            <td><span class="report-percentage">8%</span></td>
-          </tr>
-          <tr>
-            <td>04</td>
-            <td>Leadway Savings</td>
-            <td>
-              <div class="report-progress-bar">
-                <div
-                  class="report-progress"
-                  data-percentage="30"
-                ></div>
+              <span class="number">NGN 52,446</span>
+            </li>
+          </ul>
+        </div>
+        <div class="report-prospect-conversion">
+          <h3>Prospect Conversion</h3>
+          <canvas id="conversionChart" class="chart"></canvas>
+        </div>
+        <div class="report-top-branches">
+          <h3>Top Branches</h3>
+          <ul>
+            <li>
+              <div class="first-span">
+                <div class="circle l">L</div>
+                <span> Lagos </span>
               </div>
-            </td>
-            <td><span class="report-percentage">30%</span></td>
-          </tr>
-        </tbody>
-      </table>
+              <span class="number">5400</span>
+            </li>
+            <li>
+              <div class="first-span">
+                <div class="circle p">P</div>
+
+                <span> Port Harcourt </span>
+              </div>
+
+              <span class="number">3200</span>
+            </li>
+            <li>
+              <div class="first-span">
+                <div class="circle a">A</div>
+
+                <span> Abuja </span>
+              </div>
+              <span class="number">987</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
+  <script src="../js/report.js"></script>
 </div>
-<script src="/js/report.js"></script>
