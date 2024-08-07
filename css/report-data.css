@@ -47,6 +47,11 @@
   justify-content: space-between;
   align-items: center;
 }
+.report-data-header h1 {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 30.36px;
+}
 
 .report-data-date-range {
   display: flex;
