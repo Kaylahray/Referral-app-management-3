@@ -17,7 +17,7 @@
     padding: 0;
   }
   
-  .prospectTableWraper{
+  #prospectTableWraper{
     display: block;
   }
   
@@ -106,7 +106,7 @@ border: 0.947px solid rgba(127, 139, 148, 0.50);
   width: 100%; /* Remove fixed width to make the table responsive */
   min-width: 1163px;
 }
-.prospectTable tr{
+#prospectTable #prospectTableBody tr{
   padding-inline: 15px;
   border: 1px solid rgba(88, 88, 88, 0.20) !important;
 }

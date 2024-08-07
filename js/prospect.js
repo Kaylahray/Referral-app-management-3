@@ -9,6 +9,8 @@
           // Find the 'ViewDropdown' div within the parent 'td'
           const dropdown = parentTd.querySelector('.ViewDropdown');
           if (dropdown) {
+       
+       
             // Toggle the display property of the dropdown
             dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
           }
