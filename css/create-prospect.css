@@ -30,7 +30,7 @@
 }
 .createProspectFormDiv {
   width: 100%;
-  max-width: 800px;
+  max-width: 100%;
   margin: auto;
 }
 .inpTyps,
@@ -46,10 +46,11 @@
   border-radius: 15px;
 }
 .location {
-  display: flex;
+  display: grid;
   gap: 10px;
+  grid-template-columns: 1fr 1fr;
 }
-.prospectInp{
+.prospectInp {
   padding: 15px;
   border: 1px solid #7f8b94;
   border-radius: 15px;
@@ -238,5 +239,8 @@
   }
   .successPopUpSect {
     width: 90%;
+  }
+  .desktopProp{
+    display: none;
   }
 }
