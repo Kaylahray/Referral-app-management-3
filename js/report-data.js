@@ -1,4 +1,4 @@
-onMounted((doc) => {
+onMounted(() => {
   const ctx = document.getElementById("myChart");
 
   const datasets = [
@@ -30,9 +30,7 @@ onMounted((doc) => {
   };
 
   data.datasets.forEach((set, i) => {
-    const sel = document.querySelector(
-      "#report-data .chart-flex .settings"
-    );
+    const sel = document.querySelector("#report-data .settings");
     const div = document.createElement("div");
     div.classList.add("chart-toggle");
     const el = document.createElement("input");
@@ -48,7 +46,7 @@ onMounted((doc) => {
       getchat.update();
     };
 
-    div.onclick = () => el.click();
+    // div.onclick = (e) => e.target.tagName === "LABEL" && el.click();
 
     div.appendChild(el);
     div.insertAdjacentHTML(
@@ -58,7 +56,7 @@ onMounted((doc) => {
     sel.appendChild(div);
   });
 
-  const getchat = new Chart(ctx, {
+  const chatConfig = {
     data,
     type: "bar",
     options: {
@@ -67,18 +65,29 @@ onMounted((doc) => {
       plugins: {
         legend: {
           display: true,
-          position: "right",
-          align: "center",
+          position: innerWidth > 1023 ? "right" : "bottom",
+          align: innerWidth > 1023 ? "end" : "center",
           labels: {
             usePointStyle: true,
-            boxWidth: 5,
+            boxWidth: 10,
           },
         },
         tooltip: {
           enabled: true,
         },
+        datalabels: {
+          anchor: "end",
+          align: "start",
+          color: "white",
+          display: function (context) {
+            return context.dataset.data[context.dataIndex] > 15;
+          },
+          font: {
+            weight: "bold",
+          },
+          formatter: Math.round,
+        },
       },
-
       scales: {
         x: {
           grid: {
@@ -90,14 +99,6 @@ onMounted((doc) => {
           },
         },
         y: {
-          datalabels: {
-            anchor: "end",
-            align: "top",
-            formatter: (value) => value, // Display the data value
-            font: {
-              weight: "bold",
-            },
-          },
           beginAtZero: true,
           grid: {
             borderDash: [5],
@@ -109,5 +110,19 @@ onMounted((doc) => {
         },
       },
     },
+  };
+
+  Chart.register(ChartDataLabels);
+  const getchat = new Chart(ctx, chatConfig);
+
+  window.addEventListener("resize", function (e) {
+    chatConfig.options.plugins.legend.position =
+      innerWidth > 1023 ? "right" : "bottom";
+    chatConfig.options.plugins.legend.align =
+      innerWidth > 1023 ? "end" : "center";
+
+    getchat.resize();
+    getchat.update();
+    console.log(chatConfig.options.plugins.legend.position);
   });
 });

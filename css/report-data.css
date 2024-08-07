@@ -203,7 +203,12 @@
   border-radius: 5px;
   background-color: white;
 }
-#report-data #myChart {
+#report-data .chartBox {
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+}
+#report-data .chartBox > #myChart {
   width: 100%;
 }
 
