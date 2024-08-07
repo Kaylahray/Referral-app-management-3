@@ -142,10 +142,6 @@ input::placeholder {
   background-color: #f8f8f8;
   border-radius: 5px;
 }
-/* .bank-info-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-} */
 
 .info-field {
   margin-bottom: 5px;
@@ -199,17 +195,6 @@ input::placeholder {
   justify-content: center; /* Center the form-wrapper */
   align-items: center; /* Center content vertically */
 }
-
-/* .form-container {
-  max-width: 100%;
-  width: 500px;
-  margin: 0 auto;
-  
-} */
-
-/* .form,
-.password-btn {
-} */
 
 .form label {
   display: block;
