@@ -204,12 +204,13 @@
   background-color: white;
 }
 #report-data .chartBox {
-  width: 90%;
-  height: 500px;
+  width: 100%;
+  min-height: 300px;
   margin: 0 auto;
 }
 #report-data .chartBox > #myChart {
   width: 100%;
+  height: 300px;
 }
 
 .chart-flex {

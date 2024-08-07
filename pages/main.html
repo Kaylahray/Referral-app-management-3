@@ -23,7 +23,7 @@
         <div class="form-group password-group">
           <div class="label">
             <label for="password">Password</label>
-            <span class="show-password">SHOW</span>
+            <span class="show-password"  id="toggle-password">SHOW</span>
           </div>
           <div class="input-wrapper">
             <input
@@ -31,6 +31,7 @@
               id="password"
               required
               placeholder="enter your password"
+              autocomplete="admin"
             />
             <img src="./assets//lock.svg" alt="" />
           </div>
@@ -43,9 +44,8 @@
 
           <a href="#" class="reset-password">Reset Password</a>
         </div>
-        <button type="submit">
-          <a href="#dashboard-page" class="login-button"> Login</a>
-        </button>
+        <a href="#dashboard-page" class="login-button">Login</a>
+        <!-- <button type="submit" class="login-button">Login</button> -->
       </form>
     </div>
   </div>
@@ -53,3 +53,5 @@
     <img src="./assets/help.svg" class="help" alt="help" />
   </div>
 </div>
+<script src="../js/main.js"></script>
+

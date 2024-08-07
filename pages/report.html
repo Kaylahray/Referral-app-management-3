@@ -11,7 +11,7 @@
   <!-- your work goes in here -->
   <div class="report-dashboard-container">
     <div class="report-header">
-      <h1>Reports</h1>
+      <p>Reports</p>
       <a class="report-create-button">
         <img src="../assets/plus.svg" alt="plus" />
         <span> Create Report </span>
@@ -19,67 +19,84 @@
     </div>
     <div class="report-cards">
       <div class="report-card">
-        <h3>Total Sales</h3>
-        <p>NGN 3,000,000</p>
+        <div class="cardup">
+          <h3>Total Sales</h3>
+        </div>
+        <div class="carddown">
+          <p class="firstp">NGN 3,000,000</p>
+        </div>
       </div>
       <div class="report-card">
-        <h3>Total Converts</h3>
-        <p>150</p>
+        <div class="cardup">
+          <h3>Total Converts</h3>
+        </div>
+        <div class="carddown">
+          <p>150</p>
+        </div>
       </div>
       <div class="report-card">
-        <h3>Prospects</h3>
-        <p>150</p>
+        <div class="cardup">
+          <h3>Prospects</h3>
+        </div>
+        <div class="carddown">
+          <p>150</p>
+        </div>
       </div>
       <div class="report-card">
-        <h3>Users</h3>
-        <p>150</p>
+        <div class="cardup">
+          <h3>Users</h3>
+        </div>
+        <div class="carddown">
+          <p>150</p>
+        </div>
       </div>
     </div>
+
     <div class="report-main">
       <div class="report-main-up">
         <div class="report-recent-reports">
           <div class="view-report">
             <h3>Recent Reports</h3>
-            <a>View All </a>
+            <a href="#/report/report-table" exact="active-link">
+              View All
+            </a>
           </div>
 
           <ul>
             <li>
-              <span class="first-span"
-                >01 <span>Report 001</span></span
-              >
+              <span class="first-span">01 <span>Report 001</span></span>
               <span class="date-span">05 Jan 2023</span>
-              <a>View</a>
+              <a href="#/report/report-data" exact="active-link">
+                View
+              </a>
             </li>
             <li>
-              <span class="first-span"
-                >02 <span>Report 002</span></span
-              >
+              <span class="first-span">02 <span>Report 002</span></span>
               <span class="date-span">05 Jan 2023</span>
-              <a>View</a>
+              <a href="#/report/report-data" exact="active-link">
+                View
+              </a>
             </li>
             <li>
-              <span class="first-span"
-                >03 <span>Report 003</span></span
-              >
+              <span class="first-span">03 <span>Report 003</span></span>
               <span class="date-span">05 Jan 2023</span>
-              <a>View</a>
+              <a href="#/report/report-data" exact="active-link">
+                View
+              </a>
             </li>
             <li>
-              <span class="first-span"
-                >04 <span>Report 004</span></span
-              >
+              <span class="first-span">04 <span>Report 004</span></span>
               <span class="date-span">05 Jan 2023</span>
-              <a>View</a>
+              <a href="#/report/report-data" exact="active-link">
+                View
+              </a>
             </li>
           </ul>
         </div>
         <div class="report-top-products">
           <div class="view-report">
             <h3>Top Products</h3>
-            <a href="#/report/report-data" class="view2"
-              >View Report</a
-            >
+            <a href="#/prospect/ongoing-prospect" exact="active-link" class="view2"> View Report </a>
           </div>
           <table class="report-table">
             <thead>
@@ -96,18 +113,11 @@
                 <td>Motor</td>
                 <td>
                   <div class="report-progress-bar" data-color="first">
-                    <div
-                      class="report-progress"
-                      data-percentage="40"
-                      data-color=" #00E096"
-                    ></div>
+                    <div class="report-progress" data-percentage="40" data-color=" #00E096"></div>
                   </div>
                 </td>
                 <td>
-                  <span
-                    class="report-percentage"
-                    data-color=" #00E096"
-                    >40%
+                  <span class="report-percentage" data-color=" #00E096">40%
                   </span>
                 </td>
               </tr>
@@ -115,20 +125,12 @@
                 <td>02</td>
                 <td>Term Life</td>
                 <td>
-                  <div
-                    class="report-progress-bar"
-                    data-color="second"
-                  >
-                    <div
-                      class="report-progress"
-                      data-percentage="22"
-                      data-color="#0095FF"
-                    ></div>
+                  <div class="report-progress-bar" data-color="second">
+                    <div class="report-progress" data-percentage="22" data-color="#0095FF"></div>
                   </div>
                 </td>
                 <td>
-                  <span class="report-percentage" data-color="#0095FF"
-                    >22%
+                  <span class="report-percentage" data-color="#0095FF">22%
                   </span>
                 </td>
               </tr>
@@ -137,18 +139,11 @@
                 <td>Group Life</td>
                 <td>
                   <div class="report-progress-bar" data-color="third">
-                    <div
-                      class="report-progress"
-                      data-percentage="8"
-                      data-color=" #884DFF"
-                    ></div>
+                    <div class="report-progress" data-percentage="8" data-color=" #884DFF"></div>
                   </div>
                 </td>
                 <td>
-                  <span
-                    class="report-percentage"
-                    data-color=" #884DFF"
-                    >8%
+                  <span class="report-percentage" data-color=" #884DFF">8%
                   </span>
                 </td>
               </tr>
@@ -156,21 +151,12 @@
                 <td>04</td>
                 <td>Leadway Savings</td>
                 <td>
-                  <div
-                    class="report-progress-bar"
-                    data-color="fourth"
-                  >
-                    <div
-                      class="report-progress"
-                      data-percentage="30"
-                      data-color="#ff8f0d"
-                    ></div>
+                  <div class="report-progress-bar" data-color="fourth">
+                    <div class="report-progress" data-percentage="30" data-color="#ff8f0d"></div>
                   </div>
                 </td>
                 <td>
-                  <span class="report-percentage" data-color="#ff8f0d"
-                    >30%</span
-                  >
+                  <span class="report-percentage" data-color="#ff8f0d">30%</span>
                 </td>
               </tr>
             </tbody>
@@ -207,7 +193,7 @@
         </div>
         <div class="report-prospect-conversion">
           <h3>Prospect Conversion</h3>
-          <canvas id="conversionChart" width="100%"></canvas>
+          <canvas id="conversionChart" class="chart"></canvas>
         </div>
         <div class="report-top-branches">
           <h3>Top Branches</h3>
