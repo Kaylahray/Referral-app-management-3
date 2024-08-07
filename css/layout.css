@@ -6,7 +6,9 @@
 [k-show] {
   display: none;
 }
-
+[k-show][i] {
+  display: none !important;
+}
 /* Grid Layout */
 .grid-container {
   display: grid;
