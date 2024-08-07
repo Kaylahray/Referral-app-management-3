@@ -52,16 +52,27 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid green;
 }
 .report-data-sales h2 {
   font-size: 18px;
   margin-bottom: 10px;
 }
+.bottom-line {
+  border: 0.5px solid #9f9f9f;
+  height: 1px;
+  width: 100%;
+  margin-block: 20px;
+  display: flex;
+  align-items: center;
+}
+.bottom-line .bottom-inner {
+  border: 2px solid #002855;
+  width: 20%;
+}
 
 .report-data-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
@@ -69,11 +80,39 @@
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  justify-content: space-between;
+}
+.card-up {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 28px 22px;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  text-wrap: wrap;
+}
+.details h3 {
+  font-size: 45px;
+  font-weight: 900;
+  line-height: 56.92px;
+  color: #585858;
+}
+.details p {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15.18px;
+  color: #7f8b94;
+}
+.details span {
+  color: #585858;
+  font-family: Mulish;
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 10.04px;
 }
 
 .report-data-card img {
@@ -101,24 +140,81 @@
 
 .report-data-card-breakdown {
   background-color: #f9fafb;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 13px 24px;
+  border-radius: 0px 0px 5px 5px;
   margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 
-.report-data-card-breakdown button {
-  background-color: #e5e7eb;
-  color: #1c64f2;
-  border: none;
-  padding: 5px 10px;
-  font-size: 12px;
-  border-radius: 5px;
-  cursor: pointer;
+.bul1 {
+  display: flex;
+  gap: 3px;
 }
 
-.report-data-card-breakdown p {
-  font-size: 12px;
-  margin: 5px 0;
-  color: #6b7280;
+.report-data-card-breakdown .bul1 p {
+  font-family: Mulish;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12.55px;
+  text-align: left;
+}
+.breakdown-1 {
+  background-color: #0277e640; /* Example color for the first card */
+}
+
+.breakdown-2 {
+  background-color: #00b38840;
+}
+.breakdown-2 .bul1 p {
+  color: #06c194;
+}
+
+.breakdown-3 {
+  background-color: #e31a1c33;
+}
+.breakdown-3 .bul1 p {
+  color: #e94849;
+}
+
+.breakdown-4 {
+  background-color: #0000002b; /* Example color for the fourth card */
+}
+.breakdown-4 .bul1 p {
+  color: #000;
+}
+
+.breakdown-1 p {
+  justify-self: end;
+}
+.report-data-card-breakdown .bul1 p span {
+  color: #585858;
+}
+
+#report-data {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 40px;
+  width: 100%;
+  padding: 1rem;
+  overflow-x: scroll;
+  border-radius: 5px;
+  background-color: white;
+}
+#report-data #myChart {
+  width: 100%;
+}
+
+.chart-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.chart-flex .settings {
+  display: flex;
+  gap: 10px;
+}
+#report-data canvas {
+  margin: 0 auto;
 }

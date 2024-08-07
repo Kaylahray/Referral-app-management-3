@@ -1,10 +1,10 @@
-.container {
+/* .container {
   max-width: 1440px;
   width: 100%;
   height: 89vh;
   margin: 0 auto;
   background-color: #f5f5f5;
-}
+} */
 
 .container h1 {
   font-size: 22px;
@@ -19,34 +19,42 @@
 .settings-container {
   display: flex;
   justify-content: center;
+  gap: 15px;
+  margin: 0 2%;
 }
 
 /* Settings-Icons menu div: ie user icon, lock icon & notification bell */
 .settings-menu {
   max-width: 450px;
   width: 330px;
-  height: 673px;
+  /* height: 520px; */
   border-radius: 5px;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+.settings-menu-width {
+  max-width: 100%;
+  width: 100%;
+  padding: 50px 20px;
+}
 
 /* Individual icons container: grids the icons in fractions */
 .settings-menu-grid {
-  width: 126px;
-  height: 105px;
+  max-width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15%;
-  margin: 50px 20px;
+  grid-template-columns: repeat(2, 128px);
+  gap: 10px;
 }
 .settings-option {
+  max-width: 128px;
+  /* width: 128px; */
+  height: 105px;
   border: 1px solid #585858;
-  padding: 30px;
+  padding: 10px;
+  text-align: center;
   cursor: pointer;
   box-shadow: 0px 0px 30px 0px #0000001a;
   border-radius: 5px;
-  margin: 0 auto;
   transition: background-color 0.3s;
 }
 .settings-option.active {
@@ -76,12 +84,12 @@
 /* CONTENT DIV STYLE */
 /* content div: ie content of either acct settings, change password form or notifications */
 .content-container {
-  width: 70%;
-  height: auto;
+  width: 100%;
   border-radius: 5px;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin: 0 15px; /* Center the settings content */
+  /* height: 373px; */
+  /* Center the settings content */
   padding: 0 0 2% 0;
 }
 
@@ -117,33 +125,34 @@ input::placeholder {
 }
 
 /* =======ACCOUNT INFORMATION FORM STYLE======= */
-/* .account-information-container {
-  display: none;
-} */
-.account-info-container,
-.bank-info-container {
+.bank-info-wrapper,
+.account-info-container {
+  background-color: #f8f8f8;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   width: 95%;
   border-radius: 5px;
+  margin: 0 auto;
+  padding: 30px;
+}
+.account-info-container,
+.bank-info-container {
   display: flex;
   flex-wrap: wrap;
-  padding: 30px;
   gap: 5%;
   background-color: #f8f8f8;
-  margin: 0 auto;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-.bank-info-container {
+/* .bank-info-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
+} */
 
 .info-field {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .info-field input {
-  width: 353px;
+  width: 290px;
   height: 49px;
   border-radius: 5px;
   outline: none;
@@ -151,6 +160,15 @@ input::placeholder {
   background-color: #e9e9e9;
 }
 
+.acct-info-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.bank-info-container .info-field input {
+  border: 1px solid #7f8b94;
+  background-color: #fff;
+}
 .bank-info .acct-btn {
   width: 207px;
   height: 64px;
@@ -159,7 +177,6 @@ input::placeholder {
   border-radius: 6px;
   display: block;
   cursor: pointer;
-  margin: 40px 35%;
   background-color: #002855;
   color: #fff;
   font-size: 24px;
@@ -170,13 +187,11 @@ input::placeholder {
 }
 
 /* =======CHANGE PASSWORD FORM STYLE======= */
-.change-password-settings-content {
-  display: none;
-}
+
 .form-wrapper {
   width: 97%;
   height: 474px;
-  margin: 0 7px;
+  margin: 0 auto;
   border-radius: 5px;
   background-color: #f8f8f8;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -185,18 +200,18 @@ input::placeholder {
   align-items: center; /* Center content vertically */
 }
 
-.form-container {
-  max-width: 500px;
-  width: 100%;
-  margin: 5% 0 10% 0;
-}
+/* .form-container {
+  max-width: 100%;
+  width: 500px;
+  margin: 0 auto;
+  
+} */
 
-form,
-button {
-  margin: 0 15%;
-}
+/* .form,
+.password-btn {
+} */
 
-form label {
+.form label {
   display: block;
   margin-bottom: 5px;
   font-size: 15px;
@@ -206,14 +221,15 @@ form label {
   color: #000000;
 }
 
-form input {
+.form input {
+  max-width: 100%;
   width: 353px;
   height: 50px;
   border-radius: 5px;
   border: 1px solid #c4c4c4;
   outline: none;
   margin-bottom: 29px;
-  padding: 2% 0 0 3%; /* Add padding for the placeholder, added in the input cause in the placeholder it moves only vertically */
+  padding: 5% 0 0 3%; /* Add padding for the placeholder, added in the input cause in the placeholder it moves only vertically */
 }
 
 .password-btn {
@@ -243,11 +259,6 @@ form input {
   background-color: #f8f8f8;
   margin: 0 15px 30px;
   padding: 20px;
-  /* max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .notification-settings h2 {
@@ -347,6 +358,7 @@ form input {
   left: -1.5px;
   bottom: -1.5px;
   background-color: white;
+  border: 1px solid #00b388;
   transition: 0.4s;
   border-radius: 50%;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
@@ -360,28 +372,134 @@ input:checked + .slider:before {
   transform: translateX(33px);
 }
 
-@media (max-width: 768px) {
+/* Media query for mobile devices */
+
+@media screen and (max-width: 767px) {
   .settings-container {
     flex-direction: column;
+    margin: 0 auto;
   }
-
   .settings-menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    max-width: 100%;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 17px;
   }
-
-  .content-container {
-    margin-top: 20px;
+  .settings-menu-grid {
+    place-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .settings-option {
-    margin-bottom: 10px;
+    padding: 10px 0;
+    height: 85%;
+  }
+  .settings-option img {
+    margin: 5px 20px 0;
+    width: 30px;
+  }
+
+  .content-container {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .account-info-container,
+  .bank-info-container {
+    padding: 20px;
+  }
+
+  .info-field input {
+    max-width: 100%;
+    width: 230px;
+    height: 35px;
+  }
+  .bank-info-wrapper {
+    padding: 5px;
+  }
+
+  .acct-info-btn {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .form input {
+    width: 250px;
+    height: 50px;
+  }
+  .password-btn {
+    width: 100%;
+    height: 50px;
+    padding: 5px 8px;
+  }
+
+  .section {
+    margin: 0 5px 20px;
+    padding: 10px;
+  }
+  .section h3 {
+    font-size: 15px;
+  }
+
+  .all-notification-header {
+    width: 100%;
+    margin-right: 0;
+    gap: 15px;
+  }
+  .all-notification-header span {
+    font-size: 10px;
+    font-weight: 300;
+  }
+
+  .toggle-group {
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  .toggle-label p {
+    font-size: 10px;
+  }
+
+  .switch {
+    width: 25px;
+    height: 10px;
+  }
+
+  .slider:before {
+    height: 12px;
+    width: 12px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(15px);
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .settings-container {
+    display: block;
+  }
+  .settings-menu {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 17px;
+  }
   .settings-menu-grid {
-    flex-direction: column;
+    /* place-content: center; */
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+  }
+
+  .form input {
+    width: 500px;
+    padding: 2% 0 0 3%;
+  }
+  .password-btn {
+    width: 100%;
+    height: 50px;
+    padding: 5px 8px;
   }
 }

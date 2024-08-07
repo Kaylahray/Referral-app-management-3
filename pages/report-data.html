@@ -20,64 +20,123 @@
     </div>
     <div class="bottom-line"><div class="bottom-inner"></div></div>
     <div class="report-data-cards">
+      <!-- First Card (Products Bought) -->
       <div class="report-data-card">
-        <img src="icon1.png" alt="Products Bought Icon" />
         <div class="report-data-card-info">
-          <h3>134</h3>
-          <p>Products Bought</p>
-          <span>+6</span>
+          <div class="card-up">
+            <img
+              src="../assets/blue.svg"
+              alt="Products Bought Icon"
+            />
+            <div class="details">
+              <h3>134</h3>
+              <p>Products Bought</p>
+            </div>
+            <div class="details">
+              <img src="../assets/greenup.svg" alt="" />
+              <span>-6</span>
+            </div>
+          </div>
         </div>
-        <div class="report-data-card-breakdown">
-          <button>See Breakdown</button>
+        <div class="report-data-card-breakdown breakdown-1">
+          <p>See Breakdown</p>
         </div>
       </div>
 
+      <!-- Second Card (Active Policies) -->
       <div class="report-data-card">
-        <img src="icon2.png" alt="Active Policies Icon" />
         <div class="report-data-card-info">
-          <h3>78</h3>
-          <p>Active Policies</p>
-          <span>+6</span>
+          <div class="card-up">
+            <img
+              src="../assets/green.svg"
+              alt="Active Policies Icon"
+            />
+            <div class="details">
+              <h3>78</h3>
+              <p>Active Policies</p>
+            </div>
+            <div class="details">
+              <img src="../assets/greenup.svg" alt="" />
+              <span>-6</span>
+            </div>
+          </div>
         </div>
-        <div class="report-data-card-breakdown">
-          <p>Corporate: 10</p>
-          <p>Individual: 40</p>
+        <div class="report-data-card-breakdown breakdown-2">
+          <div class="bul1">
+            <img src="../assets/building1.svg" alt="" />
+            <p>Corporate: <span>10</span></p>
+          </div>
+          <div class="bul1">
+            <img src="../assets/building2.svg" alt="" />
+            <p>Individual: <span>40</span></p>
+          </div>
         </div>
       </div>
 
+      <!-- Third Card (Drop Offs) -->
       <div class="report-data-card">
-        <img src="icon3.png" alt="Drop Offs Icon" />
         <div class="report-data-card-info">
-          <h3>20</h3>
-          <p>Drop Offs</p>
-          <span>-6</span>
+          <div class="card-up">
+            <img src="../assets/red.svg" alt="Drop Offs Icon" />
+            <div class="details">
+              <h3>20</h3>
+              <p>Drop Offs</p>
+            </div>
+            <div class="details">
+              <img src="../assets/greenup.svg" alt="" />
+              <span>-6</span>
+            </div>
+          </div>
         </div>
-        <div class="report-data-card-breakdown">
-          <p>Corporate: 5</p>
-          <p>Individual: 15</p>
+        <div class="report-data-card-breakdown breakdown-3">
+          <div class="bul1">
+            <img src="../assets/building1.svg" alt="" />
+            <p>Corporate: <span>5</span></p>
+          </div>
+          <div class="bul1">
+            <img src="../assets/building2.svg" alt="" />
+            <p>Individual: <span>15</span></p>
+          </div>
         </div>
       </div>
 
+      <!-- Fourth Card (In Progress) -->
       <div class="report-data-card">
-        <img src="icon4.png" alt="In Progress Icon" />
         <div class="report-data-card-info">
-          <h3>5</h3>
-          <p>In Progress</p>
-          <span>-6</span>
+          <div class="card-up">
+            <img src="../assets/black.svg" alt="In Progress Icon" />
+            <div class="details">
+              <h3>5</h3>
+              <p>In Progress</p>
+            </div>
+            <div class="details">
+              <img src="../assets/greenup.svg" alt="" />
+              <span>-6</span>
+            </div>
+          </div>
         </div>
-        <div class="report-data-card-breakdown">
-          <p>Corporate: 1</p>
-          <p>Individual: 4</p>
+        <div class="report-data-card-breakdown breakdown-4">
+          <div class="bul1">
+            <img src="../assets/building1.svg" alt="" />
+            <p>Corporate: <span>1</span></p>
+          </div>
+          <div class="bul1">
+            <img src="../assets/building2.svg" alt="" />
+            <p>Individual: <span>4</span></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <div id="report-data">
+    <div class="chart-flex">
+      <div class="settings"></div>
+      <button>incoming</button>
+    </div>
+
+    <canvas id="myChart" width="100%"></canvas>
+    <!-- your work goes in here -->
+  </div>
 </div>
 
-<div id="report-data">
-  report data page
-  <div class="settings"></div>
-  <canvas id="myChart"></canvas>
-  <!-- your work goes in here -->
-</div>
 <script src="../js/report-data.js"></script>

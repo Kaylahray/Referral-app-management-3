@@ -115,7 +115,11 @@
         <div class="chart">
           <h3>Prospect Conversion</h3>
           <!-- Chart placeholder -->
-          <canvas id="conversionChart"></canvas>
+          <canvas
+            class="dashchart"
+            width="100%"
+            id="conversionChart"
+          ></canvas>
         </div>
         <!-- activity section -->
         <div class="activity">
@@ -157,11 +161,11 @@
           label: "Prospect Conversion",
           data: [120, 400, 210, 800, 300, 550, 550], // Example data
           fill: false,
-          borderColor: "#1C64F2", // Line color similar to the image
+          borderColor: "#002855",
           tension: 0.4, // Smoother curve
           pointBackgroundColor: "transparent", // Point color similar to the image
           pointBorderColor: "transparent", // White border for the points
-          pointHoverBackgroundColor: "#1C64F2",
+          pointHoverBackgroundColor: "#E6B014",
           pointBorderWidth: 2,
           pointRadius: 5, // Size of the points
           pointHoverRadius: 7, // Size when hovered
@@ -188,8 +192,7 @@
               color: "#8E8E93",
             },
             grid: {
-              drawBorder: false,
-              color: "#F1F1F2",
+              display: false,
             },
           },
           x: {
@@ -208,12 +211,8 @@
         plugins: {
           tooltip: {
             enabled: true,
+
             backgroundColor: "#fff",
-            titleColor: "#1C64F2",
-            titleFont: {
-              size: 14,
-              family: "Circular Std, sans-serif",
-            },
             bodyColor: "#000",
             borderColor: "#ddd",
             borderWidth: 1,
@@ -221,11 +220,19 @@
               size: 12,
               family: "Circular Std, sans-serif",
             },
-            padding: 10,
+            padding: {
+              top: 4, // Padding for the top side
+              right: 20, // Padding for the right side
+              bottom: 4, // Padding for the bottom side
+              left: 20, // Padding for the left side
+            },
             displayColors: false,
             callbacks: {
               label: function (context) {
                 return context.raw;
+              },
+              title: function () {
+                return ""; // Disable the title by returning an empty string
               },
             },
           },
