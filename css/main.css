@@ -3,7 +3,7 @@
   width: 100%;
   min-height: 100vh;
   justify-content: space-between;
-
+}
   .left {
     width: 50%;
     height: auto;
@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: center;
     background-color: #f0f2fa;
-
+  
     @media screen and (max-width: 768px) {
       z-index: 1;
       display: flex;
@@ -47,20 +47,24 @@
         flex-direction: column;
         gap: 13px;
         h1 {
+          font-size: Circular Std;
           font-size: 48px;
-          font-weight: 700;
+          font-weight: 500;
           line-height: 52.71px;
           color: #585858;
           @media screen and (max-width: 768px) {
             font-size: 30px;
+            color:#fff;
+        
           }
           @media screen and (max-width: 475px) {
             font-size: 22px;
           }
         }
         p {
+          font-family: Circular Std;
           font-size: 18px;
-          font-weight: 450;
+          font-weight: 400;
           line-height: 22.59px;
           color: #afb0b1;
         }
@@ -70,6 +74,7 @@
         margin-top: 10px;
         padding-block: 10px;
         display: flex;
+        font-family: "mulish";
         flex-direction: column;
         gap: 1.2rem;
         .form-group {
@@ -85,13 +90,15 @@
               255,
               1
             ); /* Make it fully opaque on mobile */
-            box-shadow: 0 8px 12px rgba(88, 87, 87, 0.2); /* Add box shadow for better visibility */
+             box-shadow: 0 8px 12px rgba(88, 87, 87, 0.2); /*Add box shadow for better visibility */
           }
           .label {
             display: flex;
+            font-family: "mulish";
             align-items: center;
             justify-content: space-between;
             .show-password {
+              font-family: "Mulish";
               font-size: 10px;
               font-weight: 700;
               line-height: 12.55px;
@@ -113,6 +120,7 @@
 
             input {
               width: 90%;
+
               border: 1px solid #fff;
               padding: 10px 2px;
               border-radius: 5px;
@@ -128,6 +136,7 @@
                 border: 1px solid rgba(255, 122, 0, 0.12);
               }
               &::placeholder {
+                font-family: "mulish";
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 20.08px;
@@ -152,6 +161,7 @@
           align-items: center;
           .checkbox,
           a {
+            font-family: "circular std";
             font-size: 12px;
             font-weight: 400;
             line-height: 15.06px;
@@ -202,6 +212,7 @@
           cursor: pointer;
           font-size: 18px;
           font-weight: 700;
+          font-family: "circular std";
           line-height: 30.12px;
           box-shadow: 0px 40px 70px 0px #ff7a001a;
           transition: background-color 0.3s;
@@ -241,4 +252,5 @@
       right: 51px;
     }
   }
-}
+   
+/* added this */
