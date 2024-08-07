@@ -232,7 +232,6 @@
     background-color: #fff;
     padding: 10px;
     border-radius: 8px;
-    max-height: 200px;
     overflow-y: scroll;
     margin-bottom: 10px;
   }
@@ -257,17 +256,6 @@
   .stats-details {
     display: grid;
     gap: 10px;
-    overflow-x: auto;
-    max-height: 200px;
-  }
-
-  .chart,
-  .activity {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    max-height: 180px;
-    overflow-y: scroll;
   }
 
   .chart h3,
