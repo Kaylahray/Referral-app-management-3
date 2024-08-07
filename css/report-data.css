@@ -14,26 +14,29 @@
   flex: 1;
 }
 
-.report-table {
+/* Updated class name for the report table */
+.sales-report-table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.report-table thead th {
+.sales-report-table thead th {
   text-align: left;
   padding: 8px;
   background-color: #f0f0f0;
 }
 
-.report-table tbody td {
+.sales-report-table tbody td {
   text-align: center;
   padding: 8px;
   border: 1px solid #ddd;
 }
 
-.report-table tbody tr:nth-child(even) {
+.sales-report-table tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
+
+/* Other existing styles remain the same */
 
 .report-data-container {
   padding: 20px;
