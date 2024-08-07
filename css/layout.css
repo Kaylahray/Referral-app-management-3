@@ -49,6 +49,7 @@
   padding-left: 39px;
   gap: 33px;
   padding-top: 12px;
+  color: white;
   padding-bottom: 14px;
   transition: transform 0.3s ease-in-out; /* Adding transition for animation */
 }
