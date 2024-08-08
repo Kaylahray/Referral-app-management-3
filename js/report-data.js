@@ -21,22 +21,22 @@ onMounted(() => {
   const datasets = [
     {
       label: "Motor",
-      backgroundColor: "#1f77b4",
+      backgroundColor: "#8DD3C7",
       data: [137, 181, 127, 169, 127, 80, 85],
     },
     {
       label: "Term Life",
-      backgroundColor: "#ff7f0e",
+      backgroundColor: "#FFFFB3",
       data: [83, 110, 185, 183, 111, 100, 61],
     },
     {
       label: "Group Life",
-      backgroundColor: "#2ca02c",
+      backgroundColor: "#BEBADA",
       data: [70, 75, 39, 169, 111, 42, 21],
     },
     {
       label: "Leadway Savings",
-      backgroundColor: "#d62728",
+      backgroundColor: "#FB8072",
       data: [68, 113, 154, 150, 153, 153, 127],
     },
   ];
@@ -83,7 +83,8 @@ onMounted(() => {
         legend: {
           display: true,
           position: innerWidth > 1023 ? "right" : "bottom",
-          align: innerWidth > 1023 ? "end" : "center",
+          align: innerWidth > 1023 ? "center" : "center",
+
           labels: {
             usePointStyle: true,
             boxWidth: 10,
@@ -95,12 +96,15 @@ onMounted(() => {
         datalabels: {
           anchor: "end",
           align: "start",
-          color: "white",
+          color: "#333333",
+
           display: function (context) {
             return context.dataset.data[context.dataIndex] > 15;
           },
           font: {
-            weight: "bold",
+            weight: "450",
+            size: "11",
+            family: "Circular Std, sans-serif",
           },
           formatter: Math.round,
         },
@@ -110,6 +114,9 @@ onMounted(() => {
           grid: {
             display: true,
           },
+          border: {
+            display: false, // Remove x-axis line
+          },
           title: {
             display: true,
             text: "Period",
@@ -117,9 +124,16 @@ onMounted(() => {
         },
         y: {
           beginAtZero: true,
-          grid: {
-            borderDash: [5],
+          border: {
+            display: false, // Remove x-axis line
           },
+          grid: {
+            display: true,
+            drawTicks: true,
+            tickColor: "#1f2021",
+            tickLength: 7,
+          },
+
           title: {
             display: true,
             text: "Amount (1000)",
@@ -150,28 +164,32 @@ onMounted(() => {
       labels: ["Motor", "Term Life", "Group Life", "Leadway Savings"],
       datasets: [
         {
-          label: "Fee (Net of Probate)", //green
-          data: [10000, 30000, 65023.26, 169302.33],
-          backgroundColor: "rgba(75, 192, 192, 0.6)",
-          borderColor: "rgba(75, 192, 192, 1)",
+          label: "Probate Fee", //purple
+          data: [0, 10000, 10000, 10000],
+          backgroundColor: "#8DA0CB",
+          borderColor: "#8DA0CB",
           borderWidth: 1,
           barThickness: 36,
+          order: 3,
         },
         {
           label: "VAT @ 7.5% of Fee", //orange
           data: [750, 2438.2, 4876.74, 12697.67],
-          backgroundColor: "rgba(255, 159, 64, 0.6)",
-          borderColor: "rgba(255, 159, 64, 1)",
+          backgroundColor: "#FC8D62",
+          borderColor: "#FC8D62",
           borderWidth: 1,
           barThickness: 36,
+          order: 2,
         },
+
         {
-          label: "Probate Fee", //purple
-          data: [0, 10000, 10000, 10000],
-          backgroundColor: "rgba(54, 162, 235, 0.6)",
-          borderColor: "rgba(54, 162, 235, 1)",
+          label: "Fee (Net of Probate)", //green
+          data: [10000, 30000, 65023.26, 169302.33],
+          backgroundColor: "#66C2A5",
+          borderColor: "#66C2A5",
           borderWidth: 1,
           barThickness: 36,
+          order: 1,
         },
       ],
     },
@@ -204,6 +222,7 @@ onMounted(() => {
           grid: {
             display: false,
           },
+
           title: {
             font: {
               size: 7,
@@ -219,6 +238,17 @@ onMounted(() => {
           position: "right",
           labels: {
             usePointStyle: true,
+
+            generateLabels: (chart) => {
+              const labels = chart.data.datasets.map(
+                (dataset, index) => ({
+                  text: dataset.label,
+                  fillStyle: dataset.backgroundColor,
+                  datasetIndex: index,
+                })
+              );
+              return labels.reverse(); // Reverse the labels order for the legend
+            },
           },
         },
         datalabels: {
