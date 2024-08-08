@@ -1,8 +1,7 @@
-const loginButton = document.getElementById("login-button");
+const loginButton = document.querySelector(".login-button");
 const togglePassword = document.getElementById("toggle-password");
 const passwordField = document.getElementById("password");
 const usernameField = document.getElementById("login-id");
-console.log(loginButton)
 loginButton.addEventListener("click", function (event) {
   event.preventDefault(); 
 
@@ -10,6 +9,7 @@ loginButton.addEventListener("click", function (event) {
   var password = passwordField.value;
 
   if (username === "admin" && password === "admin") {
+    console.log("Worked!");
     location.href = "/#/dashboard-page";
   } else {
     alert("Enter admin for both username and password");
