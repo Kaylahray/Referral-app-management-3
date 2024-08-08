@@ -130,7 +130,7 @@ body {
   height: 34px;
 }
 .persons-detail h6 {
-  color: #585858;
+  color: #002855;
 }
 .persons-detail p {
   color: #002855;
@@ -246,6 +246,11 @@ body {
   }
   .createcancel-btn {
     gap: px;
+  }
+  .createcancel-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
   }
 
   .persons-detail p{

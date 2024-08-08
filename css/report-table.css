@@ -422,8 +422,7 @@ td.dots {
   padding: 25px;
 
   background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 .informationdetail-box {
   display: flex;
@@ -438,14 +437,16 @@ td.dots {
 }
 .block-table {
   display: none;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border-radius: 5px;
 }
 .person-detail h6{
   font-size: 8px;
+  color:#002855;
 }
 p.value {
   font-size: 12px;
+  color:#002855;
   
 }
 @media screen and (max-width:1023px) {
@@ -468,9 +469,16 @@ p.value {
     line-height: 20.36px;
     margin-bottom: 0px;
   }
-  @media screen and (max-width: 668px) {
+  @media screen and (max-width:668px) {
     .searchname {
       flex-direction: column;
+    }
+    .report-table-container{
+      padding-left:20px;
+      padding-right:20px;
+    }
+    .report-table-header h1{
+      padding-left: 0px;
     }
     .searchbyname p {
       display: none;
