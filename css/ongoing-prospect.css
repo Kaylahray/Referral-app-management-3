@@ -393,6 +393,7 @@ display: none;
 @media screen and (max-width: 847px) {
 .profileCard{
     flex-direction: column;
+    padding: 10px 20px;
 }
 .profileHeader{
     padding-left: 50px;
@@ -437,11 +438,18 @@ display: none;
     width: 120px;
     height: 30px;
   }
+  .ongoingProspectContainer{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .activityButton {
     width: 120px;
     height: 30px;
   }
-
+  .activitySummaryTable {
+    
+    padding: 0px 20px;
+}
 
   .profileHeader > img {
     width: 100px;
