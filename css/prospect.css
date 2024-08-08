@@ -104,7 +104,7 @@ border: 0.947px solid rgba(127, 139, 148, 0.50);
 }
 .prospectTable {
   width: 100%; /* Remove fixed width to make the table responsive */
-  min-width: 1163px;
+  min-width: 760px;
 }
 #prospectTable #prospectTableBody tr{
   padding-inline: 15px;
