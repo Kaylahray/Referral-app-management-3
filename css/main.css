@@ -1,256 +1,254 @@
 .form_container {
   display: flex;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
+  height: 100vh;
   justify-content: space-between;
 }
-  .left {
-    width: 50%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f0f2fa;
-  
-    @media screen and (max-width: 768px) {
-      z-index: 1;
-      display: flex;
-      width: 100%;
-      opacity: 0.9;
-      background-color: #000;
-    }
+.left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f2fa;
 
-    .left_cont {
-      width: 75%;
-      margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    opacity: 0.9;
+    background-color: #000;
+  }
+
+  .left_cont {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    @media screen and (max-width: 768px) {
+      gap: 30px;
+    }
+    .logoo {
+      width: 80px;
+      height: 80px;
+      margin-top: 0.5rem;
+      @media screen and (min-width: 768px) {
+        align-self: flex-start;
+        width: 108px;
+        height: 100px;
+      }
+    }
+    .heading {
       display: flex;
-      align-items: flex-start;
-      justify-content: center;
+      flex-direction: column;
+      gap: 13px;
+      h1 {
+        font-size: Circular Std;
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 52.71px;
+        color: #585858;
+        @media screen and (max-width: 768px) {
+          font-size: 30px;
+          color: #fff;
+        }
+        @media screen and (max-width: 475px) {
+          font-size: 22px;
+        }
+      }
+      p {
+        font-family: Circular Std;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22.59px;
+        color: #afb0b1;
+      }
+    }
+    form {
+      width: 100%;
+      margin-top: 10px;
+      padding-block: 10px;
+      display: flex;
+      font-family: "mulish";
       flex-direction: column;
       gap: 1.2rem;
-
-      @media screen and (max-width: 768px) {
-        gap: 30px;
-      }
-      .logoo {
-        width: 80px;
-        height: 80px;
-        margin-top: 0.5rem;
-        @media screen and (min-width: 768px) {
-          align-self: flex-start;
-          width: 108px;
-          height: 100px;
+      .form-group {
+        background-color: #fff;
+        position: relative;
+        padding: 18px 10px 16px 30px;
+        box-shadow: 0px 20px 70px 0px #0000000f;
+        border-radius: 5px;
+        @media screen and (max-width: 768px) {
+          background-color: rgba(
+            255,
+            255,
+            255,
+            1
+          ); /* Make it fully opaque on mobile */
+          box-shadow: 0 8px 12px rgba(88, 87, 87, 0.2); /*Add box shadow for better visibility */
         }
-      }
-      .heading {
-        display: flex;
-        flex-direction: column;
-        gap: 13px;
-        h1 {
-          font-size: Circular Std;
-          font-size: 48px;
-          font-weight: 500;
-          line-height: 52.71px;
-          color: #585858;
-          @media screen and (max-width: 768px) {
-            font-size: 30px;
-            color:#fff;
-        
-          }
-          @media screen and (max-width: 475px) {
-            font-size: 22px;
-          }
-        }
-        p {
-          font-family: Circular Std;
-          font-size: 18px;
-          font-weight: 400;
-          line-height: 22.59px;
-          color: #afb0b1;
-        }
-      }
-      form {
-        width: 100%;
-        margin-top: 10px;
-        padding-block: 10px;
-        display: flex;
-        font-family: "mulish";
-        flex-direction: column;
-        gap: 1.2rem;
-        .form-group {
-          background-color: #fff;
-          position: relative;
-          padding: 18px 10px 16px 30px;
-          box-shadow: 0px 20px 70px 0px #0000000f;
-          border-radius: 5px;
-          @media screen and (max-width: 768px) {
-            background-color: rgba(
-              255,
-              255,
-              255,
-              1
-            ); /* Make it fully opaque on mobile */
-             box-shadow: 0 8px 12px rgba(88, 87, 87, 0.2); /*Add box shadow for better visibility */
-          }
-          .label {
-            display: flex;
-            font-family: "mulish";
-            align-items: center;
-            justify-content: space-between;
-            .show-password {
-              font-family: "Mulish";
-              font-size: 10px;
-              font-weight: 700;
-              line-height: 12.55px;
-              color: #002855;
-              cursor: pointer;
-            }
-          }
-          label {
-            display: block;
-            font-size: 16px;
-            margin-bottom: 4px;
-            font-weight: 400;
-            line-height: 20.08px;
-            color: #000;
-          }
-
-          .input-wrapper {
-            position: relative;
-
-            input {
-              width: 90%;
-
-              border: 1px solid #fff;
-              padding: 10px 2px;
-              border-radius: 5px;
-              font-size: 0.9rem;
-              outline: none;
-              background-color: transparent;
-              transition: border 0.6s;
-
-              @media screen and (max-width: 768px) {
-                width: 80%;
-              }
-              &:focus {
-                border: 1px solid rgba(255, 122, 0, 0.12);
-              }
-              &::placeholder {
-                font-family: "mulish";
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 20.08px;
-                padding-left: 2px;
-                color: #afb0b1;
-              }
-            }
-
-            img {
-              position: absolute;
-              right: 10px;
-              top: 50%;
-              transform: translateY(-50%);
-              color: #999;
-            }
-          }
-        }
-
-        .form-options {
+        .label {
           display: flex;
-          justify-content: space-between;
+          font-family: "mulish";
           align-items: center;
-          .checkbox,
-          a {
-            font-family: "circular std";
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 15.06px;
-            color: #7f8b94;
-            text-decoration: none;
-          }
-          a:hover {
-            color: #74b3e3;
+          justify-content: space-between;
+          .show-password {
+            font-family: "Mulish";
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 12.55px;
+            color: #002855;
             cursor: pointer;
           }
-          input[type="checkbox"] {
-            box-sizing: border-box;
-            width: 12px;
-            height: 12px;
-            margin-right: 4px;
-            padding: 0;
-            border: 1px solid #e7e8e9;
-            appearance: none;
-            background-color: #002855;
-            outline: none;
-            transition: outline 0.1s;
-
-            &:checked {
-              background-size: cover;
-              padding: 2px;
-              background-image: url("../../assets/check.svg");
-            }
-
-            &:disabled {
-              background-color: #f5f6f7;
-            }
-          }
         }
-        button {
-          outline: none;
-          border: none;
-          margin-top: 11px;
-        }
-        .login-button {
+        label {
           display: block;
-          border-radius: 5px;
-          background-color: #002855;
-          color: #fff;
-          width: 100%;
-          padding-block: 20px;
-          border: 2px solid transparent;
-          text-decoration: none;
-          cursor: pointer;
-          font-size: 18px;
-          font-weight: 700;
+          font-size: 16px;
+          margin-bottom: 4px;
+          font-weight: 400;
+          line-height: 20.08px;
+          color: #000;
+        }
+
+        .input-wrapper {
+          position: relative;
+
+          input {
+            width: 90%;
+
+            border: 1px solid #fff;
+            padding: 10px 2px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            outline: none;
+            background-color: transparent;
+            transition: border 0.6s;
+
+            @media screen and (max-width: 768px) {
+              width: 80%;
+            }
+            &:focus {
+              border: 1px solid rgba(255, 122, 0, 0.12);
+            }
+            &::placeholder {
+              font-family: "mulish";
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 20.08px;
+              padding-left: 2px;
+              color: #afb0b1;
+            }
+          }
+
+          img {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+          }
+        }
+      }
+
+      .form-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .checkbox,
+        a {
           font-family: "circular std";
-          line-height: 30.12px;
-          box-shadow: 0px 40px 70px 0px #ff7a001a;
-          transition: background-color 0.3s;
-          &.inactive {
-            cursor: not-allowed;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 15.06px;
+          color: #7f8b94;
+          text-decoration: none;
+        }
+        a:hover {
+          color: #74b3e3;
+          cursor: pointer;
+        }
+        input[type="checkbox"] {
+          box-sizing: border-box;
+          width: 12px;
+          height: 12px;
+          margin-right: 4px;
+          padding: 0;
+          border: 1px solid #e7e8e9;
+          appearance: none;
+          background-color: #002855;
+          outline: none;
+          transition: outline 0.1s;
+
+          &:checked {
+            background-size: cover;
+            padding: 2px;
+            background-image: url("../../assets/check.svg");
           }
-          &:hover {
+
+          &:disabled {
             background-color: #f5f6f7;
-            border: 2px solid #002855;
-            color: #002855;
           }
+        }
+      }
+      button {
+        outline: none;
+        border: none;
+        margin-top: 11px;
+      }
+      .login-button {
+        display: block;
+        border-radius: 5px;
+        background-color: #002855;
+        color: #fff;
+        width: 100%;
+        padding-block: 20px;
+        border: 2px solid transparent;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: "circular std";
+        line-height: 30.12px;
+        box-shadow: 0px 40px 70px 0px #ff7a001a;
+        transition: background-color 0.3s;
+        &.inactive {
+          cursor: not-allowed;
+        }
+        &:hover {
+          background-color: #f5f6f7;
+          border: 2px solid #002855;
+          color: #002855;
         }
       }
     }
   }
+}
 
-  .right {
-    height: auto;
-    width: 50%;
-    background-image: url("../assets/formBg.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    position: relative;
+.right {
+  width: 50%;
+  background-image: url("../assets/formBg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 
-    @media screen and (max-width: 768px) {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .help {
-      position: absolute;
-      top: 39px;
-      right: 51px;
-    }
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
-   
+
+  .help {
+    position: absolute;
+    top: 39px;
+    right: 51px;
+  }
+}
+
 /* added this */
