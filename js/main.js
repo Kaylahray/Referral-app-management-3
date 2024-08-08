@@ -7,9 +7,8 @@ document
     var password = document.getElementById("password").value;
 
     if (username === "admin" && password === "admin") {
-      alert("Login successful");
       //   please fix the code below to redirect...
-      location.href = "/#/dashboardPage.html";
+      location.href = "/#/dashboard-page";
     } else {
       alert("Enter admin for both username and password");
     }
