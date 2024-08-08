@@ -8,7 +8,7 @@
   <!-- your work goes here -->
   <!-- this the main container of the dashboard -->
   <section class="dashboard">
-    <h1>Welcome, Deens <span>👋</span></h1>
+    <h1 class="dashboard-heading">Welcome, Deens <span>👋🏾</span></h1>
     <!-- the container that contains the four boxes -->
     <div class="stats">
       <div class="stat-item blue">
@@ -28,86 +28,92 @@
         <span>150</span>
       </div>
     </div>
-    <!-- the three button -->
-    <div class="actions">
-      <button>View Prospect</button>
-      <button>View Report</button>
-      <button>Create Prospect</button>
-    </div>
+
     <!-- the container that contains both the prospects table and the prospect coonversion and chart -->
     <div class="content">
       <!-- prospects table that contains the datas -->
-      <div class="prospects">
-        <div class="text">
-          <h3>Prospects</h3>
-          <button>View all</button>
+      <div class="prospect-actions">
+        <!-- the three button -->
+        <div class="actions">
+          <button class="action-btn">View Prospect</button>
+          <button class="action-btn">View Report</button>
+          <button class="action-btn">Create Prospect</button>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Assigned To</th>
-              <th>Date Added</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Nurdeen Ibrahim</td>
-              <td>Seyi Olarenwaju</td>
-              <td>04-01-2023</td>
-              <td class="status pending">Pending</td>
-            </tr>
-            <tr>
-              <td>Mohammed Ganiyu</td>
-              <td>Ade Ayobami</td>
-              <td>04-01-2023</td>
-              <td class="status pending">Pending</td>
-            </tr>
-            <tr>
-              <td>David Jacobs</td>
-              <td>Jide Alade</td>
-              <td>04-01-2023</td>
-              <td class="status completed">Completed</td>
-            </tr>
-            <tr>
-              <td>Nurudeem Ibrahim</td>
-              <td>Seyi Olarenwaju</td>
-              <td>04-01-2023</td>
-              <td class="status pending">pending</td>
-            </tr>
-            <tr>
-              <td>Nurudeem Ibrahim</td>
-              <td>Seyi Olarenwaju</td>
-              <td>04-01-2023</td>
-              <td class="status pending">pending</td>
-            </tr>
-            <tr>
-              <td>Nurudeem Ibrahim</td>
-              <td>Seyi Olarenwaju</td>
-              <td>04-01-2023</td>
-              <td class="status pending">pending</td>
-            </tr>
-            <tr>
-              <td>Nurudeem Ibrahim</td>
-              <td>Seyi Olarenwaju</td>
-              <td>04-01-2023</td>
-              <td class="status completed">Completed</td>
-            </tr>
-            <tr>
-              <td>Nurudeem Ibrahim</td>
-              <td>Seyi Olarenwaju</td>
-              <td>04-01-2023</td>
-              <td class="status pending">pending</td>
-            </tr>
-            <tr>
-              <td>Nurudeem Ibrahim</td>
-              <td>Seyi Olarenwaju</td>
-              <td>04-01-2023</td>
-              <td class="status pending">pending</td>
-            </tr>
-          </tbody>
-        </table>
+
+        <div class="prospects">
+          <div class="prospects-border-bottom">
+            <div class="text">
+              <h3 class="prospect-head">Prospects</h3>
+              <button class="prospect-view-btn">View all</button>
+            </div>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th class="left-head-th">Assigned To</th>
+                <th class="left-head-th">Date Added</th>
+                <th class="left-head-th">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nurdeen Ibrahim</td>
+                <td>Seyi Olarenwaju</td>
+                <td>04-01-2023</td>
+                <td class="status pending">Pending</td>
+              </tr>
+              <tr>
+                <td>Mohammed Ganiyu</td>
+                <td>Ade Ayobami</td>
+                <td>04-01-2023</td>
+                <td class="status pending">Pending</td>
+              </tr>
+              <tr>
+                <td>David Jacobs</td>
+                <td>Jide Alade</td>
+                <td>04-01-2023</td>
+                <td class="status completed">Completed</td>
+              </tr>
+              <tr>
+                <td>Nurudeem Ibrahim</td>
+                <td>Seyi Olarenwaju</td>
+                <td>04-01-2023</td>
+                <td class="status pending">pending</td>
+              </tr>
+              <tr>
+                <td>Nurudeem Ibrahim</td>
+                <td>Seyi Olarenwaju</td>
+                <td>04-01-2023</td>
+                <td class="status pending">pending</td>
+              </tr>
+              <tr>
+                <td>Nurudeem Ibrahim</td>
+                <td>Seyi Olarenwaju</td>
+                <td>04-01-2023</td>
+                <td class="status pending">pending</td>
+              </tr>
+              <tr>
+                <td>Nurudeem Ibrahim</td>
+                <td>Seyi Olarenwaju</td>
+                <td>04-01-2023</td>
+                <td class="status completed">Completed</td>
+              </tr>
+              <tr>
+                <td>Nurudeem Ibrahim</td>
+                <td>Seyi Olarenwaju</td>
+                <td>04-01-2023</td>
+                <td class="status pending">pending</td>
+              </tr>
+              <tr>
+                <td>Nurudeem Ibrahim</td>
+                <td>Seyi Olarenwaju</td>
+                <td>04-01-2023</td>
+                <td class="status pending">pending</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
       <!-- This the container that contain both the chart and activiy section -->
       <div class="stats-details">
