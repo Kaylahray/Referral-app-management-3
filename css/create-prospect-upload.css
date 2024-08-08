@@ -185,7 +185,7 @@ body {
   border: none;
 }
 
-@media screen and (max-width: 555px) {
+@media screen and (max-width: 608px) {
   .createprospect-tablewrapper {
     display: none;
   }
@@ -248,5 +248,9 @@ body {
   }
   .createcancel-btn {
     gap: px;
+  }
+
+  .persons-detail p{
+    font-size: 13px;
   }
 }
