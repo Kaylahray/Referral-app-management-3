@@ -268,44 +268,52 @@ onMounted(() => {
     },
   });
 
-  const settingsOptions = document.querySelectorAll(
-    ".settings-option"
+  const modal = document.querySelector(".modal");
+  const secondModal = document.querySelector(
+    ".success-modal-container"
   );
-  const contentSections = document.querySelectorAll(
-    ".content-section"
+  const exportToggle = document.getElementById("export-toggle");
+  const recurrentCheckbox = document.getElementById(
+    "recurrent-reporting"
   );
+  const parametersSection = document.getElementById(
+    "parameters-section"
+  );
+  const recurrentOptions = document.getElementById(
+    "recurrent-options"
+  );
+  const exportButton = document.querySelector(".export-button");
+  const backButton = document.querySelector(".back-button");
 
-  settingsOptions.forEach((option) => {
-    option.addEventListener("click", function () {
-      console.log("Option clicked:", this.id);
+  exportToggle.addEventListener("click", () => {
+    modal.classList.add("active-modal");
+  });
 
-      // Remove 'active' class from all options
-      settingsOptions.forEach((opt) =>
-        opt.classList.remove("active")
-      );
+  recurrentCheckbox.addEventListener("change", () => {
+    if (recurrentCheckbox.checked) {
+      parametersSection.style.display = "none";
+      recurrentOptions.style.display = "block";
+      exportButton.textContent = "Export";
+    } else {
+      parametersSection.style.display = "block";
+      recurrentOptions.style.display = "none";
+      exportButton.textContent = "Export Report";
+    }
+  });
 
-      // Hide all content sections
-      contentSections.forEach(
-        (section) => (section.style.display = "none")
-      );
+  exportButton.addEventListener("click", () => {
+    if (exportButton.textContent === "Export") {
+      secondModal.style.display = "flex";
+    } else {
+      recurrentCheckbox.checked = true;
+      parametersSection.style.display = "none";
+      recurrentOptions.style.display = "block";
+      exportButton.textContent = "Export";
+    }
+  });
 
-      // Add 'active' class to the clicked option
-      this.classList.add("active");
-
-      // Display the corresponding content section
-      const contentClass = `${this.id}-content`;
-      const contentSection = document.querySelector(
-        `.${contentClass}`
-      );
-      console.log("Content section:", contentSection);
-
-      if (contentSection) {
-        contentSection.style.display = "block";
-      } else {
-        console.error(
-          `Content section with class ${contentClass} not found.`
-        );
-      }
-    });
+  backButton.addEventListener("click", () => {
+    modal.style.display = "none";
+    secondModal.style.display = "none";
   });
 });
