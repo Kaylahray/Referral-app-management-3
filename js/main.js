@@ -1,29 +1,29 @@
-document
-  .getElementById("login-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-    var username = document.getElementById("login-id").value;
-    console.log(username);
-    var password = document.getElementById("password").value;
+const loginButton = document.getElementById("login-button");
+const togglePassword = document.getElementById("toggle-password");
+const passwordField = document.getElementById("password");
+const usernameField = document.getElementById("login-id");
+console.log(loginButton)
+loginButton.addEventListener("click", function (event) {
+  event.preventDefault(); 
 
-    if (username === "admin" && password === "admin") {
-      alert("Login successful");
-      //   please fix the code below to redirect...
-      location.href = "/#/dashboardPage.html";
-    } else {
-      alert("Enter admin for both username and password");
-    }
-  });
+  var username = usernameField.value;
+  var password = passwordField.value;
 
-document
-  .getElementById("toggle-password")
-  .addEventListener("click", function () {
-    var passwordField = document.getElementById("password");
-    if (passwordField.type === "password") {
-      passwordField.type = "text";
-      this.textContent = "HIDE";
-    } else {
-      passwordField.type = "password";
-      this.textContent = "SHOW";
-    }
-  });
+  if (username === "admin" && password === "admin") {
+    alert("Login successful");
+    window.location.href = "/#/dashboardPage.html";
+  } else {
+    alert("Enter admin for both username and password");
+  }
+});
+
+togglePassword.addEventListener("click", function (e) {
+  e.preventDefault()
+  if (passwordField.type === "password") {
+    passwordField.type = "text";
+    this.textContent = "HIDE";
+  } else {
+    passwordField.type = "password";
+    this.textContent = "SHOW";
+  }
+});
