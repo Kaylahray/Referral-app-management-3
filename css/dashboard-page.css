@@ -337,8 +337,7 @@
 }
 
 .actions .action-btn {
-  width: 168px;
-  height: 45px;
+  padding: 10px;
   border-radius: 5px;
   background-color: #002855;
   color: #fff;
@@ -379,8 +378,7 @@
   color: #353535;
 }
 .text .prospect-view-btn {
-  width: 62px;
-  height: 25px;
+  padding: 8px;
   border-radius: 3px;
   border: 1px solid #fff;
   background-color: #002855;

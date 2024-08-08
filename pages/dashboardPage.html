@@ -35,16 +35,30 @@
       <div class="prospect-actions">
         <!-- the three button -->
         <div class="actions">
-          <button class="action-btn">View Prospect</button>
-          <button class="action-btn">View Report</button>
-          <button class="action-btn">Create Prospect</button>
+          <a class="action-btn" href="#/prospect" exact="active-link"
+            >View Prospect</a
+          >
+          <a class="action-btn" href="#/report" exact="active-link"
+            >View Report</a
+          >
+          <a
+            class="action-btn"
+            href="#/prospect/create-prospect"
+            exact="active-link"
+            >Create Prospect</a
+          >
         </div>
 
         <div class="prospects">
           <div class="prospects-border-bottom">
             <div class="text">
               <h3 class="prospect-head">Prospects</h3>
-              <button class="prospect-view-btn">View all</button>
+              <a
+                href="#/prospect"
+                exact="active-link"
+                class="prospect-view-btn"
+                >View all</a
+              >
             </div>
           </div>
           <table>
