@@ -11,7 +11,7 @@ loginButton.addEventListener("click", function (event) {
 
   if (username === "admin" && password === "admin") {
     alert("Login successful");
-    window.location.href = "/#/dashboardPage.html";
+    window.location.href = "/#/dashboard/";
   } else {
     alert("Enter admin for both username and password");
   }
