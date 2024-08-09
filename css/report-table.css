@@ -535,4 +535,40 @@ p.value {
     width:150px;
     border-radius:10px;
   }
+  .reportpop-up{
+    width:300px;
+  }
+  .reportpop-up p{
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 3px;
+  }
+  .data-date{
+    display:block;
+  }
+  .data-date-box p{
+    font-size: 10px;
+  }
+  .datadate-text {
+    padding-bottom: 5px;
+  }
+  .scrollable-container label {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 15.18px
+  }
+  .cancel-create-button > button {
+    padding: 10px 10px;
+    font-family: Circular Std;
+    font-size: 14px;
+    font-weight: 600;
+}
+.cancel-create-button .cancel {
+  background-color: #d4d4d4;
+  width:100px;
+  text-align: center;
+}
+.reportsuccess-popup{
+  width:310px;
+}
 }
