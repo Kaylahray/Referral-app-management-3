@@ -38,6 +38,11 @@ function showActivity() {
 
 function startChat() {
     chatwrapper.style.display = "flex";
+    if (chatwrapper.style.display = "flex"){
+        chatwrapper.addEventListener("click", function(){
+            chatwrapper.style.display = "none"   
+        })
+    }
 }
 
 function completeChat() {
