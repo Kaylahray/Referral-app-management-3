@@ -227,9 +227,9 @@
 }
 .datadate-text {
   font-family: Mulish;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 600;
-  line-height: 17.57px;
+  line-height: 14.57px;
   text-align: left;
   color: #7f8b94;
   padding-top: 8px;
@@ -507,7 +507,7 @@ p.value {
       height: 100%;
       font-size: 10px;
       font-weight: 700;
-      padding: 5px 30px;
+      padding: 10px 30px;
       background-color: #002855;
       margin-top: 0px;
     }
@@ -527,6 +527,14 @@ p.value {
     .recent-result {
       padding-left: 20px;
     }
+    .data-date{
+      display:block;
+    }
+    .datadate-text {
+      padding-bottom: 5px;
+    }
+    .cancel-create-button > button {
+      padding: 10px ;
   }
   
 }
@@ -535,4 +543,37 @@ p.value {
     width:150px;
     border-radius:10px;
   }
+  .reportpop-up{
+    width:300px;
+  }
+  .reportpop-up p{
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 3px;
+  }
+  
+  .data-date-box p{
+    font-size: 10px;
+  }
+  
+  .scrollable-container label {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 15.18px
+  }
+  .cancel-create-button > button {
+    padding: 10px 10px;
+    font-family: Circular Std;
+    font-size: 14px;
+    font-weight: 600;
+}
+.cancel-create-button .cancel {
+  background-color: #d4d4d4;
+  width:100px;
+  text-align: center;
+}
+.reportsuccess-popup{
+  width:310px;
+}
+}
 }

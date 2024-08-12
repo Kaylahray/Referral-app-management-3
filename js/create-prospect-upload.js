@@ -1,8 +1,14 @@
 const yesBttn = document.querySelector(".yesbtn");
-constsuccessPop = document.querySelector(".successpopupmodalcontainer");
+const successPop = document.querySelector(".successpopupmodalcontainer");
 yesBttn.onclick = function() {
-  constsuccessPop.style.display = "flex"
+  successPop.style.display = "flex"
+  if(successPop.style.display= "flex") {
+    successPop.addEventListener("click", function(){
+successPop.style.display = "none";
+    })
+  }
 }
+
 
 
 // if (typeof loadProspectUpload === "undefined") {
