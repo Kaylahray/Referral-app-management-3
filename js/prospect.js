@@ -1,4 +1,4 @@
-// Get all img elements with class 'viewDropdownImg'
+
 const images = document.querySelectorAll(".viewDropdownImg");
 
 // Function to close all dropdowns
