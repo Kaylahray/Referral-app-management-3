@@ -150,14 +150,14 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 15.18px;
-  text-align: center;
+  text-align: left;
   padding-bottom: 20px;
   color: #1f4173;
 }
 
 .prospects table td {
   font-size: 11px;
-  text-align: center;
+  text-align: left;
   font-weight: 450;
   line-height: 13.91px;
   padding: 15px 0;
