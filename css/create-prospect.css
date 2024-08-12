@@ -107,6 +107,16 @@
   background-color: #34475e;
   border-radius: 50%;
 }
+
+.inpDropdown{
+  position: relative;
+}
+.inpDropdownIcon{
+  position: absolute;
+  right: 6%;
+  top: 50%;
+  transform: translateY(-50%);
+}
 /* ------------------------------- */
 .createPrspctBtn {
   padding: 18px 30px;
