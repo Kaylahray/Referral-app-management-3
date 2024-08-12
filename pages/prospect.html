@@ -10,10 +10,10 @@
 
 <div>
   <!-- your work goes here -->
-  <div class="report-table-container">
+  <div class="report-table-container" id="prospect-table-container">
     <!-- report table header -->
-    <div class="report-table-header">
-      <h1>Reports</h1>
+    <div class="report-table-header" id="prospectsTableHeader">
+      <h1>Prospects</h1>
       <button class="report-table-header-btn">
         <a href="#/prospect/create-prospect" exact="active-link">
           + &nbsp; Create Prospect
@@ -22,14 +22,17 @@
     </div>
     <!-- search section -->
     <div class="searchsection-container" id="prospectSearchContainer">
-      <div class="searchsectionmid-container">
+      <div class="searchsectionmid-container" id="searchsectionmid-container">
         <div class="searchname" id="prospectSearchname">
           <div class="searchbyname">
-            <p class="searchbyname">
+            <p class="searchbyname" id="searchbynameP">
               Search By: Name &nbsp; &nbsp;<img src="../assets/search-dropdown.svg" />
               &nbsp
             </p>
-            <input type="text" class="searchinput prospectSearchInp" placeholder="Search name" />
+            <div class="searchinput prospectSearchInpDiv">
+              <img src="../assets/search.svg" alt="" class="prospectSearchIcon">
+              <input type="text" />
+            </div>
           </div>
           <button class="find-btn" id="prospectFindBtn">Find</button>
         </div>
@@ -166,7 +169,7 @@
       </table>
       <div class="tableWrapFooter">
       <div class="leftTableWrapFooter">
-        <img src="../assets/leftArrow.svg" alt="" style="width: 10px;">
+        <img src="../assets/leftArrow.svg" alt="" class="img1">
         <div class="prospectPgCount">
           <span>1</span>
           <span>2</span>

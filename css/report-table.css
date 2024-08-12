@@ -18,6 +18,7 @@
   line-height: 30.36px;
   margin-bottom: 40px;
   padding-left: 10px;
+  color:#585858
 }
 .report-table-header .report-table-header-btn {
   height: Hug (48px) px;
@@ -40,11 +41,11 @@
   border-radius: 10px;
   margin-top: 10px;
   padding-left: 10px;
-  padding-right: 40px;
+  /* padding-right: 40px; */
 }
 .searchsectionmid-container {
   width: 100%;
-  border: 1px solid rgba(63, 61, 61, 0.436);
+  border: 1px solid #58585833;
   height: 83.34px;
   border-radius: 5px;
   padding: 20px;
@@ -79,12 +80,14 @@
   font-family: Circular Std;
   font-size: 15.15px;
   font-weight: 500;
+  color:#34475E;
+  background-color: #F3F5F6;
   line-height: 19.17px;
-  border: 1px solid rgba(63, 61, 61, 0.436);
+  border: 0.95px solid #7F8B9480;
 }
 .reportsearchinput {
   height: 100%;
-  border: 1px solid rgba(63, 61, 61, 0.436);
+  border: 1px solid #58585833;
   outline: none;
   background: url(../assets/search\ icon.svg) no-repeat;
   display: flex;
@@ -134,6 +137,7 @@
 .report-container-table tbody tr td {
   height: 49px;
   margin-bottom: 10px;
+  color:#353535
 }
 
 .report-container-table tbody td {
@@ -144,8 +148,9 @@
   line-height: 15.18px;
   text-align: center;
   /* padding: 10px; */
-  border-top: 1px solid rgba(63, 61, 61, 0.436);
-  border-bottom: 1px solid rgba(63, 61, 61, 0.436);
+  border-top: 1px solid #58585833;
+  border-bottom: 1px solid #58585833;
+  
   background-color: #fff;
 }
 .report-container-table td.dots {
@@ -222,9 +227,9 @@
 }
 .datadate-text {
   font-family: Mulish;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 600;
-  line-height: 17.57px;
+  line-height: 14.57px;
   text-align: left;
   color: #7f8b94;
   padding-top: 8px;
@@ -282,11 +287,11 @@
 }
 
 td.first-td {
-  border-left: 1px solid rgba(63, 61, 61, 0.436);
+  border-left: 1px solid #58585833;
 }
 
 td.dots {
-  border-right: 1px solid rgba(63, 61, 61, 0.436);
+  border-right: 1px solid #58585833;
 }
 
 /* scrollable input checkboxes styling */
@@ -417,8 +422,7 @@ td.dots {
   padding: 25px;
 
   background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 .informationdetail-box {
   display: flex;
@@ -433,15 +437,22 @@ td.dots {
 }
 .block-table {
   display: none;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   border-radius: 5px;
 }
 .person-detail h6{
   font-size: 8px;
+  color:#002855;
 }
 p.value {
   font-size: 12px;
+  color:#002855;
   
+}
+@media screen and (max-width:1023px) {
+  .report-table-container{
+   padding-right: 50px;
+  }
 }
 
 @media screen and (max-width: 760px) {
@@ -458,9 +469,16 @@ p.value {
     line-height: 20.36px;
     margin-bottom: 0px;
   }
-  @media screen and (max-width: 668px) {
+  @media screen and (max-width:668px) {
     .searchname {
       flex-direction: column;
+    }
+    .report-table-container{
+      padding-left:20px;
+      padding-right:20px;
+    }
+    .report-table-header h1{
+      padding-left: 0px;
     }
     .searchbyname p {
       display: none;
@@ -489,7 +507,7 @@ p.value {
       height: 100%;
       font-size: 10px;
       font-weight: 700;
-      padding: 5px 30px;
+      padding: 10px 30px;
       background-color: #002855;
       margin-top: 0px;
     }
@@ -509,5 +527,53 @@ p.value {
     .recent-result {
       padding-left: 20px;
     }
+    .data-date{
+      display:block;
+    }
+    .datadate-text {
+      padding-bottom: 5px;
+    }
+    .cancel-create-button > button {
+      padding: 10px ;
   }
+  
+}
+@media screen and (max-width: 400px){
+  .reportsearchinput {
+    width:150px;
+    border-radius:10px;
+  }
+  .reportpop-up{
+    width:300px;
+  }
+  .reportpop-up p{
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 3px;
+  }
+  
+  .data-date-box p{
+    font-size: 10px;
+  }
+  
+  .scrollable-container label {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 15.18px
+  }
+  .cancel-create-button > button {
+    padding: 10px 10px;
+    font-family: Circular Std;
+    font-size: 14px;
+    font-weight: 600;
+}
+.cancel-create-button .cancel {
+  background-color: #d4d4d4;
+  width:100px;
+  text-align: center;
+}
+.reportsuccess-popup{
+  width:310px;
+}
+}
 }

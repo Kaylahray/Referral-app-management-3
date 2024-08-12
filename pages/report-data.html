@@ -21,11 +21,11 @@
         <img src="../assets/sales-x.svg" alt="" />
       </div>
       <div class="report-data-actions">
-        <a href="#/report/report" class="report-data-back">
+        <a href="#/report" class="report-data-back">
           <img src="../assets/back.svg" alt="" />
           Back To Report
         </a>
-        <button class="report-data-export">
+        <button class="report-data-export" id="export-toggle">
           <img src="../assets/export-arrow.svg" alt="" />
           Export Report
         </button>
@@ -154,14 +154,17 @@
         Income Breakdown
       </button>
     </div>
-    <div class="chartBox">
-      <canvas id="myChart"></canvas>
+    <div class="chartBox" style="min-height: 500px">
+      <canvas
+        width="100%"
+        style="min-height: 500px"
+        id="myChart"
+      ></canvas>
     </div>
   </div>
 
   <div id="report-data-sec" k-show i>
     <div class="chart-flex">
-      <div class="settings"></div>
       <button
         class="toggle-btn"
         data-toggle="report-data"
@@ -174,17 +177,23 @@
     <div class="report-data-container2">
       <div class="chart-container">
         <div class="span">
-          <span>jkk</span>
-          <span>jkk</span>
-          <span>jkk</span>
+          <span>YTD</span>
+          <span>1 Week</span>
+          <span>1 Month</span>
         </div>
-        <canvas id="reportChart"></canvas>
+        <div class="chartBox" style="min-height: 300px">
+          <canvas
+            width="100%"
+            id="reportChart"
+            style="min-height: 300px"
+          ></canvas>
+        </div>
       </div>
       <div class="table-container">
         <div class="span">
-          <span>jkk</span>
-          <span>jkk</span>
-          <span>jkk</span>
+          <span>YTD</span>
+          <span>1 Week</span>
+          <span>1 Month</span>
         </div>
         <table class="sales-report-table animatable-table">
           <thead>
@@ -231,6 +240,165 @@
           </tbody>
         </table>
       </div>
+    </div>
+  </div>
+
+  <!-- Modal Wrapper -->
+  <div class="modal">
+    <!-- Modal Content -->
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="modal-header-closeBtn">
+          <h2>Report Parameters</h2>
+          <p>Select parameters you want to include in your report</p>
+        </div>
+        <button class="close-button">&times;</button>
+        <!-- Parameters Description -->
+      </div>
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <!-- Sales Overview Section -->
+        <div class="sales-overview">
+          <h3>Sales Overview</h3>
+          <button class="change-button">Change</button>
+        </div>
+        <!-- Date Range Section -->
+        <div class="date-range">
+          <label class="start-date" for="start-date"
+            >Showing data from:</label
+          >
+          <select class="select" id="start-date">
+            <option>Wed March 29, 2020</option>
+            <!-- Add more options as needed -->
+          </select>
+          <select class="select" id="end-date">
+            <option>Wed March 29, 2020</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+        <!-- Recurrent Reporting Checkbox -->
+        <div class="recurrent-reporting">
+          <input
+            class="recurrent-checkbox"
+            type="checkbox"
+            id="recurrent-reporting"
+          />
+          <label class="recurrent-label" for="recurrent-reporting"
+            >Turn on recurrent reporting</label
+          >
+        </div>
+        <!-- Parameters Section -->
+        <div
+          class="parameters-section active-sec"
+          id="parameters-section"
+        >
+          <!-- Select Options -->
+          <div class="select-options">
+            <span class="select-head" id="select-all"
+              >Select All</span
+            >
+            <span class="select-head" id="select-none"
+              >Select None</span
+            >
+          </div>
+          <!-- Parameters List -->
+          <ul class="parameters-list">
+            <li class="parameters">
+              <input type="checkbox" /> No of Active Customers
+            </li>
+            <li class="parameters">
+              <input type="checkbox" /> No of Drop Off Customers
+              (Prospects)
+            </li>
+            <li class="parameters">
+              <input type="checkbox" /> No of Admin Users
+            </li>
+            <li class="parameters">
+              <input type="checkbox" /> Income Statement
+            </li>
+            <li class="parameters">
+              <input type="checkbox" /> Commission Payment
+            </li>
+          </ul>
+        </div>
+        <!-- Recurrent Options -->
+        <div
+          class="recurrent-options"
+          id="recurrent-options"
+          style="display: none"
+        >
+          <form>
+            <div class="form-group">
+              <label class="when-label" for="schedule">When:</label>
+              <select
+                class="when-select"
+                id="schedule"
+                name="schedule"
+              >
+                <option value="monthly">
+                  Every first day of the month
+                </option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="when-label" for="email">To:</label>
+              <input
+                class="to-input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter Email Addresses"
+              />
+            </div>
+          </form>
+          <div class="format">
+            <p>Format:</p>
+            <div class="toggle-group">
+              <div class="toggle-option">
+                <span>Excel</span>
+                <label class="switch">
+                  <input
+                    class="input"
+                    class="input"
+                    type="checkbox"
+                    checked
+                  />
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="toggle-option">
+                <span>PDF</span>
+                <label class="switch">
+                  <input class="input" type="checkbox" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="toggle-option">
+                <span>PPT</span>
+                <label class="switch">
+                  <input class="input" type="checkbox" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <button class="cancel-button">Cancel</button>
+        <button class="export-button">Export Report</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="success-modal-container" style="display: none">
+    <div class="report-success-modal">
+      <h1>Report exported <br />successfully</h1>
+      <img src="../assets/sucess-img.svg" class="success-image" />
+      <a href="#/report" class="back-button"> Back </a>
     </div>
   </div>
 </div>
