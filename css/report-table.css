@@ -274,6 +274,7 @@
   text-align: left;
 }
 .reportselect-links {
+  display:flex;
   margin-top: 10px;
 }
 .reportselect-links a {
@@ -449,6 +450,9 @@ p.value {
   color:#002855;
   
 }
+.currentReportingOption {
+  display:none;
+}
 @media screen and (max-width:1023px) {
   .report-table-container{
    padding-right: 50px;
@@ -469,7 +473,7 @@ p.value {
     line-height: 20.36px;
     margin-bottom: 0px;
   }
-  @media screen and (max-width:668px) {
+  @media screen and (max-width:680px) {
     .searchname {
       flex-direction: column;
     }
