@@ -58,19 +58,25 @@
   background-color: #00b388;
 }
 
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 51px;
+}
 .actions {
+  max-width: 100%;
   display: flex;
-  flex-wrap: wrap;
   gap: 10px;
 }
 
 .actions .action-btn {
-  padding: 13px 24px;
+  max-width: 100%;
+  padding: 8px 30px;
   border-radius: 5px;
   background-color: #002855;
   color: #fff;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 18.97px;
   letter-spacing: 0.01em;
@@ -81,16 +87,11 @@
   text-align: center;
 }
 
-.content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 51px;
-}
 
 .prospect-actions {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: fit-content auto;
+  /* grid-template-columns: 1fr; */
+  grid-template-rows: 50px auto;
   gap: 20px;
 }
 
@@ -190,10 +191,6 @@
 .chart .dashchart {
   max-width: 100%;
 }
-/* .chart {
-    max-width: 1050px;
-    margin: 3px auto;
-  } */
 
 .chart h3,
 .activity h3 {
@@ -225,7 +222,8 @@
 
 /* Media Queries */
 
-@media screen and (max-width: 1370px) {
+
+/* @media screen and (max-width: 1370px) {
   .actions .action-btn {
     font-size: 12px;
     padding: 10px;
@@ -233,10 +231,17 @@
   .dashboard {
     padding: 24px 26px;
   }
-}
+} */
+ 
 @media (max-width: 1200px) {
   .dashboard {
     padding: 20px;
+  }
+  
+  .actions .action-btn {
+    padding: 10px;
+    font-size: 12px;
+    
   }
 
   .stats {
@@ -290,11 +295,17 @@
     font-size: 24px;
     margin-left: 0;
   }
-
+  .prospect-actions{
+    width: 100%;
+  }
   .actions {
-    /* flex-direction: column; */
-    width: 280px;
-    gap: 5px;
+   flex-wrap: wrap;
+   justify-content: center;
+   /* align-items: center; */
+   /* margin-right: 5%  ; */
+  }
+  .actions .action-btn {
+    padding: 4px 20px;   
   }
 
   .content {
@@ -306,7 +317,7 @@
     background-color: #fff;
     padding: 10px;
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin-top: 10px;
   }
 
   .prospects h3 {
@@ -343,7 +354,7 @@
   }
 
   .activity li {
-    /* margin-bottom: 15px; */
     padding: 5px 10px;
   }
 }
+
