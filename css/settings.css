@@ -27,7 +27,6 @@
 .settings-menu {
   max-width: 450px;
   width: 330px;
-  /* height: 520px; */
   border-radius: 5px;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -47,7 +46,6 @@
 }
 .settings-option {
   max-width: 128px;
-  /* width: 128px; */
   height: 105px;
   border: 1px solid #585858;
   padding: 10px;
@@ -88,9 +86,9 @@
   border-radius: 5px;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 0 0 2% 0;
   /* height: 373px; */
   /* Center the settings content */
-  padding: 0 0 2% 0;
 }
 
 /* general  style for account information and change password heading */
@@ -154,6 +152,7 @@ input::placeholder {
   outline: none;
   border: none;
   background-color: #e9e9e9;
+  padding: 2px 0 0 10px;
 }
 
 .acct-info-btn {
