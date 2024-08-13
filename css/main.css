@@ -250,5 +250,18 @@
     right: 51px;
   }
 }
+.sign-up {
+  font-size: 20px;
+  font-weight: 450;
+  line-height: 25.3px;
+  color: #585858;
+  margin-top: 35px;
+}
+.sign-up a {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25.3px;
+  color: #002855;
+}
 
 /* added this */
