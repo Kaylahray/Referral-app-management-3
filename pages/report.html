@@ -12,44 +12,52 @@
   <div class="report-dashboard-container">
     <div class="report-header">
       <p>Reports</p>
-      <a class="report-create-button">
+      <button class="report-create-button" id="create-report-btn">
         <img src="../assets/plus.svg" alt="plus" />
         <span> Create Report </span>
-      </a>
+      </button>
     </div>
     <div class="report-cards">
-      <div class="report-card">
-        <div class="cardup">
-          <h3>Total Sales</h3>
+      <a href="#/report/report-data">
+        <div class="report-card">
+          <div class="cardup">
+            <h3>Total Sales</h3>
+          </div>
+          <div class="carddown">
+            <p class="firstp">NGN 3,000,000</p>
+          </div>
         </div>
-        <div class="carddown">
-          <p class="firstp">NGN 3,000,000</p>
+      </a>
+      <a href="#/report/report-data">
+        <div class="report-card">
+          <div class="cardup">
+            <h3>Total Converts</h3>
+          </div>
+          <div class="carddown">
+            <p>150</p>
+          </div>
         </div>
-      </div>
-      <div class="report-card">
-        <div class="cardup">
-          <h3>Total Converts</h3>
+      </a>
+      <a href="#/report/report-data">
+        <div class="report-card">
+          <div class="cardup">
+            <h3>Prospects</h3>
+          </div>
+          <div class="carddown">
+            <p>150</p>
+          </div>
         </div>
-        <div class="carddown">
-          <p>150</p>
+      </a>
+      <a href="#/report/report-data">
+        <div class="report-card">
+          <div class="cardup">
+            <h3>Users</h3>
+          </div>
+          <div class="carddown">
+            <p>150</p>
+          </div>
         </div>
-      </div>
-      <div class="report-card">
-        <div class="cardup">
-          <h3>Prospects</h3>
-        </div>
-        <div class="carddown">
-          <p>150</p>
-        </div>
-      </div>
-      <div class="report-card">
-        <div class="cardup">
-          <h3>Users</h3>
-        </div>
-        <div class="carddown">
-          <p>150</p>
-        </div>
-      </div>
+      </a>
     </div>
 
     <div class="report-main">
@@ -64,28 +72,36 @@
 
           <ul>
             <li>
-              <span class="first-span">01 <span>Report 001</span></span>
+              <span class="first-span"
+                >01 <span>Report 001</span></span
+              >
               <span class="date-span">05 Jan 2023</span>
               <a href="#/report/report-data" exact="active-link">
                 View
               </a>
             </li>
             <li>
-              <span class="first-span">02 <span>Report 002</span></span>
+              <span class="first-span"
+                >02 <span>Report 002</span></span
+              >
               <span class="date-span">05 Jan 2023</span>
               <a href="#/report/report-data" exact="active-link">
                 View
               </a>
             </li>
             <li>
-              <span class="first-span">03 <span>Report 003</span></span>
+              <span class="first-span"
+                >03 <span>Report 003</span></span
+              >
               <span class="date-span">05 Jan 2023</span>
               <a href="#/report/report-data" exact="active-link">
                 View
               </a>
             </li>
             <li>
-              <span class="first-span">04 <span>Report 004</span></span>
+              <span class="first-span"
+                >04 <span>Report 004</span></span
+              >
               <span class="date-span">05 Jan 2023</span>
               <a href="#/report/report-data" exact="active-link">
                 View
@@ -96,7 +112,13 @@
         <div class="report-top-products">
           <div class="view-report">
             <h3>Top Products</h3>
-            <a href="#/prospect/ongoing-prospect" exact="active-link" class="view2"> View Report </a>
+            <a
+              href="#/prospect/ongoing-prospect"
+              exact="active-link"
+              class="view2"
+            >
+              View Report
+            </a>
           </div>
           <table class="report-table">
             <thead>
@@ -113,11 +135,18 @@
                 <td>Motor</td>
                 <td>
                   <div class="report-progress-bar" data-color="first">
-                    <div class="report-progress" data-percentage="40" data-color=" #00E096"></div>
+                    <div
+                      class="report-progress"
+                      data-percentage="40"
+                      data-color=" #00E096"
+                    ></div>
                   </div>
                 </td>
                 <td>
-                  <span class="report-percentage" data-color=" #00E096">40%
+                  <span
+                    class="report-percentage"
+                    data-color=" #00E096"
+                    >40%
                   </span>
                 </td>
               </tr>
@@ -125,12 +154,20 @@
                 <td>02</td>
                 <td>Term Life</td>
                 <td>
-                  <div class="report-progress-bar" data-color="second">
-                    <div class="report-progress" data-percentage="22" data-color="#0095FF"></div>
+                  <div
+                    class="report-progress-bar"
+                    data-color="second"
+                  >
+                    <div
+                      class="report-progress"
+                      data-percentage="22"
+                      data-color="#0095FF"
+                    ></div>
                   </div>
                 </td>
                 <td>
-                  <span class="report-percentage" data-color="#0095FF">22%
+                  <span class="report-percentage" data-color="#0095FF"
+                    >22%
                   </span>
                 </td>
               </tr>
@@ -139,11 +176,18 @@
                 <td>Group Life</td>
                 <td>
                   <div class="report-progress-bar" data-color="third">
-                    <div class="report-progress" data-percentage="8" data-color=" #884DFF"></div>
+                    <div
+                      class="report-progress"
+                      data-percentage="8"
+                      data-color=" #884DFF"
+                    ></div>
                   </div>
                 </td>
                 <td>
-                  <span class="report-percentage" data-color=" #884DFF">8%
+                  <span
+                    class="report-percentage"
+                    data-color=" #884DFF"
+                    >8%
                   </span>
                 </td>
               </tr>
@@ -151,12 +195,21 @@
                 <td>04</td>
                 <td>Leadway Savings</td>
                 <td>
-                  <div class="report-progress-bar" data-color="fourth">
-                    <div class="report-progress" data-percentage="30" data-color="#ff8f0d"></div>
+                  <div
+                    class="report-progress-bar"
+                    data-color="fourth"
+                  >
+                    <div
+                      class="report-progress"
+                      data-percentage="30"
+                      data-color="#ff8f0d"
+                    ></div>
                   </div>
                 </td>
                 <td>
-                  <span class="report-percentage" data-color="#ff8f0d">30%</span>
+                  <span class="report-percentage" data-color="#ff8f0d"
+                    >30%</span
+                  >
                 </td>
               </tr>
             </tbody>
@@ -225,6 +278,164 @@
           </ul>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="report-modal">
+    <!-- Modal Content -->
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="modal-header-closeBtn">
+          <h2>Report Parameters</h2>
+          <p>Select parameters you want to include in your report</p>
+        </div>
+        <button class="close-button">&times;</button>
+        <!-- Parameters Description -->
+      </div>
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <!-- Sales Overview Section -->
+        <div class="sales-overview">
+          <h3>Sales Overview</h3>
+          <button class="change-button">Change</button>
+        </div>
+        <!-- Date Range Section -->
+        <div class="date-range">
+          <label class="start-date" for="start-date"
+            >Showing data from:</label
+          >
+          <select class="select" id="start-date">
+            <option>Wed March 29, 2020</option>
+            <!-- Add more options as needed -->
+          </select>
+          <select class="select" id="end-date">
+            <option>Wed March 29, 2020</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+        <!-- Recurrent Reporting Checkbox -->
+        <div class="recurrent-reporting">
+          <input
+            class="recurrent-checkbox"
+            type="checkbox"
+            id="recurrent-reporting"
+          />
+          <label class="recurrent-label" for="recurrent-reporting"
+            >Turn on recurrent reporting</label
+          >
+        </div>
+        <!-- Parameters Section -->
+        <div
+          class="parameters-section active-sec"
+          id="parameters-section"
+        >
+          <!-- Select Options -->
+          <div class="select-options">
+            <span class="select-head" id="select-all"
+              >Select All</span
+            >
+            <span class="select-head" id="select-none"
+              >Select None</span
+            >
+          </div>
+          <!-- Parameters List -->
+          <ul class="parameters-list">
+            <li class="parameters">
+              <input type="checkbox" /> No of Active Customers
+            </li>
+            <li class="parameters">
+              <input type="checkbox" /> No of Drop Off Customers
+              (Prospects)
+            </li>
+            <li class="parameters">
+              <input type="checkbox" /> No of Admin Users
+            </li>
+            <li class="parameters">
+              <input type="checkbox" /> Income Statement
+            </li>
+            <li class="parameters">
+              <input type="checkbox" /> Commission Payment
+            </li>
+          </ul>
+        </div>
+        <!-- Recurrent Options -->
+        <div
+          class="recurrent-options"
+          id="recurrent-options"
+          style="display: none"
+        >
+          <form>
+            <div class="form-group">
+              <label class="when-label" for="schedule">When:</label>
+              <select
+                class="when-select"
+                id="schedule"
+                name="schedule"
+              >
+                <option value="monthly">
+                  Every first day of the month
+                </option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="when-label" for="email">To:</label>
+              <input
+                class="to-input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter Email Addresses"
+              />
+            </div>
+          </form>
+          <div class="format">
+            <p>Format:</p>
+            <div class="toggle-group">
+              <div class="toggle-option">
+                <span>Excel</span>
+                <label class="switch">
+                  <input
+                    class="input"
+                    class="input"
+                    type="checkbox"
+                    checked
+                  />
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="toggle-option">
+                <span>PDF</span>
+                <label class="switch">
+                  <input class="input" type="checkbox" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="toggle-option">
+                <span>PPT</span>
+                <label class="switch">
+                  <input class="input" type="checkbox" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <button class="cancel-button2">Cancel</button>
+        <button class="export-button2">Create Report</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="success-modal-container2" style="display: none">
+    <div class="report-success-modal">
+      <h1>Report created <br />successfully</h1>
+      <img src="../assets/sucess-img.svg" class="success-image" />
+      <a href="#/report/report-data" class="back-button2"> View </a>
     </div>
   </div>
   <script src="../js/report.js"></script>
