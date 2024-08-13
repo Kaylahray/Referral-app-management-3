@@ -241,9 +241,9 @@
     font-size: 12px;
   }
 
-  .stats {
+  /* .stats {
     grid-template-columns: repeat(2, 1fr);
-  }
+  } */
 }
 
 @media (max-width: 992px) {
