@@ -125,7 +125,7 @@
               <p>In Progress</p>
             </div>
             <div class="details2">
-              <img src="../assets/greenup.svg" alt="" />
+              <img src="../assets/reddown.svg" alt="" />
               <span>-6</span>
             </div>
           </div>
@@ -165,8 +165,9 @@
 
   <div id="report-data-sec" k-show i>
     <div class="chart-flex">
+      <div></div>
       <button
-        class="toggle-btn"
+        class="toggle-btn end"
         data-toggle="report-data"
         data-parent="report-data-sec"
       >
@@ -181,10 +182,14 @@
           <span>1 Week</span>
           <span>1 Month</span>
         </div>
-        <div class="chartBox" style="min-height: 300px">
+        <div
+          class="chartBox"
+          style="min-height: 300px; overflow-x: scroll"
+          ;
+        >
           <canvas
-            width="100%"
             id="reportChart"
+            width="100%"
             style="min-height: 300px"
           ></canvas>
         </div>

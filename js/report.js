@@ -126,6 +126,46 @@ if (typeof loadReport === "undefined") {
     };
 
     new Chart(ctx, config);
+
+    const modal = document.querySelector(".report-modal");
+    const secondModal = document.querySelector(
+      ".success-modal-container2"
+    );
+    const createToggle = document.getElementById("create-report-btn");
+    const recurrentCheckbox = document.getElementById(
+      "recurrent-reporting"
+    );
+    const parametersSection = document.getElementById(
+      "parameters-section"
+    );
+    const recurrentOptions = document.getElementById(
+      "recurrent-options"
+    );
+    const exportButton = document.querySelector(".export-button2");
+    const backButton = document.querySelector(".back-button2");
+
+    createToggle.addEventListener("click", () => {
+      modal.classList.add("active-modal");
+    });
+
+    recurrentCheckbox.addEventListener("change", () => {
+      if (recurrentCheckbox.checked) {
+        parametersSection.style.display = "none";
+        recurrentOptions.style.display = "block";
+      } else {
+        parametersSection.style.display = "block";
+        recurrentOptions.style.display = "none";
+      }
+    });
+
+    exportButton.addEventListener("click", () => {
+      secondModal.style.display = "flex";
+    });
+
+    backButton.addEventListener("click", () => {
+      modal.style.display = "none";
+      secondModal.style.display = "none";
+    });
   };
   loadReport();
 } else {
